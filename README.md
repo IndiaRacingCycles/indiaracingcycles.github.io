@@ -113,3 +113,7 @@ Open the three HTML pages locally or from GitHub Pages. Test search, category/st
 - Tour of Thekkady: https://www.tourofthekkady.com/
 
 Always check the organiser's latest notice before travel or payment.
+
+## Event tip submissions
+
+The public Suggest an Event page uses a simple prompt-style form. Visitors can submit a short description, a public event link, an image (JPG, PNG or WebP), or any combination. The browser compresses uploaded images before sending them to the Worker. Attachments are stored with the pending suggestion in D1 and displayed in the private admin review queue. They are evidence for review only; they are not automatically published as event posters. Every submission remains pending until an administrator checks the source and completes the event details.
