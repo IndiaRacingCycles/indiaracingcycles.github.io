@@ -125,9 +125,7 @@
         detail("Location", s.location),
         detail("Category", s.category || s.source_platform),
         detail("Organiser", s.organiser),
-        detail("Contributor", s.contributor_name),
-        detail("Contributor mobile / WhatsApp", s.contributor_phone),
-        detail("Contributor email", s.contributor_email),
+        detail("Contributor contact details", s.contributor_contact || [s.contributor_name, s.contributor_phone, s.contributor_email].filter(Boolean).join(" · ")),
         detail("Event source", s.source_url, true),
         detail("Poster image link", s.poster_url, true)
       ].join("");
