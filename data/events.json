@@ -1,7 +1,7 @@
 {
   "meta": {
     "last_updated": "2026-11-11",
-    "note": "Reviewed against organiser and federation pages on 11 November 2026. Updated HCL Cyclothon Hyderabad, Track Asia Cup II, Pune Grand Tour, Tour of Thekkady, Race Across India and HCL Cyclothon Bengaluru/Noida. Added the 5th Ultimate Uttarakhand MTB Challenge. National Road Championships venue conflict retained and flagged: supplied CFI calendar image says Jabalpur while HimCycling lists Coimbatore. Some CFI calendar entries remain provisional or TBC; verify with CFI before travel."
+    "note": "Event calendar checked against organiser, federation, UCI and association announcements on 11 November 2026. Updates include corrected Track Asia Cup II dates, Asian Track Championships dates, Asian Road Championships postponement/host uncertainty, Tour de Thar registration status, completed Zabarvan Legends stage dates, and the ASMITA Women's Cycling Zonal League. Earlier update includes HCL Cyclothon, Pune Grand Tour, Tour of Thekkady, Race Across India and Uttarakhand MTB Challenge. National Road Championships venue remains disputed between the supplied CFI calendar image (Jabalpur) and HimCycling (Coimbatore); verify with CFI. Entries with no new official detail remain TBC."
   },
   "events": [
     {
@@ -925,12 +925,12 @@
     },
     {
       "id": "cfi-2026-zabarvan-1",
-      "title": "Zabarvan 1",
-      "start_date": "",
-      "end_date": "",
+      "title": "Zabarvan Legends · Stage 1: Singge Oralo",
+      "start_date": "2026-10-07",
+      "end_date": "2026-10-11",
       "date_note": "Date and venue to be confirmed",
-      "location": "TBC",
-      "state": "",
+      "location": "Zoom Village, Sikkim",
+      "state": "Sikkim",
       "discipline": "MTB",
       "categories": [
         "Elite",
@@ -939,31 +939,32 @@
       "event_scope": "National",
       "calendar_category": "national",
       "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the event date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "description": "Official Zabarvan Season 2 schedule identifies this as Stage 1, Singge Oralo, in Zoom Village, Sikkim, 7–11 October 2026. The 2026 series has finished.",
       "registration_url": "",
       "contact_email": "",
       "contact_phone": "",
       "poster_url": "",
       "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
+      "source_url": "https://www.zabarvanx.com/event/zabarvan-legends",
+      "source_name": "Official Zabarvan Legends series page",
       "source_links": [
         {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
+          "label": "Official Zabarvan Legends series",
+          "url": "https://www.zabarvanx.com/event/zabarvan-legends"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "official-organiser",
+      "verified_at": "2026-11-11"
     },
     {
       "id": "cfi-2026-zabarvan-2",
-      "title": "Zabarvan 2",
-      "start_date": "",
-      "end_date": "",
+      "title": "Zabarvan Legends · Stage 2: Druk Layul",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-18",
       "date_note": "Date and venue to be confirmed",
-      "location": "TBC",
-      "state": "",
+      "location": "South Pullu, Ladakh",
+      "state": "Ladakh",
       "discipline": "MTB",
       "categories": [
         "Elite",
@@ -972,31 +973,32 @@
       "event_scope": "National",
       "calendar_category": "national",
       "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the event date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "description": "Official Zabarvan Season 2 schedule identifies this as Stage 2, Druk Layul, at South Pullu, Ladakh, 14–18 October 2026. The 2026 series has finished.",
       "registration_url": "",
       "contact_email": "",
       "contact_phone": "",
       "poster_url": "",
       "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
+      "source_url": "https://www.zabarvanx.com/event/zabarvan-legends",
+      "source_name": "Official Zabarvan Legends series page",
       "source_links": [
         {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
+          "label": "Official Zabarvan Legends series",
+          "url": "https://www.zabarvanx.com/event/zabarvan-legends"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "official-organiser",
+      "verified_at": "2026-11-11"
     },
     {
       "id": "cfi-2026-zabarvan-3",
-      "title": "Zabarvan 3",
-      "start_date": "",
-      "end_date": "",
+      "title": "Zabarvan Legends · Stage 3: Gaur Ghat",
+      "start_date": "2026-10-22",
+      "end_date": "2026-10-25",
       "date_note": "Date and venue to be confirmed",
-      "location": "TBC",
-      "state": "",
+      "location": "Gaur Ghat, Pune, Maharashtra",
+      "state": "Maharashtra",
       "discipline": "MTB",
       "categories": [
         "Elite",
@@ -1005,22 +1007,23 @@
       "event_scope": "National",
       "calendar_category": "national",
       "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the event date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "description": "Official Zabarvan Season 2 schedule identifies this as Stage 3, Gaur Ghat, Pune, 22–25 October 2026. The 2026 series has finished.",
       "registration_url": "",
       "contact_email": "",
       "contact_phone": "",
       "poster_url": "",
       "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
+      "source_url": "https://www.zabarvanx.com/event/zabarvan-legends",
+      "source_name": "Official Zabarvan Legends series page",
       "source_links": [
         {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
+          "label": "Official Zabarvan Legends series",
+          "url": "https://www.zabarvanx.com/event/zabarvan-legends"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "official-organiser",
+      "verified_at": "2026-11-11"
     },
     {
       "id": "cfi-2026-ecycling-isso-finals",
@@ -1124,12 +1127,12 @@
     },
     {
       "id": "cfi-2026-tour-de-thar",
-      "title": "Tour de Thar",
+      "title": "Tour de Thar 2026",
       "start_date": "",
       "end_date": "",
-      "date_note": "Date and venue to be confirmed",
-      "location": "TBC",
-      "state": "",
+      "date_note": "Winter 2026 · November–December · exact date TBC",
+      "location": "Thar Desert, Rajasthan",
+      "state": "Rajasthan",
       "discipline": "Road",
       "categories": [
         "National"
@@ -1137,22 +1140,23 @@
       "event_scope": "National",
       "calendar_category": "national",
       "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the event date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
-      "registration_url": "",
+      "description": "The official Tour de Thar event page now lists the 2026 edition as an active/upcoming event with registration open. It is a 130 km ride in the Thar Desert, Rajasthan, scheduled for winter 2026 (November–December); the exact race date is still to be confirmed. The page describes dune roads and an expressway section.",
+      "registration_url": "https://tourdethar.com/events",
       "contact_email": "",
       "contact_phone": "",
       "poster_url": "",
       "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
+      "source_url": "https://tourdethar.com/events",
+      "source_name": "Official Tour de Thar events page",
       "source_links": [
         {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
+          "label": "Official events and registration",
+          "url": "https://tourdethar.com/events"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "confirmed",
+      "confidence": "official-organiser",
+      "verified_at": "2026-11-11"
     },
     {
       "id": "cfi-2027-national-coaching-camp-elite-road",
@@ -1260,11 +1264,11 @@
     {
       "id": "cfi-2027-asian-track-cycling-championships",
       "title": "Asian Track Cycling Championships",
-      "start_date": "",
-      "end_date": "",
+      "start_date": "2027-01-30",
+      "end_date": "2027-02-03",
       "date_note": "January–February 2027 · exact dates TBC",
-      "location": "Malaysia",
-      "state": "",
+      "location": "Velodrom Nasional Malaysia",
+      "state": "Malaysia",
       "discipline": "Track",
       "categories": [
         "Junior",
@@ -1274,22 +1278,27 @@
       "calendar_category": "international",
       "uci_accredited": true,
       "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. UCI-accredited international track championship. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "description": "The UCI calendar now lists the 2027 Asian Track Championships at Velodrom Nasional Malaysia from 30 January to 3 February 2027. This replaces the earlier broad January–February 2027 window in the supplied CFI calendar image.",
       "registration_url": "",
       "contact_email": "",
       "contact_phone": "",
       "poster_url": "",
       "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
+      "source_url": "https://www.uci.org/calendar/all/2jnxYAuvjgttyHi6YQ94EJ?searchTerm=track",
+      "source_name": "UCI 2027 calendar",
       "source_links": [
         {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
+          "label": "UCI calendar",
+          "url": "https://www.uci.org/calendar/all/2jnxYAuvjgttyHi6YQ94EJ?searchTerm=track"
+        },
+        {
+          "label": "Asian Cycling Confederation calendar",
+          "url": "https://www.accasia.org/calendar/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "confirmed",
+      "confidence": "uci-official",
+      "verified_at": "2026-11-11"
     },
     {
       "id": "cfi-2027-national-coaching-camp-elite-junior-track",
@@ -1366,8 +1375,8 @@
       "start_date": "",
       "end_date": "",
       "date_note": "February–March 2027 · exact dates TBC",
-      "location": "China",
-      "state": "",
+      "location": "Malaysia (planned; final venue/date not confirmed)",
+      "state": "Malaysia",
       "discipline": "Road",
       "categories": [
         "Junior",
@@ -1377,22 +1386,27 @@
       "calendar_category": "international",
       "uci_accredited": true,
       "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. UCI-accredited international road championship. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "description": "The supplied CFI calendar image listed China and a February–March 2027 window. A newer Japan Cycling Federation event listing now shows the Asian Road Cycling Championships as postponed/undecided, with Malaysia as the planned host. No confirmed 2027 date is currently published. Treat this as TBC until the Asian Cycling Confederation or UCI confirms it.",
       "registration_url": "",
       "contact_email": "",
       "contact_phone": "",
       "poster_url": "",
       "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
+      "source_url": "https://jcf.or.jp/events/asian-road-cycling-championships-2/",
+      "source_name": "Japan Cycling Federation event listing",
       "source_links": [
         {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
+          "label": "Japan Cycling Federation event listing",
+          "url": "https://jcf.or.jp/events/asian-road-cycling-championships-2/"
+        },
+        {
+          "label": "Asian Cycling Confederation",
+          "url": "https://www.accasia.org/calendar/"
         }
       ],
       "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "confidence": "official-federation-listing-confirms-postponement",
+      "verified_at": "2026-11-11"
     },
     {
       "id": "uttarakhand-mtb-challenge-2026",
@@ -1426,6 +1440,40 @@
       "confidence": "organiser-announcement",
       "event_scope": "National",
       "calendar_category": "national"
+    },
+    {
+      "id": "asmita-womens-cycling-zonal-league-hyderabad-2026",
+      "title": "ASMITA Khelo India Women’s Cycling Zonal League",
+      "start_date": "2026-11-16",
+      "end_date": "2026-11-17",
+      "location": "SATG Cycling Velodrome, Osmania University, Hyderabad, Telangana",
+      "state": "Telangana",
+      "discipline": "Track",
+      "categories": [
+        "Junior Girls",
+        "Sub-Junior Girls",
+        "Women",
+        "Khelo India",
+        "Zonal League"
+      ],
+      "organiser": "Cycling Federation of India, Sports Authority of India and Khelo India, with Telangana Cycling Association",
+      "description": "Announced for 16–17 November 2026 at SATG's cycling velodrome, Osmania University, Hyderabad. Categories include Junior Girls, Sub-Junior Girls and Women. District cycling associations were asked to arrange participation. Public announcement names Surabhi Venugopal as the contact (9032762247); confirm eligibility and entry through the Telangana Cycling Association.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "9032762247",
+      "poster_url": "",
+      "poster_note": "No official event poster URL confirmed.",
+      "source_url": "https://hindudayashankar.com/education/asmita-khelo-india-womens-cycling-zonal-league-to-be-held-in-hyderabad-on-november-16-17/",
+      "source_name": "Telangana Cycling Association announcement reported 5 Nov 2026",
+      "source_links": [
+        {
+          "label": "Event announcement",
+          "url": "https://hindudayashankar.com/education/asmita-khelo-india-womens-cycling-zonal-league-to-be-held-in-hyderabad-on-november-16-17/"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "association-announcement"
     }
   ]
 }
