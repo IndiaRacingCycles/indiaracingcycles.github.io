@@ -75,6 +75,19 @@
     }).join("");
     return header+rows+'</tbody></table>';
   }
+  function pastEventTable(list){
+    const header='<table class="event-table past-event-table"><thead><tr><th scope="col">Date</th><th scope="col">Event / organiser</th><th scope="col">Discipline</th><th scope="col">Location</th><th scope="col">Result / note</th><th scope="col">Links</th></tr></thead><tbody>';
+    const rows=list.map(e=>{
+      const cats=(Array.isArray(e.categories)?e.categories:[]).filter(c=>String(c).toLowerCase()!==String(e.event_scope||"").toLowerCase());
+      const discipline=[e.discipline,...cats].filter(Boolean).join(" · ");
+      const result=safe(e.result||e.result_note||e.results||"Completed");
+      const source=e.source_url?'<a class="table-action" href="'+safeUrl(e.source_url)+'" target="_blank" rel="noopener">Source ↗</a>':"";
+      const register=e.registration_url?'<a class="table-action" href="'+safeUrl(e.registration_url)+'" target="_blank" rel="noopener">Results ↗</a>':"";
+      const extra=e.verified_at?'<small class="event-table-status">Verified '+safe(fmt(e.verified_at))+'</small>':"";
+      return '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong><small>'+safe(e.organiser||"Organiser not recorded")+'</small><small class="event-table-mobile-meta">'+safe(discipline)+' · '+result+'</small></td><td>'+safe(discipline||"—")+'</td><td>'+safe(e.location||"Not recorded")+'</td><td><span class="event-result-note">'+result+'</span>'+extra+'</td><td class="event-table-links">'+source+register+'</td></tr>';
+    }).join("");
+    return header+rows+'</tbody></table>';
+  }
   function empty(title,desc,icon){return '<div class="empty-state"><span class="material-symbols-rounded">'+icon+'</span><h3>'+title+'</h3><p>'+desc+'</p></div>';}
   function setTheme(){const saved=localStorage.getItem("irc-theme");if(saved==="dark")document.documentElement.dataset.theme="dark";const btn=$("theme-toggle");if(btn)btn.addEventListener("click",()=>{const dark=document.documentElement.dataset.theme!=="dark";if(dark)document.documentElement.dataset.theme="dark";else delete document.documentElement.dataset.theme;localStorage.setItem("irc-theme",dark?"dark":"light");btn.querySelector("span").textContent=dark?"light_mode":"dark_mode";});if(btn&&document.documentElement.dataset.theme==="dark")btn.querySelector("span").textContent="light_mode";}
   async function initUpcoming(){
@@ -85,13 +98,28 @@
     ["event-search","category-filter","state-filter"].forEach(id=>$(id).addEventListener(id==="event-search"?"input":"change",render));
   }
   async function initPast(){
-    const grid=$("past-grid");let events=[];
-    try{const d=await load("events");events=d.events||d;events=events.filter(e=>e.status==="completed"||e.status==="cancelled"||(e.status!=="postponed"&&e.end_date&&new Date(e.end_date+"T23:59:59")<today));const years=[...new Set(events.map(e=>e.start_date?.slice(0,4)).filter(Boolean))].sort().reverse();years.forEach(y=>$("year-filter").add(new Option(y,y)));render();}
-    catch(err){grid.innerHTML=empty("Archive could not load","Please refresh the page.","cloud_offline");$("past-error").hidden=false;$("past-error").textContent=err.message;}
-    function render(){const q=$("past-search").value.trim().toLowerCase(),year=$("year-filter").value;const list=events.filter(e=>(!q||[e.title,e.location,e.organiser].join(" ").toLowerCase().includes(q))&&(!year||e.start_date.startsWith(year))).sort((a,b)=>b.start_date.localeCompare(a.start_date));grid.innerHTML=list.length?list.map(eventCard).join(""):empty("The archive is ready for its first finish line","Completed events will move here automatically on the day after they finish. Historical entries can also be added with their original source links.","inventory_2");}
-    $("past-search").addEventListener("input",render);$("year-filter").addEventListener("change",render);
+    const grid=$("past-grid");grid.classList.add("event-table-shell");let events=[];
+    try{
+      const d=await load("events");events=d.events||d;
+      events=events.filter(e=>e.status==="completed"||e.status==="cancelled"||(e.status!=="postponed"&&e.end_date&&new Date(e.end_date+"T23:59:59")<today));
+      const years=[...new Set(events.map(e=>e.start_date?.slice(0,4)).filter(Boolean))].sort().reverse();
+      years.forEach(y=>$("year-filter").add(new Option(y,y)));
+      const states=[...new Set(events.map(e=>e.state).filter(Boolean))].sort();
+      states.forEach(s=>$("past-state-filter").add(new Option(s,s)));
+      render();
+    }catch(err){grid.innerHTML=empty("Archive could not load","Please refresh the page.","cloud_offline");$("past-error").hidden=false;$("past-error").textContent=err.message;}
+    function render(){
+      const q=$("past-search").value.trim().toLowerCase(),year=$("year-filter").value,category=$("past-category-filter").value,state=$("past-state-filter").value;
+      const list=events.filter(e=>(!q||[e.title,e.location,e.organiser,e.description].join(" ").toLowerCase().includes(q)))
+        .filter(e=>(!year||String(e.start_date||"").startsWith(year)))
+        .filter(e=>(!category||(e.discipline||"").toLowerCase().includes(category.toLowerCase())||(e.categories||[]).some(c=>String(c).toLowerCase().includes(category.toLowerCase()))))
+        .filter(e=>(!state||e.state===state))
+        .sort((a,b)=>(b.start_date||"").localeCompare(a.start_date||""));
+      grid.innerHTML=list.length?pastEventTable(list):empty("No matching past events","Try another search, year, discipline or state.","event_busy");
+    }
+    ["past-search","year-filter","past-category-filter","past-state-filter"].forEach(id=>$(id).addEventListener(id==="past-search"?"input":"change",render));
   }
-  async function initNews(){
+    async function initNews(){
     const grid=$("news-grid");let items=[];
     try{const d=await load("news");items=d.news||d;render();}
     catch(err){grid.innerHTML=empty("News could not load","Please refresh the page.","cloud_offline");$("news-error").hidden=false;$("news-error").textContent=err.message;}
@@ -100,203 +128,77 @@
   }
 
   async function readFileAsDataUrl(file) {
-    return new Promise((resolve,reject)=>{
-      const reader=new FileReader();
-      reader.onload=()=>resolve(String(reader.result||""));
-      reader.onerror=()=>reject(new Error("The image could not be read. Please try another file."));
-      reader.readAsDataURL(file);
-    });
+    return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result||""));reader.onerror=()=>reject(new Error("The image could not be read. Please try another file."));reader.readAsDataURL(file);});
   }
   async function compressSuggestionImage(file) {
-    const allowed=["image/jpeg","image/png","image/webp"];
-    if(!allowed.includes(file.type)) throw new Error("Please choose a JPG, PNG or WebP image.");
-    if(file.size>12*1024*1024) throw new Error("That image is too large to process. Please choose an image under 12 MB.");
-    const targetBytes=580*1024;
-    if(file.size<=targetBytes) return readFileAsDataUrl(file);
-    let bitmap;
-    try { bitmap=await createImageBitmap(file); }
-    catch { throw new Error("This image could not be opened. Please try saving it as JPG or PNG and upload again."); }
-    try {
-      for(const maxSide of [1600,1400,1200,1000]) {
-        const scale=Math.min(1,maxSide/Math.max(bitmap.width,bitmap.height));
-        const canvas=document.createElement("canvas");
-        canvas.width=Math.max(1,Math.round(bitmap.width*scale));
-        canvas.height=Math.max(1,Math.round(bitmap.height*scale));
-        const ctx=canvas.getContext("2d");
-        if(!ctx) throw new Error("Image processing is not available in this browser.");
-        ctx.fillStyle="#ffffff";
-        ctx.fillRect(0,0,canvas.width,canvas.height);
-        ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);
-        for(const quality of [0.88,0.82,0.76,0.70,0.64]) {
+    if(!file||!String(file.type||"").startsWith("image/")) throw new Error("Please choose an image file.");
+    if(file.size>12*1024*1024) throw new Error("Please choose an image smaller than 12 MB.");
+    let bitmap;try{bitmap=await createImageBitmap(file);}catch{throw new Error("This image format could not be opened. Please try a JPG, PNG or WebP screenshot.");}
+    try{
+      for(const maxSide of [1600,1400,1200,1000,900]){
+        const scale=Math.min(1,maxSide/Math.max(bitmap.width,bitmap.height)),canvas=document.createElement("canvas");
+        canvas.width=Math.max(1,Math.round(bitmap.width*scale));canvas.height=Math.max(1,Math.round(bitmap.height*scale));
+        const ctx=canvas.getContext("2d");if(!ctx)throw new Error("Image processing is not available in this browser.");
+        ctx.fillStyle="#ffffff";ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);
+        for(const quality of [0.88,0.82,0.76,0.70,0.64,0.58]){
           const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/jpeg",quality));
-          if(blob&&blob.size<=targetBytes) {
-            const compressedFile=new File([blob],"event-image.jpg",{type:"image/jpeg"});
-            return readFileAsDataUrl(compressedFile);
-          }
+          if(blob&&blob.size<=580*1024)return readFileAsDataUrl(new File([blob],"event-screenshot.jpg",{type:"image/jpeg"}));
         }
       }
-    } finally { bitmap.close?.(); }
-    throw new Error("We could not reduce this image enough. Please upload a smaller screenshot or photo.");
+    }finally{bitmap.close?.();}
+    throw new Error("The image could not be compressed enough. Please use a smaller screenshot.");
   }
   function suggestionForm(){
-    const form=$("event-suggestion-form");
-    if(!form)return;
-    const msg=$("suggestion-message");
-    const imageInput=$("suggest-image");
-    const preview=$("suggest-image-preview");
-    const previewImage=$("suggest-image-thumb");
-    const previewName=$("suggest-image-name");
-    const previewSize=$("suggest-image-size");
-    const pasteZone=$("suggest-paste-zone");
+    const form=$("event-suggestion-form");if(!form)return;
+    const msg=$("suggestion-message"),inputBox=$("suggest-event-input"),imageInput=$("suggest-image"),preview=$("suggest-image-preview"),previewImage=$("suggest-image-thumb"),previewName=$("suggest-image-name"),previewSize=$("suggest-image-size");
     let previewUrl="";
-    function clearImage(){
-      imageInput.value="";
-      if(previewUrl)URL.revokeObjectURL(previewUrl);
-      previewUrl="";
-      preview.hidden=true;
-      previewImage.removeAttribute("src");
-      previewName.textContent="";
-      previewSize.textContent="";
+    function setMessage(t,c="form-message form-message-dark"){msg.textContent=t;msg.className=c;}
+    function clearImage(){imageInput.value="";if(previewUrl)URL.revokeObjectURL(previewUrl);previewUrl="";preview.hidden=true;previewImage.removeAttribute("src");previewName.textContent="";previewSize.textContent="";}
+    function attachImage(file){
+      if(!file||!String(file.type||"").startsWith("image/")){setMessage("Please choose or paste an image file.","form-message form-message-dark error");return false;}
+      if(file.size>12*1024*1024){setMessage("Please choose an image smaller than 12 MB.","form-message form-message-dark error");return false;}
+      try{const transfer=new DataTransfer();transfer.items.add(file);imageInput.files=transfer.files;imageInput.dispatchEvent(new Event("change",{bubbles:true}));return true;}
+      catch{setMessage("This browser could not attach the image. Please use Upload screenshot / photo.","form-message form-message-dark error");return false;}
     }
     imageInput.addEventListener("change",()=>{
-      const file=imageInput.files?.[0];
-      if(!file){clearImage();return;}
-      if(!["image/jpeg","image/png","image/webp"].includes(file.type)){
-        clearImage();
-        msg.textContent="Please choose a JPG, PNG or WebP image.";
-        msg.className="form-message form-message-dark error";
-        return;
-      }
-      if(file.size>12*1024*1024){
-        clearImage();
-        msg.textContent="Please choose an image smaller than 12 MB.";
-        msg.className="form-message form-message-dark error";
-        return;
-      }
-      if(previewUrl)URL.revokeObjectURL(previewUrl);
-      previewUrl=URL.createObjectURL(file);
-      previewImage.src=previewUrl;
-      previewName.textContent=file.name;
-      previewSize.textContent=(file.size/1024/1024).toFixed(2)+" MB · will be compressed before sending";
-      preview.hidden=false;
-      msg.textContent="Image ready. Add a note or link too, or submit the image by itself.";
-      msg.className="form-message form-message-dark";
+      const file=imageInput.files?.[0];if(!file){clearImage();return;}
+      if(!String(file.type||"").startsWith("image/")||file.size>12*1024*1024){clearImage();setMessage("Please choose an image file smaller than 12 MB.","form-message form-message-dark error");return;}
+      if(previewUrl)URL.revokeObjectURL(previewUrl);previewUrl=URL.createObjectURL(file);previewImage.src=previewUrl;previewName.textContent=file.name||"Pasted screenshot";
+      previewSize.textContent=(file.size/1024/1024).toFixed(2)+" MB · compressed before sending";preview.hidden=false;setMessage("Image attached. Add a note or link, or send it now.");
     });
-    $("remove-suggest-image").addEventListener("click",()=>{
-      clearImage();
-      if(pasteZone)pasteZone.textContent="";
+    $("remove-suggest-image").addEventListener("click",clearImage);
+    inputBox.addEventListener("paste",ev=>{
+      const item=Array.from(ev.clipboardData?.items||[]).find(x=>x.kind==="file"&&/^image\//i.test(x.type));
+      if(item){const file=item.getAsFile();if(file){ev.preventDefault();attachImage(file);}}
     });
-    function useClipboardImage(file){
-      if(!file||!["image/jpeg","image/png","image/webp"].includes(file.type)){
-        msg.textContent="The pasted item is not a supported image. Please paste a JPG, PNG or WebP screenshot.";
-        msg.className="form-message form-message-dark error";
-        return false;
-      }
-      if(file.size>12*1024*1024){
-        msg.textContent="The pasted image is too large. Please use a screenshot under 12 MB.";
-        msg.className="form-message form-message-dark error";
-        return false;
-      }
-      try{
-        const transfer=new DataTransfer();
-        transfer.items.add(file);
-        imageInput.files=transfer.files;
-        imageInput.dispatchEvent(new Event("change",{bubbles:true}));
-        if(pasteZone){pasteZone.textContent="";pasteZone.classList.remove("has-text");}
-      msg.textContent="Screenshot pasted and attached. You can send it now or add more details.";
-      msg.className="form-message form-message-dark";
-        return true;
-      }catch{
-        msg.textContent="This browser could not attach the pasted image. Please use Choose image instead.";
-        msg.className="form-message form-message-dark error";
-        return false;
-      }
-    }
-    form.addEventListener("paste",ev=>{
-      const items=Array.from(ev.clipboardData?.items||[]);
-      const imageItem=items.find(item=>item.kind==="file"&&/^image\//i.test(item.type));
-      if(!imageItem)return;
-      const file=imageItem.getAsFile();
-      if(!file)return;
-      ev.preventDefault();
-      useClipboardImage(file);
-    });
-    if(pasteZone){
-      pasteZone.addEventListener("keydown",ev=>{
-        if((ev.key==="Enter")&&!ev.shiftKey){ev.preventDefault();}
-      });
-      pasteZone.addEventListener("input",()=>{
-        pasteZone.classList.toggle("has-text",Boolean(pasteZone.textContent.trim()));
-      });
-    }
-
+    inputBox.addEventListener("dragover",ev=>{if(Array.from(ev.dataTransfer?.items||[]).some(x=>x.kind==="file"&&/^image\//i.test(x.type))){ev.preventDefault();inputBox.classList.add("dragging");}});
+    inputBox.addEventListener("dragleave",()=>inputBox.classList.remove("dragging"));
+    inputBox.addEventListener("drop",ev=>{inputBox.classList.remove("dragging");const file=Array.from(ev.dataTransfer?.files||[]).find(f=>String(f.type||"").startsWith("image/"));if(file){ev.preventDefault();attachImage(file);}});
+    inputBox.addEventListener("input",()=>inputBox.classList.toggle("has-content",Boolean(inputBox.innerText.trim())));
     form.addEventListener("submit",async ev=>{
       ev.preventDefault();
-      const submit=form.querySelector('button[type="submit"]');
-      const formData=Object.fromEntries(new FormData(form).entries());
-      const selectedFile=imageInput.files?.[0]||null;
-      delete formData.image_file;
-      const pastedText=String(pasteZone?.innerText||"").trim();
-      formData.details=[String(formData.details||"").trim(),pastedText].filter(Boolean).join("\\n\\n").slice(0,5000);
-      formData.source_url=String(formData.source_url||"").trim();
-      formData.contributor_name=String(formData.contributor_name||"").trim();
-      formData.contributor_email=String(formData.contributor_email||"").trim();
-      if(!formData.source_url&&formData.details){
-        const match=formData.details.match(/https?:\/\/[^\s<>"']+/i);
-        if(match)formData.source_url=match[0].replace(/[),.;!?]+$/,"");
-      }
-      if(!formData.details&&!formData.source_url&&!selectedFile){
-        msg.textContent="Please write a short note, paste an event link or attach an image. Any one is enough.";
-        msg.className="form-message form-message-dark error";
-        return;
-      }
-      if(formData.source_url){
-        try{
-          const parsed=new URL(formData.source_url);
-          if(!["https:","http:"].includes(parsed.protocol))throw new Error("Invalid link");
-          formData.source_url=parsed.href;
-        }catch{
-          msg.textContent="The event link is not a valid web address. Please use a full link beginning with https://.";
-          msg.className="form-message form-message-dark error";
-          $("suggest-url").focus();
-          return;
-        }
-      }
-      if(formData.contributor_email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.contributor_email)){
-        msg.textContent="Please check your email address, or leave it blank.";
-        msg.className="form-message form-message-dark error";
-        $("suggest-email").focus();
-        return;
-      }
-      if(!base){
-        msg.textContent="The secure submission service is not connected. Your event tip has not been sent.";
-        msg.className="form-message form-message-dark error";
-        return;
-      }
-      msg.textContent=selectedFile?"Preparing image and sending your event tip…":"Sending your event tip…";
-      msg.className="form-message form-message-dark";
-      submit.disabled=true;
+      const submit=form.querySelector('button[type="submit"]'),details=String(inputBox.innerText||inputBox.textContent||"").trim().slice(0,5000),selectedFile=imageInput.files?.[0]||null;
+      const contributorName=String($("suggest-name").value||"").trim(),contributorPhone=String($("suggest-phone").value||"").trim();
+      if(!details&&!selectedFile){setMessage("Please write event details, paste a link, upload a screenshot or paste an image.","form-message form-message-dark error");inputBox.focus();return;}
+      if(!contributorName){setMessage("Please enter your name.","form-message form-message-dark error");$("suggest-name").focus();return;}
+      const phoneDigits=Array.from(contributorPhone).filter(ch=>ch>="0"&&ch<="9").length;
+      if(phoneDigits<7||phoneDigits>15||!/^[+0-9 ()-]+$/.test(contributorPhone)){setMessage("Please enter a valid mobile or WhatsApp number.","form-message form-message-dark error");$("suggest-phone").focus();return;}
+      let sourceUrl="";const match=details.match(/https?:\/\/[^\s<>"']+/i);if(match)sourceUrl=match[0].replace(/[),.;!?]+$/,"");
+      if(sourceUrl){try{const parsed=new URL(sourceUrl);if(!["https:","http:"].includes(parsed.protocol))throw new Error("Invalid link");sourceUrl=parsed.href;}catch{setMessage("The event link is not valid. Please paste the full link beginning with https://.","form-message form-message-dark error");inputBox.focus();return;}}
+      if(!base){setMessage("The secure submission service is not connected. Your tip has not been sent.","form-message form-message-dark error");return;}
+      setMessage(selectedFile?"Preparing screenshot and sending your event tip…":"Sending your event tip…");submit.disabled=true;
       try{
-        if(selectedFile){
-          formData.image_data_url=await compressSuggestionImage(selectedFile);
-          formData.image_filename=selectedFile.name.slice(0,160);
-        }
-        const response=await fetch(base+"/api/event-suggestions",{
-          method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(formData)
-        });
-        const result=await response.json();
-        if(!response.ok)throw new Error(result.error||"Your event tip could not be sent. Please try again.");
-        msg.textContent="Thank you! Your event tip has reached our private review inbox. We will check the link or image and verify the details before publishing anything.";
-        msg.className="form-message form-message-dark success";
-        form.reset();clearImage();
-        if(pasteZone){pasteZone.textContent="";pasteZone.classList.remove("has-text");}
-      }catch(error){
-        msg.textContent=error.message||"Your event tip could not be sent. Please try again later.";
-        msg.className="form-message form-message-dark error";
-      }finally{submit.disabled=false;}
+        const payload={details,source_url:sourceUrl,contributor_name:contributorName,contributor_phone:contributorPhone};
+        if(selectedFile){payload.image_data_url=await compressSuggestionImage(selectedFile);payload.image_filename=(selectedFile.name||"event-screenshot.jpg").slice(0,160);}
+        const response=await fetch(base+"/api/event-suggestions",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(payload)});
+        const result=await response.json();if(!response.ok)throw new Error(result.error||"Your event tip could not be sent. Please try again.");
+        setMessage("Thank you! Your event tip has reached our private review inbox. We will check it before adding it to the calendar.","form-message form-message-dark success");
+        form.reset();inputBox.textContent="";inputBox.classList.remove("has-content");clearImage();
+      }catch(error){setMessage(error.message||"Your event tip could not be sent. Please try again later.","form-message form-message-dark error");}
+      finally{submit.disabled=false;}
     });
   }
-  function newsletter(){
+    function newsletter(){
     const form=$("newsletter-form");
     if(!form)return;
     form.addEventListener("submit",async ev=>{
