@@ -150,10 +150,15 @@
   }
   function suggestionForm(){
     const form=$("event-suggestion-form");if(!form)return;
-    const msg=$("suggestion-message"),inputBox=$("suggest-event-input"),imageInput=$("suggest-image"),preview=$("suggest-image-preview"),previewImage=$("suggest-image-thumb"),previewName=$("suggest-image-name"),previewSize=$("suggest-image-size");
+    const msg=$("suggestion-message"),inputBox=$("suggest-event-input"),imageInput=$("suggest-image"),contactBox=$("suggest-contact");
+    const preview=$("suggest-image-preview"),previewImage=$("suggest-image-thumb"),previewName=$("suggest-image-name"),previewSize=$("suggest-image-size");
     let previewUrl="";
     function setMessage(t,c="form-message form-message-dark"){msg.textContent=t;msg.className=c;}
-    function clearImage(){imageInput.value="";if(previewUrl)URL.revokeObjectURL(previewUrl);previewUrl="";preview.hidden=true;previewImage.removeAttribute("src");previewName.textContent="";previewSize.textContent="";}
+    function clearImage(){
+      imageInput.value="";
+      if(previewUrl)URL.revokeObjectURL(previewUrl);
+      previewUrl="";preview.hidden=true;previewImage.removeAttribute("src");previewName.textContent="";previewSize.textContent="";
+    }
     function attachImage(file){
       if(!file||!String(file.type||"").startsWith("image/")){setMessage("Please choose or paste an image file.","form-message form-message-dark error");return false;}
       if(file.size>12*1024*1024){setMessage("Please choose an image smaller than 12 MB.","form-message form-message-dark error");return false;}
@@ -163,34 +168,42 @@
     imageInput.addEventListener("change",()=>{
       const file=imageInput.files?.[0];if(!file){clearImage();return;}
       if(!String(file.type||"").startsWith("image/")||file.size>12*1024*1024){clearImage();setMessage("Please choose an image file smaller than 12 MB.","form-message form-message-dark error");return;}
-      if(previewUrl)URL.revokeObjectURL(previewUrl);previewUrl=URL.createObjectURL(file);previewImage.src=previewUrl;previewName.textContent=file.name||"Pasted screenshot";
-      previewSize.textContent=(file.size/1024/1024).toFixed(2)+" MB · compressed before sending";preview.hidden=false;setMessage("Image attached. Add a note or link, or send it now.");
+      if(previewUrl)URL.revokeObjectURL(previewUrl);
+      previewUrl=URL.createObjectURL(file);previewImage.src=previewUrl;previewName.textContent=file.name||"Pasted screenshot";
+      previewSize.textContent=(file.size/1024/1024).toFixed(2)+" MB · compressed before sending";preview.hidden=false;
+      setMessage("Image attached. Add a note or link, or send it now.");
     });
     $("remove-suggest-image").addEventListener("click",clearImage);
     inputBox.addEventListener("paste",ev=>{
       const item=Array.from(ev.clipboardData?.items||[]).find(x=>x.kind==="file"&&/^image\//i.test(x.type));
       if(item){const file=item.getAsFile();if(file){ev.preventDefault();attachImage(file);}}
     });
-    inputBox.addEventListener("dragover",ev=>{if(Array.from(ev.dataTransfer?.items||[]).some(x=>x.kind==="file"&&/^image\//i.test(x.type))){ev.preventDefault();inputBox.classList.add("dragging");}});
+    inputBox.addEventListener("dragover",ev=>{
+      if(Array.from(ev.dataTransfer?.items||[]).some(x=>x.kind==="file"&&/^image\//i.test(x.type))){ev.preventDefault();inputBox.classList.add("dragging");}
+    });
     inputBox.addEventListener("dragleave",()=>inputBox.classList.remove("dragging"));
-    inputBox.addEventListener("drop",ev=>{inputBox.classList.remove("dragging");const file=Array.from(ev.dataTransfer?.files||[]).find(f=>String(f.type||"").startsWith("image/"));if(file){ev.preventDefault();attachImage(file);}});
+    inputBox.addEventListener("drop",ev=>{
+      inputBox.classList.remove("dragging");
+      const file=Array.from(ev.dataTransfer?.files||[]).find(f=>String(f.type||"").startsWith("image/"));
+      if(file){ev.preventDefault();attachImage(file);}
+    });
     inputBox.addEventListener("input",()=>inputBox.classList.toggle("has-content",Boolean(inputBox.innerText.trim())));
     form.addEventListener("submit",async ev=>{
       ev.preventDefault();
-      const submit=form.querySelector('button[type="submit"]'),details=String(inputBox.innerText||inputBox.textContent||"").trim().slice(0,5000),selectedFile=imageInput.files?.[0]||null;
-      const contributorName=String($("suggest-name").value||"").trim();
-      const contributorPhone=String($("suggest-phone").value||"").trim();
-      const contributorEmail=String($("suggest-email").value||"").trim();
-      if(!details&&!selectedFile){setMessage("Please provide at least one: write about the event, paste its link, paste a screenshot, or upload a screenshot/photo.","form-message form-message-dark error");inputBox.focus();return;}
-      const phoneDigits=Array.from(contributorPhone).filter(ch=>ch>="0"&&ch<="9").length;
-      if(contributorPhone&&(phoneDigits<7||phoneDigits>15||!/^[+0-9 ()-]+$/.test(contributorPhone))){setMessage("Please check the contact number, or leave it blank.","form-message form-message-dark error");$("suggest-phone").focus();return;}
-      if(contributorEmail&&!$("suggest-email").validity.valid){setMessage("Please check the email address, or leave it blank.","form-message form-message-dark error");$("suggest-email").focus();return;}
+      const submit=form.querySelector('button[type="submit"]');
+      const details=String(inputBox.innerText||inputBox.textContent||"").trim().slice(0,5000);
+      const selectedFile=imageInput.files?.[0]||null;
+      const contributorContact=String(contactBox?.value||"").trim().slice(0,500);
+      if(!details&&!selectedFile){setMessage("Please write about the event, paste its link, paste a screenshot, or upload a screenshot/photo. One option is enough.","form-message form-message-dark error");inputBox.focus();return;}
       let sourceUrl="";const match=details.match(/https?:\/\/[^\s<>"']+/i);if(match)sourceUrl=match[0].replace(/[),.;!?]+$/,"");
-      if(sourceUrl){try{const parsed=new URL(sourceUrl);if(!["https:","http:"].includes(parsed.protocol))throw new Error("Invalid link");sourceUrl=parsed.href;}catch{setMessage("The event link is not valid. Please paste the full link beginning with https://.","form-message form-message-dark error");inputBox.focus();return;}}
+      if(sourceUrl){
+        try{const parsed=new URL(sourceUrl);if(!["https:","http:"].includes(parsed.protocol))throw new Error("Invalid link");sourceUrl=parsed.href;}
+        catch{setMessage("The event link is not valid. Please paste the full link beginning with https://.","form-message form-message-dark error");inputBox.focus();return;}
+      }
       if(!base){setMessage("The secure submission service is not connected. Your tip has not been sent.","form-message form-message-dark error");return;}
       setMessage(selectedFile?"Preparing screenshot and sending your event tip…":"Sending your event tip…");submit.disabled=true;
       try{
-        const payload={details,source_url:sourceUrl,contributor_name:contributorName,contributor_phone:contributorPhone,contributor_email:contributorEmail};
+        const payload={details,source_url:sourceUrl,contributor_contact:contributorContact};
         if(selectedFile){payload.image_data_url=await compressSuggestionImage(selectedFile);payload.image_filename=(selectedFile.name||"event-screenshot.jpg").slice(0,160);}
         const response=await fetch(base+"/api/event-suggestions",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(payload)});
         const result=await response.json();if(!response.ok)throw new Error(result.error||"Your event tip could not be sent. Please try again.");
