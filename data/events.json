@@ -1,9 +1,632 @@
 {
   "meta": {
-    "last_updated": "2026-11-04",
-    "note": "Initial community launch dataset. Dates and details below were checked against the linked official event pages on 4 November 2026."
+    "last_updated": "2026-11-11",
+    "note": "Updated 11 November 2026. Includes 36 additional entries transcribed from the CFI Calendar 2026–27 image supplied by the site admin. Repeated monthly listings for the same foreign training programme were merged; the existing Bajaj Pune Grand Tour entry was retained to avoid a duplicate. Events marked TBC have no confirmed date or venue in the supplied calendar. Confirm all details with CFI before making travel plans."
   },
   "events": [
+    {
+      "id": "hcl-cyclothon-greater-noida-2026",
+      "title": "HCL Cyclothon",
+      "start_date": "2026-03-15",
+      "end_date": "2026-03-15",
+      "location": "Gaur City Mall, Greater Noida, Uttar Pradesh",
+      "state": "Uttar Pradesh",
+      "discipline": "Road",
+      "categories": [
+        "Cyclothon",
+        "Road"
+      ],
+      "organiser": "As shown in the community-supplied event poster",
+      "description": "Historical entry transcribed from the India Racing Cycles Facebook group screenshot supplied by the community admin. The poster shows 15 March 2026 and Gaur City Mall, Greater Noida. The original post URL was not present in the screenshot.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "Community screenshot reference; original poster file and post URL not captured.",
+      "source_url": "",
+      "source_links": [],
+      "status": "completed",
+      "verified_at": "2026-11-04",
+      "confidence": "community-screenshot"
+    },
+    {
+      "id": "cfi-2026-uci-world-cup-2",
+      "title": "UCI World Cup 2",
+      "start_date": "2026-04-17",
+      "end_date": "2026-04-19",
+      "location": "Hong Kong",
+      "state": "",
+      "discipline": "Track",
+      "categories": [
+        "Elite",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. UCI-accredited international track event. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-uci-world-cup-3",
+      "title": "UCI World Cup 3",
+      "start_date": "2026-04-24",
+      "end_date": "2026-04-26",
+      "location": "Nilai, Malaysia",
+      "state": "",
+      "discipline": "Track",
+      "categories": [
+        "Elite",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. UCI-accredited international track event. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-foreign-training-track",
+      "title": "Foreign Training and Competition – Track",
+      "start_date": "2026-05-20",
+      "end_date": "2026-08-03",
+      "location": "European Circuit",
+      "state": "",
+      "discipline": "Track",
+      "categories": [
+        "Elite (Sprint)",
+        "Training Camp",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar shows this sprint training and competition programme running from 20 May to 3 August 2026. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-national-coaching-camp-mtb",
+      "title": "National Coaching Camp – MTB",
+      "start_date": "2026-05-22",
+      "end_date": "2026-06-20",
+      "location": "Shilaroo, Himachal Pradesh",
+      "state": "Himachal Pradesh",
+      "discipline": "MTB",
+      "categories": [
+        "Junior",
+        "Elite",
+        "Coaching Camp",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "camp",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National coaching camp for Junior and Elite riders. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-foreign-training-mtb",
+      "title": "Foreign Training and Competition – MTB",
+      "start_date": "2026-06-21",
+      "end_date": "2026-07-20",
+      "location": "Uzbekistan",
+      "state": "",
+      "discipline": "MTB",
+      "categories": [
+        "Elite (Endurance)",
+        "Training Camp",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists an endurance training and competition programme in Uzbekistan. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-asian-mtb-cycling-championships",
+      "title": "Asian MTB Cycling Championships",
+      "start_date": "2026-06-23",
+      "end_date": "2026-06-26",
+      "location": "Uzbekistan",
+      "state": "",
+      "discipline": "MTB",
+      "categories": [
+        "Junior",
+        "Elite",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. UCI-accredited international MTB championship. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-selection-trial-1",
+      "title": "Selection Trial 1",
+      "start_date": "2026-07-24",
+      "end_date": "2026-07-25",
+      "location": "Delhi",
+      "state": "Delhi",
+      "discipline": "Track",
+      "categories": [
+        "Elite",
+        "Junior",
+        "Selection Trial",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National track selection trial. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-uci-junior-world-track-championships",
+      "title": "UCI Junior World Track Cycling Championships",
+      "start_date": "2026-08-19",
+      "end_date": "2026-08-23",
+      "location": "Heusden-Zolder, Belgium",
+      "state": "",
+      "discipline": "Track",
+      "categories": [
+        "Junior",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. UCI-accredited junior world track championship. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-track-asia-cup-bangkok",
+      "title": "Track Asia Cup – Bangkok",
+      "start_date": "2026-08-28",
+      "end_date": "2026-08-30",
+      "location": "Bangkok, Thailand",
+      "state": "",
+      "discipline": "Track",
+      "categories": [
+        "Junior",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. UCI-accredited international track event. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "odisha-state-mtb-championship-2026",
+      "title": "2nd State MTB Cycling Championship 2026 & ASMITA Women's MTB Cycling League",
+      "start_date": "2026-09-04",
+      "end_date": "2026-09-06",
+      "location": "Mahendragiri Hills, Odisha",
+      "state": "Odisha",
+      "discipline": "MTB",
+      "categories": [
+        "MTB",
+        "State Championship",
+        "Women's MTB League"
+      ],
+      "organiser": "Odisha Cycling Association (as shown on the supplied group screenshot)",
+      "description": "Historical entry transcribed from the event poster visible in the community-admin screenshot. Dates and location are reproduced as displayed; the original announcement URL was not captured.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "Community screenshot reference; original poster file and post URL not captured.",
+      "source_url": "",
+      "source_links": [],
+      "status": "completed",
+      "verified_at": "2026-11-04",
+      "confidence": "community-screenshot"
+    },
+    {
+      "id": "cfi-2026-first-cadet-nationals",
+      "title": "1st Cadet Nationals",
+      "start_date": "2026-09-13",
+      "end_date": "2026-09-13",
+      "location": "Hyderabad",
+      "state": "Telangana",
+      "discipline": "Road",
+      "categories": [
+        "Cadet",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National road event for Cadet riders. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-national-mtb-cycling-championships",
+      "title": "National MTB Cycling Championships",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-04",
+      "location": "Mahendragiri, Odisha",
+      "state": "Odisha",
+      "discipline": "MTB",
+      "categories": [
+        "Elite",
+        "Junior",
+        "Sub-Junior",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. UCI-accredited national MTB championship. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-hcl-cyclothon-chennai",
+      "title": "HCL Cyclothon – Chennai",
+      "start_date": "2026-10-04",
+      "end_date": "2026-10-04",
+      "location": "Chennai",
+      "state": "Tamil Nadu",
+      "discipline": "Road",
+      "categories": [
+        "Elite Men",
+        "Elite Women",
+        "Cyclothon",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National road cyclothon. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-uci-world-track-championships",
+      "title": "UCI World Track Cycling Championships",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-18",
+      "location": "Shanghai, China",
+      "state": "",
+      "discipline": "Track",
+      "categories": [
+        "Elite",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. UCI-accredited world track championship. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-national-track-cycling-championships",
+      "title": "National Track Cycling Championships",
+      "start_date": "2026-10-30",
+      "end_date": "2026-11-04",
+      "location": "Ranchi, Jharkhand",
+      "state": "Jharkhand",
+      "discipline": "Track",
+      "categories": [
+        "Elite",
+        "Junior",
+        "Sub-Junior",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the championship from 30 October to 4 November 2026. UCI accreditation is marked in the source. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-hcl-cyclothon-hyderabad",
+      "title": "HCL Cyclothon – Hyderabad",
+      "start_date": "2026-11-15",
+      "end_date": "2026-11-15",
+      "location": "Hyderabad",
+      "state": "Telangana",
+      "discipline": "Road",
+      "categories": [
+        "Elite Men",
+        "Elite Women",
+        "Cyclothon",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National road cyclothon. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-track-asia-cup-delhi",
+      "title": "Track Asia Cup – Delhi",
+      "start_date": "2026-11-26",
+      "end_date": "2026-11-28",
+      "location": "Delhi, India",
+      "state": "Delhi",
+      "discipline": "Track",
+      "categories": [
+        "Elite",
+        "Junior",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. UCI-accredited international track event. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-national-road-cycling-championships",
+      "title": "National Road Cycling Championships",
+      "start_date": "2026-12-26",
+      "end_date": "2026-12-30",
+      "location": "Jabalpur, Madhya Pradesh",
+      "state": "Madhya Pradesh",
+      "discipline": "Road",
+      "categories": [
+        "Elite",
+        "Junior",
+        "Sub-Junior",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. UCI accreditation is marked in the source calendar. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
     {
       "id": "bajaj-pune-grand-tour-2027",
       "title": "Bajaj Pune Grand Tour 2027",
@@ -79,55 +702,38 @@
       "image_note": "Official organiser website image; not a standalone event poster."
     },
     {
-      "id": "hcl-cyclothon-greater-noida-2026",
-      "title": "HCL Cyclothon",
-      "start_date": "2026-03-15",
-      "end_date": "2026-03-15",
-      "location": "Gaur City Mall, Greater Noida, Uttar Pradesh",
-      "state": "Uttar Pradesh",
+      "id": "cfi-2027-hcl-cyclothon-bangalore",
+      "title": "HCL Cyclothon – Bangalore",
+      "start_date": "2027-02-07",
+      "end_date": "2027-02-07",
+      "location": "Bangalore",
+      "state": "Karnataka",
       "discipline": "Road",
       "categories": [
+        "Elite",
+        "Junior",
         "Cyclothon",
-        "Road"
+        "National"
       ],
-      "organiser": "As shown in the community-supplied event poster",
-      "description": "Historical entry transcribed from the India Racing Cycles Facebook group screenshot supplied by the community admin. The poster shows 15 March 2026 and Gaur City Mall, Greater Noida. The original post URL was not present in the screenshot.",
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National road cyclothon. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
       "registration_url": "",
       "contact_email": "",
       "contact_phone": "",
       "poster_url": "",
-      "poster_note": "Community screenshot reference; original poster file and post URL not captured.",
-      "source_url": "",
-      "source_links": [],
-      "status": "completed",
-      "verified_at": "2026-11-04",
-      "confidence": "community-screenshot"
-    },
-    {
-      "id": "odisha-state-mtb-championship-2026",
-      "title": "2nd State MTB Cycling Championship 2026 & ASMITA Women's MTB Cycling League",
-      "start_date": "2026-09-04",
-      "end_date": "2026-09-06",
-      "location": "Mahendragiri Hills, Odisha",
-      "state": "Odisha",
-      "discipline": "MTB",
-      "categories": [
-        "MTB",
-        "State Championship",
-        "Women's MTB League"
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
       ],
-      "organiser": "Odisha Cycling Association (as shown on the supplied group screenshot)",
-      "description": "Historical entry transcribed from the event poster visible in the community-admin screenshot. Dates and location are reproduced as displayed; the original announcement URL was not captured.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "Community screenshot reference; original poster file and post URL not captured.",
-      "source_url": "",
-      "source_links": [],
-      "status": "completed",
-      "verified_at": "2026-11-04",
-      "confidence": "community-screenshot"
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
     },
     {
       "id": "race-across-india-2027",
@@ -158,6 +764,611 @@
       "confidence": "high",
       "image_url": "https://raceacrossindia.org/wp-content/uploads/2024/05/route-for-race-across-india.jpg",
       "image_note": "Official route-map image shown on the RAIN 3.0 page; check the current organiser route before travel."
+    },
+    {
+      "id": "cfi-2027-hcl-cyclothon-noida",
+      "title": "HCL Cyclothon – Noida",
+      "start_date": "2027-03-14",
+      "end_date": "2027-03-14",
+      "location": "Noida",
+      "state": "Uttar Pradesh",
+      "discipline": "Road",
+      "categories": [
+        "Elite",
+        "Junior",
+        "Cyclothon",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National road cyclothon. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-college-cyclothon-series",
+      "title": "College Cyclothon Series",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Dates and venue to be confirmed",
+      "location": "",
+      "state": "",
+      "discipline": "Road",
+      "categories": [
+        "Private Event",
+        "College Series",
+        "Private"
+      ],
+      "event_scope": "Private",
+      "calendar_category": "private",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar does not provide a venue or date. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-kashmir-grand-tour",
+      "title": "Kashmir Grand Tour",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date to be announced",
+      "location": "Kashmir, India",
+      "state": "Jammu and Kashmir",
+      "discipline": "Road",
+      "categories": [
+        "Elite",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the venue as Kashmir, India and the date as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-ecycling-isso-zonals",
+      "title": "E-Cycling ISSO Zonals",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date and venue to be confirmed",
+      "location": "TBC",
+      "state": "",
+      "discipline": "E-Cycling",
+      "categories": [
+        "E-Cycling",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "private",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-zabarvan-1",
+      "title": "Zabarvan 1",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date and venue to be confirmed",
+      "location": "TBC",
+      "state": "",
+      "discipline": "MTB",
+      "categories": [
+        "Elite",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the event date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-zabarvan-2",
+      "title": "Zabarvan 2",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date and venue to be confirmed",
+      "location": "TBC",
+      "state": "",
+      "discipline": "MTB",
+      "categories": [
+        "Elite",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the event date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-zabarvan-3",
+      "title": "Zabarvan 3",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date and venue to be confirmed",
+      "location": "TBC",
+      "state": "",
+      "discipline": "MTB",
+      "categories": [
+        "Elite",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the event date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-ecycling-isso-finals",
+      "title": "E-Cycling ISSO Finals",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date and venue to be confirmed",
+      "location": "TBC",
+      "state": "",
+      "discipline": "E-Cycling",
+      "categories": [
+        "E-Cycling",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "private",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-statue-of-unity",
+      "title": "Statue of Unity Cycling Event",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date to be announced",
+      "location": "Ahmedabad, Gujarat",
+      "state": "Gujarat",
+      "discipline": "Road",
+      "categories": [
+        "Elite Men",
+        "Elite Women",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists Ahmedabad, Gujarat as the venue and the date as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-cycling-league-of-india",
+      "title": "Cycling League of India",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date to be announced",
+      "location": "Ahmedabad, Gujarat",
+      "state": "Gujarat",
+      "discipline": "Road",
+      "categories": [
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar marks this event as UCI-accredited; date is TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-tour-de-thar",
+      "title": "Tour de Thar",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date and venue to be confirmed",
+      "location": "TBC",
+      "state": "",
+      "discipline": "Road",
+      "categories": [
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the event date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2027-national-coaching-camp-elite-road",
+      "title": "National Coaching Camp – Elite (Road)",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "January–February 2027 · exact dates TBC",
+      "location": "Patiala",
+      "state": "Punjab",
+      "discipline": "Road",
+      "categories": [
+        "Elite",
+        "Coaching Camp",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "camp",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National road coaching camp. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2027-national-coaching-camp-junior-road",
+      "title": "National Coaching Camp – Junior (Road)",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "January–February 2027 · exact dates TBC",
+      "location": "Patiala",
+      "state": "Punjab",
+      "discipline": "Road",
+      "categories": [
+        "Junior",
+        "Coaching Camp",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "camp",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National road coaching camp. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2027-selection-trial-2",
+      "title": "Selection Trial 2",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date and venue to be confirmed",
+      "location": "TBC",
+      "state": "",
+      "discipline": "Road",
+      "categories": [
+        "Elite",
+        "Junior",
+        "Selection Trial",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National road selection trial. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2027-asian-track-cycling-championships",
+      "title": "Asian Track Cycling Championships",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "January–February 2027 · exact dates TBC",
+      "location": "Malaysia",
+      "state": "",
+      "discipline": "Track",
+      "categories": [
+        "Junior",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. UCI-accredited international track championship. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2027-national-coaching-camp-elite-junior-track",
+      "title": "National Coaching Camp – Elite & Junior (Track)",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "February–March 2027 · exact dates TBC",
+      "location": "Delhi / Rudrapur",
+      "state": "Delhi / Uttarakhand",
+      "discipline": "Track",
+      "categories": [
+        "Elite",
+        "Junior",
+        "Coaching Camp",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "camp",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National track coaching camp. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2027-national-coaching-camp-junior-track",
+      "title": "National Coaching Camp – Junior (Track)",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "February–March 2027 · exact dates TBC",
+      "location": "Delhi / Rudrapur",
+      "state": "Delhi / Uttarakhand",
+      "discipline": "Track",
+      "categories": [
+        "Junior",
+        "Coaching Camp",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "camp",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National track coaching camp. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2027-asian-road-cycling-championships",
+      "title": "Asian Road Cycling Championships",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "February–March 2027 · exact dates TBC",
+      "location": "China",
+      "state": "",
+      "discipline": "Road",
+      "categories": [
+        "Junior",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. UCI-accredited international road championship. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/",
+      "source_name": "Cycling Federation of India (CFI)",
+      "source_links": [
+        {
+          "label": "CFI event calendar",
+          "url": "https://www.cfiindia.in/about-3"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
     }
   ]
 }
