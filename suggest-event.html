@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
   <link rel="icon" type="image/webp" href="assets/images/irc-logo.webp">
-  <link rel="stylesheet" href="assets/css/styles.css?v=irc-about-cover-5">
+  <link rel="stylesheet" href="assets/css/styles.css?v=event-tip-optional-contact-6">
   <script>window.IRC_CONFIG = { apiBase: "https://india-racing-cycles-api.india-racing-cycles-315595.workers.dev" };</script>
-  <script defer src="assets/js/app.js?v=irc-site-refresh-4"></script>
+  <script defer src="assets/js/app.js?v=event-tip-optional-contact-6"></script>
 </head>
 <body data-page="suggestion">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -58,15 +58,19 @@
       <div><b id="suggest-image-name"></b><small id="suggest-image-size"></small></div>
       <button class="icon-button remove-image-button" id="remove-suggest-image" type="button" aria-label="Remove image"><span class="material-symbols-rounded">close</span></button>
     </div>
-    <small class="field-hint unified-help">On your phone, upload a screenshot or photo from your gallery. On a laptop, upload an image or paste it directly into this box. You can also write event details or paste a link. Any one is enough.</small>
+    <small class="field-hint unified-help">On your phone, upload a screenshot or photo from your gallery. On a laptop, upload an image or paste it directly into this box. Please provide at least one: write about the event, paste its link, paste a screenshot, or upload a screenshot/photo. You do not need to do all four.</small>
   </div>
   <div class="unified-contact-box">
-    <p class="eyebrow">YOUR CONTACT DETAILS</p>
-    <div class="unified-contact-fields">
-      <div><label class="field-label" for="suggest-name">Your name</label><input class="text-field" id="suggest-name" name="contributor_name" type="text" maxlength="100" autocomplete="name" placeholder="Enter your name" required></div>
-      <div><label class="field-label" for="suggest-phone">Mobile / WhatsApp number</label><input class="text-field" id="suggest-phone" name="contributor_phone" type="tel" maxlength="25" autocomplete="tel" placeholder="+91 98765 43210" required></div>
+    <div class="unified-contact-heading">
+      <p class="eyebrow">YOUR CONTACT DETAILS</p>
+      <span class="optional-tag">Optional</span>
     </div>
-    <small class="field-hint">Your mobile number will only be used if we need to ask you about this event tip.</small>
+    <div class="unified-contact-fields">
+      <div><label class="field-label" for="suggest-name">Name</label><input class="text-field" id="suggest-name" name="contributor_name" type="text" maxlength="100" autocomplete="name" placeholder="Your name"></div>
+      <div><label class="field-label" for="suggest-phone">Contact number</label><input class="text-field" id="suggest-phone" name="contributor_phone" type="tel" maxlength="25" autocomplete="tel" placeholder="Mobile / WhatsApp"></div>
+      <div><label class="field-label" for="suggest-email">Email address</label><input class="text-field" id="suggest-email" name="contributor_email" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com"></div>
+    </div>
+    <small class="field-hint">All contact details are optional. Leave them blank if you prefer not to share them.</small>
   </div>
   <div class="form-trap" aria-hidden="true"><label for="suggest-website">Leave this field empty</label><input id="suggest-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
   <button class="button button-filled submit-suggestion" type="submit"><span class="material-symbols-rounded">send</span> Send Event Tip</button>
