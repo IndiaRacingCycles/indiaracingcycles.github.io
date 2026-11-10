@@ -83,63 +83,150 @@
     ["news-search","news-type-filter"].forEach(id=>$(id).addEventListener(id==="news-search"?"input":"change",render));
   }
 
+  async function readFileAsDataUrl(file) {
+    return new Promise((resolve,reject)=>{
+      const reader=new FileReader();
+      reader.onload=()=>resolve(String(reader.result||""));
+      reader.onerror=()=>reject(new Error("The image could not be read. Please try another file."));
+      reader.readAsDataURL(file);
+    });
+  }
+  async function compressSuggestionImage(file) {
+    const allowed=["image/jpeg","image/png","image/webp"];
+    if(!allowed.includes(file.type)) throw new Error("Please choose a JPG, PNG or WebP image.");
+    if(file.size>12*1024*1024) throw new Error("That image is too large to process. Please choose an image under 12 MB.");
+    const targetBytes=580*1024;
+    if(file.size<=targetBytes) return readFileAsDataUrl(file);
+    let bitmap;
+    try { bitmap=await createImageBitmap(file); }
+    catch { throw new Error("This image could not be opened. Please try saving it as JPG or PNG and upload again."); }
+    try {
+      for(const maxSide of [1600,1400,1200,1000]) {
+        const scale=Math.min(1,maxSide/Math.max(bitmap.width,bitmap.height));
+        const canvas=document.createElement("canvas");
+        canvas.width=Math.max(1,Math.round(bitmap.width*scale));
+        canvas.height=Math.max(1,Math.round(bitmap.height*scale));
+        const ctx=canvas.getContext("2d");
+        if(!ctx) throw new Error("Image processing is not available in this browser.");
+        ctx.fillStyle="#ffffff";
+        ctx.fillRect(0,0,canvas.width,canvas.height);
+        ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);
+        for(const quality of [0.88,0.82,0.76,0.70,0.64]) {
+          const blob=await new Promise(resolve=>canvas.toBlob(resolve,"image/jpeg",quality));
+          if(blob&&blob.size<=targetBytes) {
+            const compressedFile=new File([blob],"event-image.jpg",{type:"image/jpeg"});
+            return readFileAsDataUrl(compressedFile);
+          }
+        }
+      }
+    } finally { bitmap.close?.(); }
+    throw new Error("We could not reduce this image enough. Please upload a smaller screenshot or photo.");
+  }
   function suggestionForm(){
     const form=$("event-suggestion-form");
     if(!form)return;
-    form.addEventListener("submit",async ev=>{
-      ev.preventDefault();
-      const msg=$("suggestion-message");
-      const submit=form.querySelector('button[type="submit"]');
-      const data=Object.fromEntries(new FormData(form).entries());
-      const useful=["event_name","source_url","event_date","event_date_end","location","category","organiser","organiser_phone","organiser_email","poster_url","details"];
-      if(!useful.some(key=>String(data[key]||"").trim())){
-        msg.textContent="Please share at least one event detail or source link so we know what to review.";
+    const msg=$("suggestion-message");
+    const imageInput=$("suggest-image");
+    const preview=$("suggest-image-preview");
+    const previewImage=$("suggest-image-thumb");
+    const previewName=$("suggest-image-name");
+    const previewSize=$("suggest-image-size");
+    let previewUrl="";
+    function clearImage(){
+      imageInput.value="";
+      if(previewUrl)URL.revokeObjectURL(previewUrl);
+      previewUrl="";
+      preview.hidden=true;
+      previewImage.removeAttribute("src");
+      previewName.textContent="";
+      previewSize.textContent="";
+    }
+    imageInput.addEventListener("change",()=>{
+      const file=imageInput.files?.[0];
+      if(!file){clearImage();return;}
+      if(!["image/jpeg","image/png","image/webp"].includes(file.type)){
+        clearImage();
+        msg.textContent="Please choose a JPG, PNG or WebP image.";
         msg.className="form-message form-message-dark error";
         return;
       }
-      // Trim both optional URL fields before checking or sending them.
-      // Blank fields are valid and are sent as empty strings.
-      for(const key of ["source_url","poster_url"]){
-        data[key] = String(data[key] ?? "").trim();
-        if(!data[key]) continue;
+      if(file.size>12*1024*1024){
+        clearImage();
+        msg.textContent="Please choose an image smaller than 12 MB.";
+        msg.className="form-message form-message-dark error";
+        return;
+      }
+      if(previewUrl)URL.revokeObjectURL(previewUrl);
+      previewUrl=URL.createObjectURL(file);
+      previewImage.src=previewUrl;
+      previewName.textContent=file.name;
+      previewSize.textContent=(file.size/1024/1024).toFixed(2)+" MB · will be compressed before sending";
+      preview.hidden=false;
+      msg.textContent="Image ready. Add a note or link too, or submit the image by itself.";
+      msg.className="form-message form-message-dark";
+    });
+    $("remove-suggest-image").addEventListener("click",clearImage);
+
+    form.addEventListener("submit",async ev=>{
+      ev.preventDefault();
+      const submit=form.querySelector('button[type="submit"]');
+      const formData=Object.fromEntries(new FormData(form).entries());
+      const selectedFile=imageInput.files?.[0]||null;
+      delete formData.image_file;
+      formData.details=String(formData.details||"").trim();
+      formData.source_url=String(formData.source_url||"").trim();
+      formData.contributor_name=String(formData.contributor_name||"").trim();
+      formData.contributor_email=String(formData.contributor_email||"").trim();
+      if(!formData.source_url&&formData.details){
+        const match=formData.details.match(/https?:\/\/[^\s<>"']+/i);
+        if(match)formData.source_url=match[0].replace(/[),.;!?]+$/,"");
+      }
+      if(!formData.details&&!formData.source_url&&!selectedFile){
+        msg.textContent="Please write a short note, paste an event link or attach an image. Any one is enough.";
+        msg.className="form-message form-message-dark error";
+        return;
+      }
+      if(formData.source_url){
         try{
-          const parsed = new URL(data[key]);
-          if(!["https:","http:"].includes(parsed.protocol)) throw new Error("Unsupported link type");
+          const parsed=new URL(formData.source_url);
+          if(!["https:","http:"].includes(parsed.protocol))throw new Error("Invalid link");
+          formData.source_url=parsed.href;
         }catch{
-          const fieldLabel = key === "source_url" ? "Event or social media link" : "Poster or image link";
-          msg.textContent = fieldLabel + " is not a valid web address. Please clear that field or enter a full link beginning with https://.";
+          msg.textContent="The event link is not a valid web address. Please use a full link beginning with https://.";
           msg.className="form-message form-message-dark error";
-          const field = form.elements.namedItem(key);
-          if(field) field.focus();
+          $("suggest-url").focus();
           return;
         }
       }
-      if(data.event_date && data.event_date_end && data.event_date_end < data.event_date){
-        msg.textContent="The event end date cannot be before its start date.";
+      if(formData.contributor_email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.contributor_email)){
+        msg.textContent="Please check your email address, or leave it blank.";
         msg.className="form-message form-message-dark error";
+        $("suggest-email").focus();
         return;
       }
       if(!base){
-        msg.textContent="The suggestion page is ready, but its secure submission service has not been connected yet. Your details have not been sent. The site administrator must finish the Cloudflare setup first.";
+        msg.textContent="The secure submission service is not connected. Your event tip has not been sent.";
         msg.className="form-message form-message-dark error";
         return;
       }
-      msg.textContent="Sending your suggestion…";
+      msg.textContent=selectedFile?"Preparing image and sending your event tip…":"Sending your event tip…";
       msg.className="form-message form-message-dark";
       submit.disabled=true;
       try{
-        const r=await fetch(base+"/api/event-suggestions",{
-          method:"POST",
-          headers:{"Content-Type":"application/json",Accept:"application/json"},
-          body:JSON.stringify(data)
+        if(selectedFile){
+          formData.image_data_url=await compressSuggestionImage(selectedFile);
+          formData.image_filename=selectedFile.name.slice(0,160);
+        }
+        const response=await fetch(base+"/api/event-suggestions",{
+          method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(formData)
         });
-        const result=await r.json();
-        if(!r.ok)throw new Error(result.error||"Your suggestion could not be sent. Please try again.");
-        msg.textContent="Thank you! Your event suggestion has been received and is waiting for manual review. It will not appear on the calendar until it has been checked.";
+        const result=await response.json();
+        if(!response.ok)throw new Error(result.error||"Your event tip could not be sent. Please try again.");
+        msg.textContent="Thank you! Your event tip has reached our private review inbox. We will check the link or image and verify the details before publishing anything.";
         msg.className="form-message form-message-dark success";
-        form.reset();
+        form.reset();clearImage();
       }catch(error){
-        msg.textContent=error.message||"Your suggestion could not be sent. Please try again later.";
+        msg.textContent=error.message||"Your event tip could not be sent. Please try again later.";
         msg.className="form-message form-message-dark error";
       }finally{submit.disabled=false;}
     });
