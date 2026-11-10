@@ -180,3 +180,22 @@
   .hero h1{font-size:clamp(2.5rem,5vw,4.2rem)}
   .hero-lead{font-size:1rem;line-height:1.52;max-width:530px}
 }
+
+
+/* Device-specific help for event image submission */
+.desktop-paste-help{display:flex;align-items:center;flex-wrap:wrap;gap:5px;margin:4px 0 -3px;color:var(--muted);font-size:.76rem;line-height:1.5}
+.desktop-paste-help b{color:var(--ink)}
+.desktop-paste-help kbd{display:inline-block;border:1px solid var(--outline-strong);border-bottom-width:2px;border-radius:5px;padding:1px 5px;background:var(--surface2);font:600 .68rem/1.5 inherit;color:var(--ink)}
+.mobile-upload-help{display:none}
+@media(max-width:760px){
+  .desktop-paste-help,.paste-hint{display:none}
+  .suggest-paste-zone{display:none}
+  .mobile-upload-help{display:block}
+  .desktop-upload-help{display:none}
+  .upload-button{width:100%;justify-content:center;min-height:44px}
+  .image-upload-card{grid-template-columns:42px minmax(0,1fr)}
+}
+@media(min-width:761px){
+  .mobile-upload-help{display:none}
+  .desktop-upload-help{display:block}
+}
