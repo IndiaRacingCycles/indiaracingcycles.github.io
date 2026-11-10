@@ -257,3 +257,14 @@
 .about-identity .button-outline{background:#fff!important;color:#172a52!important;border:2px solid #fff!important;font-weight:800!important;box-shadow:0 4px 14px rgba(0,0,0,.2)}
 .about-identity .button-outline:hover{background:#f0f4fa!important;color:#10213f!important;border-color:#f0f4fa!important}
 .about-heading-tagline{font-size:clamp(1.15rem,2vw,1.45rem);font-weight:800;line-height:1.25;color:var(--primary-dark);margin:8px 0 0}
+
+
+/* Optional contributor contact details in one compact card */
+.unified-contact-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.unified-contact-heading .eyebrow{margin:0}
+.unified-contact-fields{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.unified-contact-fields>div{min-width:0}
+.unified-contact-fields .field-label{font-size:.76rem}
+.unified-contact-fields input{min-width:0;width:100%}
+.unified-contact-box .field-hint{display:block;margin-top:10px}
+@media(max-width:760px){.unified-contact-fields{grid-template-columns:1fr}}
