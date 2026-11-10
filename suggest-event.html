@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
   <link rel="icon" type="image/webp" href="assets/images/irc-logo.webp">
-  <link rel="stylesheet" href="assets/css/styles.css?v=event-tip-optional-contact-6">
+  <link rel="stylesheet" href="assets/css/styles.css?v=md3-funky-9">
   <script>window.IRC_CONFIG = { apiBase: "https://india-racing-cycles-api.india-racing-cycles-315595.workers.dev" };</script>
-  <script defer src="assets/js/app.js?v=event-tip-optional-contact-7"></script>
+  <script defer src="assets/js/app.js?v=contact-one-box-md3-9"></script>
 </head>
 <body data-page="suggestion">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -65,14 +65,11 @@
       <p class="eyebrow">YOUR CONTACT DETAILS</p>
       <span class="optional-tag">Optional</span>
     </div>
-    <div class="unified-contact-fields">
-      <div><label class="field-label" for="suggest-name">Name</label><input class="text-field" id="suggest-name" name="contributor_name" type="text" maxlength="100" autocomplete="name" placeholder="Your name"></div>
-      <div><label class="field-label" for="suggest-phone">Contact number</label><input class="text-field" id="suggest-phone" name="contributor_phone" type="tel" maxlength="25" autocomplete="tel" placeholder="Mobile / WhatsApp"></div>
-      <div><label class="field-label" for="suggest-email">Email address</label><input class="text-field" id="suggest-email" name="contributor_email" type="email" maxlength="254" autocomplete="email" placeholder="you@example.com"></div>
-    </div>
-    <small class="field-hint">All contact details are optional. Leave them blank if you prefer not to share them.</small>
+    <label class="field-label" for="suggest-contact">Name, contact number and email address</label>
+    <textarea class="text-field unified-contact-textarea" id="suggest-contact" name="contributor_contact" rows="3" maxlength="500" autocomplete="off" placeholder="Name:&#10;Contact number:&#10;Email address:"></textarea>
+    <small class="field-hint">This is one optional box. Add any contact details you are comfortable sharing, or leave it empty.</small>
   </div>
-  <div class="form-trap" aria-hidden="true"><label for="suggest-website">Leave this field empty</label><input id="suggest-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+<div class="form-trap" aria-hidden="true"><label for="suggest-website">Leave this field empty</label><input id="suggest-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
   <button class="button button-filled submit-suggestion" type="submit"><span class="material-symbols-rounded">send</span> Send Event Tip</button>
   <p id="suggestion-message" class="form-message form-message-dark" role="status">Your event tip will be checked before it appears on the calendar.</p>
 </form>
