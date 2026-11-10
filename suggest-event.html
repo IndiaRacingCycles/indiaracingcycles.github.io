@@ -10,9 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
   <link rel="icon" type="image/webp" href="assets/images/irc-logo.webp">
-  <link rel="stylesheet" href="assets/css/styles.css?v=event-prompt-review-2">
+  <link rel="stylesheet" href="assets/css/styles.css?v=event-prompt-paste-table-3">
   <script>window.IRC_CONFIG = { apiBase: "https://india-racing-cycles-api.india-racing-cycles-315595.workers.dev" };</script>
-  <script defer src="assets/js/app.js?v=event-prompt-review-2"></script>
+  <script defer src="assets/js/app.js?v=event-prompt-paste-table-3"></script>
 </head>
 <body data-page="suggestion">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -64,6 +64,8 @@
 
         <label class="field-label" for="suggest-details">Tell us anything you know</label>
         <textarea class="text-field text-area prompt-textarea" id="suggest-details" name="details" rows="7" maxlength="5000" placeholder="Example: I saw a road race poster for Pune in January. It may be organised by a local cycling club. I don't know the exact date yet.&#10;&#10;You can also paste the event link here or simply write: 'Please check this event.'"></textarea>
+        <div class="suggest-paste-zone" id="suggest-paste-zone" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Paste a screenshot here" data-placeholder="Click here, then press Ctrl+V (Windows) or Cmd+V (Mac) to paste a screenshot."></div>
+        <small class="field-hint">You can paste a screenshot directly here or into the message box above. You can also use Choose image below.</small>
 
         <label class="field-label" for="suggest-url">Event or social media link <span>Optional</span></label>
         <input class="text-field" id="suggest-url" name="source_url" type="url" maxlength="1000" placeholder="Paste the public event, Instagram, Facebook or registration link">
