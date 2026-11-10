@@ -59,13 +59,29 @@
     const uciChip=e.uci_accredited ? '<span class="chip">UCI accredited</span>' : "";
     return '<article class="event-card"><div class="event-poster">'+poster+'</div><div class="event-body"><div class="event-meta"><span class="event-date">'+safe(dateRange(e))+'</span>'+sourceLabel+'</div><div class="event-meta">'+categories+'</div><h3>'+safe(e.title)+'</h3><p class="event-description">'+safe(e.description||"Open the official source for event information.")+'</p><div class="event-details"><div class="detail-row"><span class="material-symbols-rounded">location_on</span><span>'+safe(e.location||"Location to be confirmed")+'</span></div><div class="detail-row"><span class="material-symbols-rounded">groups</span><span>'+safe(e.organiser||"Organiser details on official source")+'</span></div>'+phone+(e.verified_at ? '<div class="detail-row"><span class="material-symbols-rounded">fact_check</span><span>Last verified: '+safe(fmt(e.verified_at))+'</span></div>' : (e.confidence === "cfi-calendar-image" ? '<div class="detail-row"><span class="material-symbols-rounded">fact_check</span><span>Source: CFI Calendar 2026–27 image</span></div>' : ""))+'</div><div class="event-actions">'+register+(e.source_url?'<a class="button button-tonal" href="'+safeUrl(e.source_url)+'" target="_blank" rel="noopener">Event details <span class="material-symbols-rounded">open_in_new</span></a>':"")+'</div>'+links(e)+'</div></article>';
   }
+  function upcomingEventTable(list){
+    const labels={international:"International",national:"National",camp:"Camp",private:"Private"};
+    const header='<table class="event-table"><thead><tr><th scope="col">Date</th><th scope="col">Event / organiser</th><th scope="col">Discipline</th><th scope="col">Location</th><th scope="col">Type</th><th scope="col">Links</th></tr></thead><tbody>';
+    const rows=list.map(e=>{
+      const categoryList=(Array.isArray(e.categories)?e.categories:[]).filter(c=>String(c).toLowerCase()!==String(e.event_scope||"").toLowerCase());
+      const sub=[e.discipline,...categoryList].filter(Boolean).join(" · ");
+      const type=labels[e.calendar_category]||"Event";
+      const typeClass=e.calendar_category?"event-type-"+safe(e.calendar_category):"";
+      const source=e.source_url?'<a class="table-action" href="'+safeUrl(e.source_url)+'" target="_blank" rel="noopener">Details ↗</a>':"";
+      const register=e.registration_url?'<a class="table-action" href="'+safeUrl(e.registration_url)+'" target="_blank" rel="noopener">Register ↗</a>':"";
+      const extra=e.uci_accredited?'<span class="table-mini-badge">UCI</span>':"";
+      const status=e.status==="postponed"?"Postponed":(e.status==="cancelled"?"Cancelled":"");
+      return '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong><small>'+safe(e.organiser||"Organiser to be confirmed")+'</small><small class="event-table-mobile-meta">'+safe(sub)+'</small><span class="event-table-mobile-type '+typeClass+'">'+safe(type)+'</span></td><td>'+safe(sub||e.discipline||"To be confirmed")+'</td><td>'+safe(e.location||"To be confirmed")+'</td><td><span class="event-type '+typeClass+'">'+safe(type)+'</span>'+extra+(status?'<small class="event-table-status">'+safe(status)+'</small>':"")+'</td><td class="event-table-links">'+source+register+'</td></tr>';
+    }).join("");
+    return header+rows+'</tbody></table>';
+  }
   function empty(title,desc,icon){return '<div class="empty-state"><span class="material-symbols-rounded">'+icon+'</span><h3>'+title+'</h3><p>'+desc+'</p></div>';}
   function setTheme(){const saved=localStorage.getItem("irc-theme");if(saved==="dark")document.documentElement.dataset.theme="dark";const btn=$("theme-toggle");if(btn)btn.addEventListener("click",()=>{const dark=document.documentElement.dataset.theme!=="dark";if(dark)document.documentElement.dataset.theme="dark";else delete document.documentElement.dataset.theme;localStorage.setItem("irc-theme",dark?"dark":"light");btn.querySelector("span").textContent=dark?"light_mode":"dark_mode";});if(btn&&document.documentElement.dataset.theme==="dark")btn.querySelector("span").textContent="light_mode";}
   async function initUpcoming(){
     const grid=$("event-grid");let events=[];
     try{const d=await load("events");events=d.events||d;const meta=d.meta||{};const upcoming=events.filter(e=>(e.status==="postponed" || (e.end_date ? new Date(e.end_date+"T23:59:59")>=today : e.status!=="completed"))&&e.status!=="cancelled");$("upcoming-count").textContent=upcoming.length;$("updated-date").textContent=meta.last_updated?fmt(meta.last_updated):"—";const states=[...new Set(upcoming.map(e=>e.state).filter(Boolean))];$("state-count").textContent=states.length?states.length+" states":"All India";const state=$("state-filter");states.sort().forEach(s=>state.add(new Option(s,s)));render();}
     catch(err){grid.innerHTML=empty("Calendar could not load","Please refresh the page. The event data file may be temporarily unavailable.","cloud_offline");$("event-error").hidden=false;$("event-error").textContent=err.message;}
-    function render(){const q=$("event-search").value.trim().toLowerCase(),cat=$("category-filter").value,state=$("state-filter").value;const list=events.filter(e=>(e.end_date ? new Date(e.end_date+"T23:59:59")>=today : e.status!=="completed")&&e.status!=="cancelled").filter(e=>(!q||[e.title,e.location,e.organiser,e.description].join(" ").toLowerCase().includes(q))&&(!cat||(e.discipline||"").toLowerCase().includes(cat.toLowerCase())||(e.categories||[]).some(c=>c.toLowerCase().includes(cat.toLowerCase())))&&(!state||e.state===state)).sort((a,b)=>(a.start_date||"9999-12-31").localeCompare(b.start_date||"9999-12-31"));grid.innerHTML=list.length?list.map(eventCard).join(""):empty("No matching events","Try a different search or filter. New listings appear after a source has been checked.","event_busy");}
+    function render(){const q=$("event-search").value.trim().toLowerCase(),cat=$("category-filter").value,state=$("state-filter").value;const list=events.filter(e=>(e.end_date ? new Date(e.end_date+"T23:59:59")>=today : e.status!=="completed")&&e.status!=="cancelled").filter(e=>(!q||[e.title,e.location,e.organiser,e.description].join(" ").toLowerCase().includes(q))&&(!cat||(e.discipline||"").toLowerCase().includes(cat.toLowerCase())||(e.categories||[]).some(c=>c.toLowerCase().includes(cat.toLowerCase())))&&(!state||e.state===state)).sort((a,b)=>(a.start_date||"9999-12-31").localeCompare(b.start_date||"9999-12-31"));grid.innerHTML=list.length?upcomingEventTable(list):empty("No matching events","Try a different search or filter. New listings appear after a source has been checked.","event_busy");}
     ["event-search","category-filter","state-filter"].forEach(id=>$(id).addEventListener(id==="event-search"?"input":"change",render));
   }
   async function initPast(){
@@ -131,6 +147,7 @@
     const previewImage=$("suggest-image-thumb");
     const previewName=$("suggest-image-name");
     const previewSize=$("suggest-image-size");
+    const pasteZone=$("suggest-paste-zone");
     let previewUrl="";
     function clearImage(){
       imageInput.value="";
@@ -165,7 +182,51 @@
       msg.textContent="Image ready. Add a note or link too, or submit the image by itself.";
       msg.className="form-message form-message-dark";
     });
-    $("remove-suggest-image").addEventListener("click",clearImage);
+    $("remove-suggest-image").addEventListener("click",()=>{
+      clearImage();
+      if(pasteZone)pasteZone.textContent="";
+    });
+    function useClipboardImage(file){
+      if(!file||!["image/jpeg","image/png","image/webp"].includes(file.type)){
+        msg.textContent="The pasted item is not a supported image. Please paste a JPG, PNG or WebP screenshot.";
+        msg.className="form-message form-message-dark error";
+        return false;
+      }
+      if(file.size>12*1024*1024){
+        msg.textContent="The pasted image is too large. Please use a screenshot under 12 MB.";
+        msg.className="form-message form-message-dark error";
+        return false;
+      }
+      try{
+        const transfer=new DataTransfer();
+        transfer.items.add(file);
+        imageInput.files=transfer.files;
+        imageInput.dispatchEvent(new Event("change",{bubbles:true}));
+        if(pasteZone)pasteZone.textContent="Screenshot pasted and attached. You can send it now or add more details.";
+        return true;
+      }catch{
+        msg.textContent="This browser could not attach the pasted image. Please use Choose image instead.";
+        msg.className="form-message form-message-dark error";
+        return false;
+      }
+    }
+    form.addEventListener("paste",ev=>{
+      const items=Array.from(ev.clipboardData?.items||[]);
+      const imageItem=items.find(item=>item.kind==="file"&&/^image\//i.test(item.type));
+      if(!imageItem)return;
+      const file=imageItem.getAsFile();
+      if(!file)return;
+      ev.preventDefault();
+      useClipboardImage(file);
+    });
+    if(pasteZone){
+      pasteZone.addEventListener("keydown",ev=>{
+        if((ev.key==="Enter")&&!ev.shiftKey){ev.preventDefault();}
+      });
+      pasteZone.addEventListener("input",()=>{
+        pasteZone.classList.toggle("has-text",Boolean(pasteZone.textContent.trim()));
+      });
+    }
 
     form.addEventListener("submit",async ev=>{
       ev.preventDefault();
@@ -173,7 +234,8 @@
       const formData=Object.fromEntries(new FormData(form).entries());
       const selectedFile=imageInput.files?.[0]||null;
       delete formData.image_file;
-      formData.details=String(formData.details||"").trim();
+      const pastedText=String(pasteZone?.innerText||"").trim();
+      formData.details=[String(formData.details||"").trim(),pastedText].filter(Boolean).join("\\n\\n").slice(0,5000);
       formData.source_url=String(formData.source_url||"").trim();
       formData.contributor_name=String(formData.contributor_name||"").trim();
       formData.contributor_email=String(formData.contributor_email||"").trim();
@@ -225,6 +287,7 @@
         msg.textContent="Thank you! Your event tip has reached our private review inbox. We will check the link or image and verify the details before publishing anything.";
         msg.className="form-message form-message-dark success";
         form.reset();clearImage();
+        if(pasteZone){pasteZone.textContent="";pasteZone.classList.remove("has-text");}
       }catch(error){
         msg.textContent=error.message||"Your event tip could not be sent. Please try again later.";
         msg.className="form-message form-message-dark error";
