@@ -184,7 +184,7 @@
       if(!details&&!selectedFile){setMessage("Please provide at least one: write about the event, paste its link, paste a screenshot, or upload a screenshot/photo.","form-message form-message-dark error");inputBox.focus();return;}
       const phoneDigits=Array.from(contributorPhone).filter(ch=>ch>="0"&&ch<="9").length;
       if(contributorPhone&&(phoneDigits<7||phoneDigits>15||!/^[+0-9 ()-]+$/.test(contributorPhone))){setMessage("Please check the contact number, or leave it blank.","form-message form-message-dark error");$("suggest-phone").focus();return;}
-      if(contributorEmail&&!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(contributorEmail)){setMessage("Please check the email address, or leave it blank.","form-message form-message-dark error");$("suggest-email").focus();return;}
+      if(contributorEmail&&!$("suggest-email").validity.valid){setMessage("Please check the email address, or leave it blank.","form-message form-message-dark error");$("suggest-email").focus();return;}
       let sourceUrl="";const match=details.match(/https?:\/\/[^\s<>"']+/i);if(match)sourceUrl=match[0].replace(/[),.;!?]+$/,"");
       if(sourceUrl){try{const parsed=new URL(sourceUrl);if(!["https:","http:"].includes(parsed.protocol))throw new Error("Invalid link");sourceUrl=parsed.href;}catch{setMessage("The event link is not valid. Please paste the full link beginning with https://.","form-message form-message-dark error");inputBox.focus();return;}}
       if(!base){setMessage("The secure submission service is not connected. Your tip has not been sent.","form-message form-message-dark error");return;}
