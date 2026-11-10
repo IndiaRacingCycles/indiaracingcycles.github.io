@@ -134,9 +134,8 @@ function escapeHtml(value) {
 async function handleEventSuggestion(request, env) {
   const body = await request.json().catch(() => null);
   if (!body || typeof body !== "object") return json({ error: "Please send the event information again." }, 400);
-  // Honeypot: bots receive a generic success response; no data is stored.
   if (body.website) return json({ ok: true }, 202);
-  if (!await limitSignup(request, env, "event-suggestion", 5)) {
+  if (!await limitSignup(request, env, "event-suggestion-v2", 5)) {
     return json({ error: "Too many submissions from this connection. Please try again later." }, 429);
   }
 
@@ -147,8 +146,17 @@ async function handleEventSuggestion(request, env) {
   }
   const email = cleanText(body.contributor_email, 254).toLowerCase();
   const organiserEmail = cleanText(body.organiser_email, 254).toLowerCase();
-  if (email && !validEmail(email)) return json({ error: "Please check the optional email address." }, 400);
+  if (email && !validEmail(email)) return json({ error: "Please check your email address." }, 400);
   if (organiserEmail && !validEmail(organiserEmail)) return json({ error: "Please check the organiser email address." }, 400);
+
+  const imageDataUrl = typeof body.image_data_url === "string" ? body.image_data_url.trim() : "";
+  const imageFilename = cleanText(body.image_filename, 160);
+  if (imageDataUrl) {
+    const validImage = /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/]+={0,2}$/.test(imageDataUrl);
+    if (!validImage || imageDataUrl.length > 820000) {
+      return json({ error: "The image could not be accepted. Please choose a smaller JPG, PNG or WebP image and try again." }, 400);
+    }
+  }
 
   const payload = {
     event_name: cleanText(body.event_name, 180),
@@ -163,6 +171,8 @@ async function handleEventSuggestion(request, env) {
     organiser_email: organiserEmail,
     poster_url: posterUrl,
     details: cleanText(body.details, 5000),
+    image_filename: imageFilename,
+    image_data_url: imageDataUrl,
     contributor_name: cleanText(body.contributor_name, 100),
     contributor_email: email
   };
@@ -174,9 +184,9 @@ async function handleEventSuggestion(request, env) {
   if (payload.event_date && payload.event_date_end && payload.event_date_end < payload.event_date) {
     return json({ error: "The event end date cannot be before its start date." }, 400);
   }
-  const useful = ["event_name", "source_url", "event_date", "event_date_end", "location", "category", "organiser", "organiser_phone", "organiser_email", "poster_url", "details"];
+  const useful = ["event_name","source_url","event_date","event_date_end","location","category","organiser","poster_url","details","image_data_url"];
   if (!useful.some(key => payload[key])) {
-    return json({ error: "Please share at least one event detail or source link." }, 400);
+    return json({ error: "Please write a note, share an event link or attach an image." }, 400);
   }
 
   const id = crypto.randomUUID();
@@ -185,17 +195,17 @@ async function handleEventSuggestion(request, env) {
     "INSERT INTO event_suggestions (id,status,payload_json,created_at,updated_at) VALUES (?,'pending',?,?,?)"
   ).bind(id, JSON.stringify(payload), timestamp, timestamp).run();
 
-  // Optional email alert. Failure does not undo the stored suggestion.
   let notificationSent = false;
   if (env.ADMIN_EMAIL && env.RESEND_API_KEY && env.FROM_EMAIL) {
-    const lines = Object.entries(payload)
-      .filter(([, value]) => value)
-      .map(([key, value]) => "<p><strong>" + escapeHtml(key.replaceAll("_", " ")) + ":</strong> " + escapeHtml(value) + "</p>")
-      .join("");
-    const html = "<div style=\"font:15px/1.6 Arial,sans-serif\"><h2>New India Racing Cycles event suggestion</h2><p>Suggestion ID: " + escapeHtml(id) + "</p><p>Status: Pending manual review</p>" + lines + "</div>";
-    const textBody = "New suggestion " + id + "\n\n" + Object.entries(payload).filter(([,value])=>value).map(([key,value])=>key + ": " + value).join("\n");
+    const safePayload = Object.entries(payload).filter(([key,value]) => key !== "image_data_url" && value);
+    const lines = safePayload.map(([key,value]) =>
+      "<p><strong>" + escapeHtml(key.replaceAll("_"," ")) + ":</strong> " + escapeHtml(value) + "</p>"
+    ).join("");
+    const imageNote = imageDataUrl ? "<p><strong>Image:</strong> An image attachment is included in the private admin review queue.</p>" : "";
+    const html = "<div style=\"font:15px/1.6 Arial,sans-serif\"><h2>New India Racing Cycles event tip</h2><p>Suggestion ID: " + escapeHtml(id) + "</p><p>Status: Pending manual review</p>" + lines + imageNote + "</div>";
+    const textBody = "New suggestion " + id + "\n\n" + safePayload.map(([key,value])=>key + ": " + value).join("\n") + (imageDataUrl ? "\nImage attachment: available in admin dashboard." : "");
     try {
-      await sendEmail(env, env.ADMIN_EMAIL, "New cycling event suggestion — manual review needed", html, textBody);
+      await sendEmail(env, env.ADMIN_EMAIL, "New cycling event tip — manual review needed", html, textBody);
       notificationSent = true;
     } catch (error) {
       console.error("Suggestion stored, but admin notification failed:", error);
