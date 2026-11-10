@@ -307,3 +307,8 @@ body{background:radial-gradient(ellipse at 8% 6%,color-mix(in srgb,var(--tertiar
 .suggest-image-preview{border-color:var(--outline)}.suggest-paste-zone{border-radius:16px}
 @media(max-width:760px){.topbar-inner{width:calc(100% - 24px)}.nav-link.active{box-shadow:inset 0 -3px 0 var(--tertiary)}.section{padding-top:48px}.stats-strip{border-radius:17px}.stat{padding:13px 10px}.cover-banner{border-bottom-width:4px}.unified-contact-textarea{min-height:112px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* One single-line contact input: name, phone and email together */
+.unified-contact-input{display:block;width:100%;min-height:54px;padding:13px 16px;border:1.5px solid var(--outline-strong);border-radius:16px;background:var(--surface2);color:var(--ink);font:inherit;line-height:1.4}
+.unified-contact-input::placeholder{color:var(--muted);opacity:1}
+.unified-contact-input:focus{border-color:var(--primary);background:var(--surface);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 18%,transparent);outline:0}
