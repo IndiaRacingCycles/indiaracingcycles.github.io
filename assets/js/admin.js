@@ -111,31 +111,38 @@
       : escapeHtml(value);
     return '<div class="admin-detail"><b>' + label + '</b>' + shown + '</div>';
   }
+  function safeImageDataUrl(value) {
+    const source=String(value||"");
+    return /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/]+={0,2}$/.test(source)&&source.length<=820000 ? source : "";
+  }
   function renderSuggestions() {
     const filter = $("suggestion-filter").value;
     const list = suggestions.filter(s => filter === "all" || s.status === filter);
     $("suggestion-list").innerHTML = list.map(s => {
-      const title = s.event_name || "Event name not supplied";
+      const title = s.event_name || "Event tip — details to be checked";
       const fields = [
         detail("Event date", s.event_date ? eventRange({start_date:s.event_date,end_date:s.event_date_end}) : ""),
         detail("Location", s.location),
         detail("Category", s.category || s.source_platform),
         detail("Organiser", s.organiser),
-        detail("Organiser contact", s.organiser_phone),
-        detail("Organiser email", s.organiser_email),
         detail("Contributor", s.contributor_name),
         detail("Contributor email", s.contributor_email),
         detail("Event source", s.source_url, true),
-        detail("Poster image", s.poster_url, true)
+        detail("Poster image link", s.poster_url, true)
       ].join("");
+      const imageUrl=safeImageDataUrl(s.image_data_url);
+      const imageAttachment=imageUrl
+        ? '<div class="suggestion-attachment"><a class="suggestion-image-link" href="' + escapeHtml(imageUrl) + '" target="_blank" rel="noopener noreferrer"><img src="' + escapeHtml(imageUrl) + '" alt="Event image submitted for review" loading="lazy"></a><div><b>' + escapeHtml(s.image_filename||"Event image") + '</b><small>Image supplied with this event tip</small><a href="' + escapeHtml(imageUrl) + '" download="' + escapeHtml(s.image_filename||"event-image") + '">Open or save image</a></div></div>'
+        : "";
       const actions = s.status === "pending" || s.status === "reviewed"
-        ? '<button class="action-button primary" data-action="approve" data-id="' + escapeHtml(s.id) + '"><span class="material-symbols-rounded">event_available</span> Approve & publish</button>' +
+        ? '<button class="action-button primary" data-action="approve" data-id="' + escapeHtml(s.id) + '"><span class="material-symbols-rounded">event_available</span> Review & add to calendar</button>' +
           '<button class="action-button" data-action="review" data-id="' + escapeHtml(s.id) + '">Mark reviewed</button>' +
           '<button class="action-button danger" data-action="reject" data-id="' + escapeHtml(s.id) + '">Reject</button>'
         : "";
       return '<article class="suggestion-card"><div class="card-top"><div><h3>' + escapeHtml(title) + '</h3><p class="card-subtitle">Submitted ' + escapeHtml(new Date(s.created_at).toLocaleString("en-IN")) + ' · ID ' + escapeHtml(s.id) + '</p></div><span class="status-chip ' + statusClass(s.status) + '">' + escapeHtml(statusLabel(s.status)) + '</span></div>' +
         '<div class="admin-detail-grid">' + fields + '</div>' +
         (s.details ? '<p class="admin-description">' + escapeHtml(s.details) + '</p>' : "") +
+        imageAttachment +
         (s.review_note ? '<p class="card-subtitle">Review note: ' + escapeHtml(s.review_note) + '</p>' : "") +
         (actions ? '<div class="card-actions">' + actions + '</div>' : "") + '</article>';
     }).join("");
