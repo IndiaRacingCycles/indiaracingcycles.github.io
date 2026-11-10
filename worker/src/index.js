@@ -148,9 +148,10 @@ async function handleEventSuggestion(request, env) {
   const contributorPhone = cleanText(body.contributor_phone, 25);
   const organiserEmail = cleanText(body.organiser_email, 254).toLowerCase();
   if (email && !validEmail(email)) return json({ error: "Please check your email address." }, 400);
-  if (!cleanText(body.contributor_name, 100)) return json({ error: "Please enter your name." }, 400);
   const phoneDigits = Array.from(contributorPhone).filter(ch => ch >= "0" && ch <= "9").length;
-  if (phoneDigits < 7 || phoneDigits > 15 || !/^[+0-9 ()-]+$/.test(contributorPhone)) return json({ error: "Please enter a valid mobile or WhatsApp number." }, 400);
+  if (contributorPhone && (phoneDigits < 7 || phoneDigits > 15 || !/^[+0-9 ()-]+$/.test(contributorPhone))) {
+    return json({ error: "Please enter a valid contact number, or leave it blank." }, 400);
+  }
   if (organiserEmail && !validEmail(organiserEmail)) return json({ error: "Please check the organiser email address." }, 400);
 
   const imageDataUrl = typeof body.image_data_url === "string" ? body.image_data_url.trim() : "";
