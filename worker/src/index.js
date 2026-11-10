@@ -146,6 +146,7 @@ async function handleEventSuggestion(request, env) {
   }
   const email = cleanText(body.contributor_email, 254).toLowerCase();
   const contributorPhone = cleanText(body.contributor_phone, 25);
+  const contributorContact = cleanText(body.contributor_contact, 500);
   const organiserEmail = cleanText(body.organiser_email, 254).toLowerCase();
   if (email && !validEmail(email)) return json({ error: "Please check your email address." }, 400);
   const phoneDigits = Array.from(contributorPhone).filter(ch => ch >= "0" && ch <= "9").length;
@@ -178,6 +179,7 @@ async function handleEventSuggestion(request, env) {
     details: cleanText(body.details, 5000),
     image_filename: imageFilename,
     image_data_url: imageDataUrl,
+    contributor_contact: contributorContact,
     contributor_name: cleanText(body.contributor_name, 100),
     contributor_phone: contributorPhone,
     contributor_email: email
