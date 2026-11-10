@@ -663,7 +663,10 @@
       "verified_at": "2026-11-04",
       "confidence": "high",
       "image_url": "https://punegrandtour.in/wp-content/uploads/2026/10/the-track-1.jpg",
-      "image_note": "Official event track visual from the organiser website; not a race poster."
+      "image_note": "Official event track visual from the organiser website; not a race poster.",
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true
     },
     {
       "id": "tour-of-thekkady-2027",
