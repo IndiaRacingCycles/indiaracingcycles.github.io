@@ -126,6 +126,7 @@
         detail("Category", s.category || s.source_platform),
         detail("Organiser", s.organiser),
         detail("Contributor", s.contributor_name),
+        detail("Contributor mobile / WhatsApp", s.contributor_phone),
         detail("Contributor email", s.contributor_email),
         detail("Event source", s.source_url, true),
         detail("Poster image link", s.poster_url, true)
