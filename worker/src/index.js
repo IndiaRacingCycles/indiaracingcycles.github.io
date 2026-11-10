@@ -145,8 +145,12 @@ async function handleEventSuggestion(request, env) {
     return json({ error: "Please use a valid public web link beginning with http:// or https://." }, 400);
   }
   const email = cleanText(body.contributor_email, 254).toLowerCase();
+  const contributorPhone = cleanText(body.contributor_phone, 25);
   const organiserEmail = cleanText(body.organiser_email, 254).toLowerCase();
   if (email && !validEmail(email)) return json({ error: "Please check your email address." }, 400);
+  if (!cleanText(body.contributor_name, 100)) return json({ error: "Please enter your name." }, 400);
+  const phoneDigits = Array.from(contributorPhone).filter(ch => ch >= "0" && ch <= "9").length;
+  if (phoneDigits < 7 || phoneDigits > 15 || !/^[+0-9 ()-]+$/.test(contributorPhone)) return json({ error: "Please enter a valid mobile or WhatsApp number." }, 400);
   if (organiserEmail && !validEmail(organiserEmail)) return json({ error: "Please check the organiser email address." }, 400);
 
   const imageDataUrl = typeof body.image_data_url === "string" ? body.image_data_url.trim() : "";
@@ -174,6 +178,7 @@ async function handleEventSuggestion(request, env) {
     image_filename: imageFilename,
     image_data_url: imageDataUrl,
     contributor_name: cleanText(body.contributor_name, 100),
+    contributor_phone: contributorPhone,
     contributor_email: email
   };
   for (const key of ["event_date", "event_date_end"]) {
