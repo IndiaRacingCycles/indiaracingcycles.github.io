@@ -178,17 +178,19 @@
     form.addEventListener("submit",async ev=>{
       ev.preventDefault();
       const submit=form.querySelector('button[type="submit"]'),details=String(inputBox.innerText||inputBox.textContent||"").trim().slice(0,5000),selectedFile=imageInput.files?.[0]||null;
-      const contributorName=String($("suggest-name").value||"").trim(),contributorPhone=String($("suggest-phone").value||"").trim();
-      if(!details&&!selectedFile){setMessage("Please write event details, paste a link, upload a screenshot or paste an image.","form-message form-message-dark error");inputBox.focus();return;}
-      if(!contributorName){setMessage("Please enter your name.","form-message form-message-dark error");$("suggest-name").focus();return;}
+      const contributorName=String($("suggest-name").value||"").trim();
+      const contributorPhone=String($("suggest-phone").value||"").trim();
+      const contributorEmail=String($("suggest-email").value||"").trim();
+      if(!details&&!selectedFile){setMessage("Please provide at least one: write about the event, paste its link, paste a screenshot, or upload a screenshot/photo.","form-message form-message-dark error");inputBox.focus();return;}
       const phoneDigits=Array.from(contributorPhone).filter(ch=>ch>="0"&&ch<="9").length;
-      if(phoneDigits<7||phoneDigits>15||!/^[+0-9 ()-]+$/.test(contributorPhone)){setMessage("Please enter a valid mobile or WhatsApp number.","form-message form-message-dark error");$("suggest-phone").focus();return;}
+      if(contributorPhone&&(phoneDigits<7||phoneDigits>15||!/^[+0-9 ()-]+$/.test(contributorPhone))){setMessage("Please check the contact number, or leave it blank.","form-message form-message-dark error");$("suggest-phone").focus();return;}
+      if(contributorEmail&&!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(contributorEmail)){setMessage("Please check the email address, or leave it blank.","form-message form-message-dark error");$("suggest-email").focus();return;}
       let sourceUrl="";const match=details.match(/https?:\/\/[^\s<>"']+/i);if(match)sourceUrl=match[0].replace(/[),.;!?]+$/,"");
       if(sourceUrl){try{const parsed=new URL(sourceUrl);if(!["https:","http:"].includes(parsed.protocol))throw new Error("Invalid link");sourceUrl=parsed.href;}catch{setMessage("The event link is not valid. Please paste the full link beginning with https://.","form-message form-message-dark error");inputBox.focus();return;}}
       if(!base){setMessage("The secure submission service is not connected. Your tip has not been sent.","form-message form-message-dark error");return;}
       setMessage(selectedFile?"Preparing screenshot and sending your event tip…":"Sending your event tip…");submit.disabled=true;
       try{
-        const payload={details,source_url:sourceUrl,contributor_name:contributorName,contributor_phone:contributorPhone};
+        const payload={details,source_url:sourceUrl,contributor_name:contributorName,contributor_phone:contributorPhone,contributor_email:contributorEmail};
         if(selectedFile){payload.image_data_url=await compressSuggestionImage(selectedFile);payload.image_filename=(selectedFile.name||"event-screenshot.jpg").slice(0,160);}
         const response=await fetch(base+"/api/event-suggestions",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(payload)});
         const result=await response.json();if(!response.ok)throw new Error(result.error||"Your event tip could not be sent. Please try again.");
