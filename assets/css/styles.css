@@ -251,3 +251,9 @@
 .about-detail-card{background:var(--surface);border:1px solid var(--outline);border-radius:18px;padding:20px}.about-detail-card h3{display:flex;align-items:center;gap:9px;font-size:1rem;margin:0 0 9px}.about-detail-card h3 .material-symbols-rounded{color:var(--primary)}
 .about-detail-card p,.about-detail-card li{font-size:.88rem;line-height:1.65;color:var(--muted)}.about-detail-card ul{padding-left:18px;margin:8px 0 0}.about-disclaimer{font-size:.76rem!important;color:var(--muted);margin-top:22px}
 @media(max-width:760px){.about-intro,.about-grid{grid-template-columns:1fr}.about-panel{padding:18px}.about-detail-card{padding:16px}}
+
+
+/* Strong contrast for the Explore the calendar action on the dark About panel */
+.about-identity .button-outline{background:#fff!important;color:#172a52!important;border:2px solid #fff!important;font-weight:800!important;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+.about-identity .button-outline:hover{background:#f0f4fa!important;color:#10213f!important;border-color:#f0f4fa!important}
+.about-heading-tagline{font-size:clamp(1.15rem,2vw,1.45rem);font-weight:800;line-height:1.25;color:var(--primary-dark);margin:8px 0 0}
