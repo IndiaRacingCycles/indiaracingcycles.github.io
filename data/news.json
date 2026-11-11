@@ -1,7 +1,7 @@
 {
   "meta": {
     "last_updated": "2026-11-11",
-    "note": "Expanded Cycling News with earlier-edition reports and race videos discovered by searching upcoming-event names with and without years. Confirmed crash coverage includes the 2017 Asian Track Championships, a 2023 Asian Track Championships video, the January 2026 ASMITA League report, and two separate 2026 Pune Grand Tour incidents. Other entries are labelled as race reports, rider blogs or videos rather than crashes."
+    "note": "Expanded Cycling News with previous-edition reports and race videos discovered by searching upcoming-event names with and without years. Verified crash coverage is limited to the 2017 and 2023 Asian Track Cycling Championships, the January 2026 ASMITA League report, and two separate 2026 Pune Grand Tour incidents. Other entries are clearly labelled as race reports, rider blogs or videos rather than crashes."
   },
   "news": [
     {
@@ -204,6 +204,43 @@
       "source_url": "https://www.youtube.com/watch?v=BcRuv0SPlTw",
       "source_label": "Watch crash video",
       "related_event_id": "cfi-2027-asian-track-cycling-championships",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "ultimate-uttarakhand-himalayan-mtb-2019-fourth-edition-report",
+      "title": "The Ultimate Uttarakhand Himalayan MTB Challenge returns for its fourth edition",
+      "published_at": "2019-05-25",
+      "publisher": "Garhwal Post",
+      "category": "Previous edition report",
+      "type": "race",
+      "summary": "A report on the fourth edition, held in April 2019, describes a multi-stage mountain-bike race from Nainital towards Mussoorie through Uttarakhand's hill districts. It gives historical context for the 2026 return of the Ultimate Uttarakhand MTB Challenge. This report does not mention a crash.",
+      "source_url": "https://garhwalpost.in/4th-edition-of-ultimate-uttarakhand-himalayan-mtb-challenge-makes-an-impact/",
+      "related_event_id": "uttarakhand-mtb-challenge-2026",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "ultimate-uttarakhand-mtb-2019-fourth-edition-video",
+      "title": "Video: Uttarakhand hosts the fourth edition of its Himalayan MTB Challenge",
+      "published_at": "2019-04-26",
+      "publisher": "The Times of India · Videos",
+      "category": "Race video",
+      "type": "video",
+      "summary": "A short Times of India video report from the 2019 fourth edition. It describes the multi-day mountain-bike race and its route through Uttarakhand. The page may require a refresh or may not play in every browser; it is event coverage, not crash footage.",
+      "source_url": "https://timesofindia.indiatimes.com/videos/news/watch-uttarakhand-hosts-4th-edition-of-mountain-bike-race/videoshow/69041893.cms",
+      "source_label": "Watch race video",
+      "related_event_id": "uttarakhand-mtb-challenge-2026",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "ultimate-uttarakhand-himalayan-mtb-2017-third-edition-feature",
+      "title": "Around the Himalayas in seven days: the 2017 Uttarakhand Himalayan MTB Challenge",
+      "published_at": "2017-04-08",
+      "publisher": "Media India Group",
+      "category": "Previous edition report",
+      "type": "race",
+      "summary": "This feature covers the third edition, which started in Nainital in April 2017 and set out over seven biking days across Uttarakhand. It describes the route and international participation. No crash is reported in this story.",
+      "source_url": "https://mediaindia.eu/tourism/around-the-himalayas-in-7-days-uttarakhand-himalayan-mtb-challenge/",
+      "related_event_id": "uttarakhand-mtb-challenge-2026",
       "verified_at": "2026-11-11"
     },
     {
