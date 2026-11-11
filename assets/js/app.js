@@ -62,6 +62,7 @@
   function mapLocation(value,fallback){
     const label=String(value||"").trim();
     if(!label)return safe(fallback||"Location to be confirmed");
+    if(["tbc","tbd","to be confirmed","not recorded","unknown","n/a","-","—"].includes(label.toLowerCase()))return safe(label);
     const url="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(label);
     return '<a class="event-location-link" href="'+safeUrl(url)+'" target="_blank" rel="noopener noreferrer" aria-label="Search '+safe(label)+' in Google Maps">'+safe(label)+'</a>';
   }
