@@ -1,7 +1,7 @@
 {
   "meta": {
     "last_updated": "2026-11-11",
-    "note": "Cycling news updated with verified coverage of the January 2026 Pune Grand Tour Stage 1 crash and the medical response. Searches of other completed events did not surface reliable reports confirming race crashes."
+    "note": "Expanded Cycling News with earlier-edition reports and race videos discovered by searching upcoming-event names with and without years. Confirmed crash coverage includes the 2017 Asian Track Championships, a 2023 Asian Track Championships video, the January 2026 ASMITA League report, and two separate 2026 Pune Grand Tour incidents. Other entries are labelled as race reports, rider blogs or videos rather than crashes."
   },
   "news": [
     {
@@ -15,6 +15,48 @@
       "source_url": "https://indiancyclingnews.com/pune-grand-tour-earns-uci-2-1-upgrade-setting-stage-for-indias-cycling-future/",
       "related_event_id": "bajaj-pune-grand-tour-2027",
       "verified_at": "2026-11-04"
+    },
+    {
+      "id": "hcl-cyclothon-bengaluru-2026-recap",
+      "title": "More than 1,850 cyclists take part in the first HCL Cyclothon Bengaluru",
+      "published_at": "2026-02-08",
+      "publisher": "HCL Group",
+      "category": "Previous edition report",
+      "type": "race",
+      "summary": "HCL's official recap reports that the first Bengaluru edition attracted more than 1,850 cyclists. The Cycling Federation of India acted as technical partner and oversaw route certification and safety protocols. ABP News also published live event coverage. This is background for the 2027 Bengaluru edition; the recap does not report a crash.",
+      "source_url": "https://hcl.com/media_management/over-1850-cyclists-take-to-the-road-at-the-1st-edition-of-hcl-cyclothon-bengaluru/",
+      "video_url": "https://www.youtube.com/watch?v=pMIuXiIC7Jo",
+      "video_label": "Watch ABP live coverage",
+      "related_event_id": "cfi-2027-hcl-cyclothon-bangalore",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "track-asia-cup-2026-chennai-race-report-video",
+      "title": "Track Asia Cup 2026 in Chennai: Indian riders win key events",
+      "published_at": "2026-01-31",
+      "publisher": "The New Indian Express",
+      "category": "Race report and video",
+      "type": "race",
+      "summary": "The Chennai edition of Track Asia Cup 2026 concluded with Indian riders winning the women's elite keirin and junior women's sprint. The report includes selected results, while a separate video provides event footage. This is coverage of an earlier Track Asia Cup edition, not the December 2026 Delhi event.",
+      "source_url": "https://www.newindianexpress.com/sport/other/2026/Jan/31/triyasha-keerthi-shine-with-gold-as-track-asia-cup-concludes",
+      "video_url": "https://www.youtube.com/watch?v=m_W8WNO61Ms",
+      "video_label": "Watch Track Asia Cup footage",
+      "related_event_id": "cfi-2026-track-asia-cup-delhi",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "pune-grand-tour-2026-deccan-collision-video",
+      "title": "Pune Grand Tour 2026: collision and heated exchange caught on video in Deccan",
+      "published_at": "2026-01-24",
+      "publisher": "Free Press Journal",
+      "category": "Race incident video",
+      "type": "race",
+      "summary": "A separate incident during the 2026 Pune Grand Tour was reported near Garware Bridge in Deccan, where a narrow section caused collisions among riders and a brief argument. Police intervened and no serious injuries were reported. The publisher's page includes the video; this is separate from the Stage 1 pile-up near Kolvan.",
+      "source_url": "https://www.freepressjournal.in/amp/pune/viral-video-shows-heated-exchange-between-cyclists-at-pune-grand-tour-2026-on-fc-road-watch",
+      "video_url": "https://www.freepressjournal.in/amp/pune/viral-video-shows-heated-exchange-between-cyclists-at-pune-grand-tour-2026-on-fc-road-watch",
+      "video_label": "Watch incident video",
+      "related_event_id": "bajaj-pune-grand-tour-2027",
+      "verified_at": "2026-11-11"
     },
     {
       "id": "pune-grand-tour-2026-medical-response-after-stage-1-crash",
@@ -36,6 +78,144 @@
       "type": "race",
       "summary": "A major pile-up happened within the first hour of Stage 1 near Kolvan village on 20 January 2026. The race was neutralised for 23 minutes while medical staff treated riders. Three riders withdrew, and the UCI commissaire panel said no one required hospitalisation. This report concerns the 2026 edition of the Pune Grand Tour.",
       "source_url": "https://indianexpress.com/article/cities/pune/crash-multiple-cyclists-pune-grand-tour-race-10485399/",
+      "verified_at": "2026-11-11",
+      "video_url": "https://www.freepressjournal.in/amp/pune/caught-on-camera-30-cyclist-pile-up-brings-pune-grand-tour-stage-1-to-a-halt-watch",
+      "video_label": "Watch pile-up footage"
+    },
+    {
+      "id": "asmita-khelo-india-womens-cycling-league-kurukshetra-crash-2026",
+      "title": "Baramulla cyclist finishes the ASMITA mass-start after a crash",
+      "published_at": "2026-01-12",
+      "publisher": "Greater Kashmir",
+      "category": "Crash report",
+      "type": "race",
+      "summary": "A report on the Khelo India ASMITA Women's Cycling League in Kurukshetra says a Baramulla rider crashed during the 60 km mass-start but still completed the race and finished 13th. This was an earlier league event, not the Hyderabad zonal league scheduled for November 2026.",
+      "source_url": "https://www.greaterkashmir.com/latest-news/jks-female-athletes-make-history-at-national-sports-league/amp",
+      "related_event_id": "asmita-womens-cycling-zonal-league-hyderabad-2026",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "national-road-cycling-championships-2025-odisha-results",
+      "title": "Swasti Singh wins silver as the 30th National Road Cycling Championships begin in Odisha",
+      "published_at": "2025-12-02",
+      "publisher": "OdiSports",
+      "category": "Previous edition results",
+      "type": "results",
+      "summary": "Coverage from the 30th National Road Cycling Championships in Sambalpur, Odisha, reports Swasti Singh's silver in the women's elite 30 km individual time trial. Harshita Jakhar won gold and Pooja Danole took bronze. This gives a look back at the previous national road championship; this report does not describe a crash.",
+      "source_url": "https://www.orisports.com/NewsDetails.aspx?nId=ODk4Ng%3D%3D",
+      "related_event_id": "cfi-2026-national-road-cycling-championships",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "tour-of-thekkady-2025-participant-vlog",
+      "title": "Tour of Thekkady 2025 — 150 km race-day vlog",
+      "published_at": "2025-04-02",
+      "publisher": "Harith Noah · YouTube",
+      "category": "Rider video",
+      "type": "video",
+      "summary": "Rider Harith Noah's vlog follows the 2025 Tour of Thekkady from preparation and the start line to the finish. He describes the 150 km route, around 2,800 m of climbing, early low visibility and rough road patches. The video is a participant's race experience, not a crash report.",
+      "source_url": "https://www.youtube.com/watch?v=Wzx2Wf7dGUQ",
+      "source_label": "Watch rider vlog",
+      "related_event_id": "tour-of-thekkady-2027",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "hcl-cyclothon-noida-2025-race-day-video",
+      "title": "HCL Cyclothon Noida 2025 — race-day live video",
+      "published_at": "2025-03-22",
+      "publisher": "HCL Group · YouTube",
+      "category": "Race video",
+      "type": "video",
+      "summary": "HCL Group's race-day video from the 2025 Noida edition. This is event coverage, not a crash video.",
+      "source_url": "https://www.youtube.com/watch?v=RJAJ_dAEsHE",
+      "source_label": "Watch race-day video",
+      "related_event_id": "cfi-2027-hcl-cyclothon-noida",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "tour-of-thekkady-2025-rider-race-blog",
+      "title": "Tour of Thekkady: a rider's account of the 2025 Gran Fondo",
+      "published_at": "2025-03-09",
+      "publisher": "BVCoaching",
+      "category": "Rider blog",
+      "type": "race",
+      "summary": "A participant's detailed blog describes the climbs, heat, race effort and early-morning conditions at the 2025 edition. The rider notes that buses and trucks were already using the road around the 5 am start. This is a first-hand course and traffic observation, not confirmation of a crash.",
+      "source_url": "https://bvcoaching.in/2025/03/tour-of-thekkady-2025/",
+      "related_event_id": "tour-of-thekkady-2027",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "race-across-india-2024-amit-samarth-wins",
+      "title": "Amit Samarth wins the 2024 Race Across India after 3,758 km",
+      "published_at": "2024-10-23",
+      "publisher": "The Bridge",
+      "category": "Previous edition report",
+      "type": "results",
+      "summary": "Amit Samarth won the Solo 18–50 category at Race Across India 2.0, finishing the 3,758 km Srinagar-to-Kanyakumari route in 8 days, 2 hours and 17 minutes. The report also lists other solo and relay-team finishers. It is a useful look at the previous edition and the demands of the ultra-distance race.",
+      "source_url": "https://thebridge.in/cycling/india-longest-cycle-race-from-srinagar-to-kanyakumari-concludes-50303",
+      "related_event_id": "race-across-india-2027",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "hcl-cyclothon-noida-2024-amateur-55km-gopro",
+      "title": "HCL Cyclothon 2024 Noida — 55 km amateur race from a rider's camera",
+      "published_at": "2024-03-29",
+      "publisher": "Sanjeev Sharma · YouTube",
+      "category": "Rider video",
+      "type": "video",
+      "summary": "A participant's GoPro recording follows the complete 55 km amateur road race at the 17 March 2024 Noida edition. It gives a rider-level view of the course and race conditions; it is not presented as an accident video.",
+      "source_url": "https://www.youtube.com/watch?v=sWBVcuY7qg0",
+      "source_label": "Watch rider video",
+      "related_event_id": "cfi-2027-hcl-cyclothon-noida",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "hcl-cyclothon-noida-2024-official-race-recap",
+      "title": "HCL Cyclothon Noida 2024 brings together more than 2,500 cyclists",
+      "published_at": "2024-03-20",
+      "publisher": "HCL Group",
+      "category": "Previous edition report",
+      "type": "race",
+      "summary": "HCL's official recap says the 17 March 2024 Noida edition brought together more than 2,500 participants from 23 Indian states, including professional, amateur and Green Ride categories. This is useful background for the HCL Cyclothon editions planned in Hyderabad, Bengaluru and Noida. The release does not report a race crash.",
+      "source_url": "https://hcl.com/media_management/2500-cyclists-from-23-indian-states-compete-in-hcl-cyclothon-2024/",
+      "related_event_id": "cfi-2027-hcl-cyclothon-noida",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "tour-of-thekkady-2024-results-recap",
+      "title": "Tour of Thekkady 2024 wraps up with Salvin, Sudhi and Alanis Lilly as champions",
+      "published_at": "2024-02-10",
+      "publisher": "Onmanorama",
+      "category": "Previous edition report",
+      "type": "results",
+      "summary": "Onmanorama's report covers the third edition of Tour of Thekkady in February 2024, including the men's, masters and women's winners. It describes a field of around 140 riders and the challenging Kottayam-to-Idukki course. No crash was reported in this recap.",
+      "source_url": "https://www.onmanorama.com/travel/travel-news/2024/02/09/tour-of-thekkady-race-tour-third-edition.html",
+      "related_event_id": "tour-of-thekkady-2027",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "asian-track-cycling-championships-2023-keirin-crash-video",
+      "title": "Video: Major crash in the men's elite keirin at the 2023 Asian Track Championships",
+      "published_at": "2023-06-18",
+      "publisher": "ArenaMalaysia Asia · YouTube",
+      "category": "Crash video",
+      "type": "video",
+      "summary": "Footage of a major crash in the men's elite keirin semi-final at the 2023 Asian Track Cycling Championships. The video description says Malaysian rider Shah Firdaus Sahrom continued despite pain and a damaged saddle. This is an older championship video, not the 2027 event.",
+      "source_url": "https://www.youtube.com/watch?v=BcRuv0SPlTw",
+      "source_label": "Watch crash video",
+      "related_event_id": "cfi-2027-asian-track-cycling-championships",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "asian-track-cycling-championships-2017-keirin-crash",
+      "title": "Three cyclists injured in a crash at the 2017 Asian Track Cycling Championships",
+      "published_at": "2017-02-07",
+      "publisher": "The Times of India / PTI",
+      "category": "Crash report",
+      "type": "race",
+      "summary": "A crash during the junior men's keirin final at the 2017 championships in New Delhi injured riders from Iran, Malaysia and South Korea. The Korean rider suffered a collarbone fracture; all three were taken for checks and later discharged. This is a historical incident from the same championship series, not a report about the 2027 edition in Malaysia.",
+      "source_url": "https://timesofindia.indiatimes.com/sports/more-sports/cycling/three-cyclists-injured-in-a-crash-during-asian-track-cships/articleshow/57023906.cms",
+      "related_event_id": "cfi-2027-asian-track-cycling-championships",
       "verified_at": "2026-11-11"
     }
   ]
