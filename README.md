@@ -17,7 +17,7 @@ Pages:
 - `suggest-event.html` — public community form for sending event tips for manual review
 - `admin.html` — private token-protected dashboard for reviewing suggestions and managing calendar events
 
-The site uses plain HTML, CSS and JavaScript. No build step or frontend framework is required. The event calendar is rendered as one list, sorted by start date with the nearest event first. The Where We Look directory is a single-column list of cycling sources and public social-platform entry points. Event and news cards are loaded from `data/events.json` and `data/news.json`. The browser can optionally use a Cloudflare Worker API by setting `window.IRC_CONFIG.apiBase` in the page HTML.
+The site uses plain HTML, CSS and JavaScript. No build step or frontend framework is required. The event calendar is rendered as one list, sorted by start date with the nearest event first. The Where We Look directory is a separate page listing cycling federations, organisers, state associations and community sources. Event and news cards are loaded from `data/events.json` and `data/news.json`. The browser can optionally use a Cloudflare Worker API by setting `window.IRC_CONFIG.apiBase` in the page HTML.
 
 ## Launch dataset
 
