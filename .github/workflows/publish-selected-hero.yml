@@ -3,7 +3,6 @@ name: Publish selected India Racing Cycles desktop cover
 on:
   push:
     paths:
-      - ".upload-tmp/hero-cover-part-*.txt"
       - ".upload-tmp/hero-cover-trigger.txt"
   workflow_dispatch:
 
