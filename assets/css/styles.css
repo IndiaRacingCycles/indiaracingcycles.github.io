@@ -312,3 +312,5 @@ body{background:radial-gradient(ellipse at 8% 6%,color-mix(in srgb,var(--tertiar
 .unified-contact-input{display:block;width:100%;min-height:54px;padding:13px 16px;border:1.5px solid var(--outline-strong);border-radius:16px;background:var(--surface2);color:var(--ink);font:inherit;line-height:1.4}
 .unified-contact-input::placeholder{color:var(--muted);opacity:1}
 .unified-contact-input:focus{border-color:var(--primary);background:var(--surface);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 18%,transparent);outline:0}
+
+.news-card-links{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:2px}
