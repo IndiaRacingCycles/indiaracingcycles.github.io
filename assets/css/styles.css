@@ -343,3 +343,5 @@ body{background:radial-gradient(ellipse at 8% 6%,color-mix(in srgb,var(--tertiar
  .source-list{grid-template-columns:1fr}
  .source-row{padding:13px}
 }
+
+.about-subtitle{display:block;margin-top:10px;font-size:clamp(1.05rem,2vw,1.45rem);font-weight:700;letter-spacing:.01em;color:var(--primary)}.about-role{font-weight:700!important;color:#ffc18e!important;margin-top:-4px!important}
