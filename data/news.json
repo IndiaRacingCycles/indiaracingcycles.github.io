@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-11-04",
-    "note": "Initial launch story. The original article is linked; open it for full context."
+    "last_updated": "2026-11-11",
+    "note": "Cycling news updated with verified coverage of the January 2026 Pune Grand Tour Stage 1 crash and the medical response. Searches of other completed events did not surface reliable reports confirming race crashes."
   },
   "news": [
     {
@@ -15,6 +15,28 @@
       "source_url": "https://indiancyclingnews.com/pune-grand-tour-earns-uci-2-1-upgrade-setting-stage-for-indias-cycling-future/",
       "related_event_id": "bajaj-pune-grand-tour-2027",
       "verified_at": "2026-11-04"
+    },
+    {
+      "id": "pune-grand-tour-2026-medical-response-after-stage-1-crash",
+      "title": "Medical teams treated riders after the Pune Grand Tour Stage 1 pile-up",
+      "published_at": "2026-01-21",
+      "publisher": "The Indian Express",
+      "category": "Race safety",
+      "type": "race",
+      "summary": "A follow-up report described the medical response after the Stage 1 crash near Kolvan. The event's medical partner said about 23 riders were treated at the scene; one rider had a broken tooth and another needed stitches in a hand. The report also said more than 50 cyclists received care for minor injuries during the event period. These figures are from the medical partner's account.",
+      "source_url": "https://indianexpress.com/article/cities/pune/pune-grand-tour-medical-teams-cyclists-minor-injuries-10487430/",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "pune-grand-tour-2026-stage-1-peloton-crash",
+      "title": "At least 30 riders caught in a crash during Pune Grand Tour Stage 1",
+      "published_at": "2026-01-20",
+      "publisher": "The Indian Express",
+      "category": "Crash report",
+      "type": "race",
+      "summary": "A major pile-up happened within the first hour of Stage 1 near Kolvan village on 20 January 2026. The race was neutralised for 23 minutes while medical staff treated riders. Three riders withdrew, and the UCI commissaire panel said no one required hospitalisation. This report concerns the 2026 edition of the Pune Grand Tour.",
+      "source_url": "https://indianexpress.com/article/cities/pune/crash-multiple-cyclists-pune-grand-tour-race-10485399/",
+      "verified_at": "2026-11-11"
     }
   ]
 }
