@@ -59,6 +59,12 @@
     const uciChip=e.uci_accredited ? '<span class="chip">UCI accredited</span>' : "";
     return '<article class="event-card"><div class="event-poster">'+poster+'</div><div class="event-body"><div class="event-meta"><span class="event-date">'+safe(dateRange(e))+'</span>'+sourceLabel+'</div><div class="event-meta">'+categories+'</div><h3>'+safe(e.title)+'</h3><p class="event-description">'+safe(e.description||"Open the official source for event information.")+'</p><div class="event-details"><div class="detail-row"><span class="material-symbols-rounded">location_on</span><a class="event-location-link" href="'+safeUrl("https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(e.location||"India"))+'" target="_blank" rel="noopener" aria-label="View '+safe(e.location||"event location")+' on Google Maps">'+safe(e.location||"Location to be confirmed")+' <span class="material-symbols-rounded map-link-icon">open_in_new</span></a></div><div class="detail-row"><span class="material-symbols-rounded">groups</span><span>'+safe(e.organiser||"Organiser details on official source")+'</span></div>'+phone+(e.verified_at ? '<div class="detail-row"><span class="material-symbols-rounded">fact_check</span><span>Last verified: '+safe(fmt(e.verified_at))+'</span></div>' : (e.confidence === "cfi-calendar-image" ? '<div class="detail-row"><span class="material-symbols-rounded">fact_check</span><span>Source: CFI Calendar 2026–27 image</span></div>' : ""))+'</div><div class="event-actions">'+register+(e.source_url?'<a class="button button-tonal" href="'+safeUrl(e.source_url)+'" target="_blank" rel="noopener">Event details <span class="material-symbols-rounded">open_in_new</span></a>':"")+'</div>'+links(e)+'</div></article>';
   }
+  function mapLocation(value,fallback){
+    const label=String(value||"").trim();
+    if(!label)return safe(fallback||"Location to be confirmed");
+    const url="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(label);
+    return '<a class="event-location-link" href="'+safeUrl(url)+'" target="_blank" rel="noopener noreferrer" aria-label="Search '+safe(label)+' in Google Maps">'+safe(label)+'</a>';
+  }
   function upcomingEventTable(list){
     const labels={international:"International",national:"National",camp:"Camp",private:"Private"};
     const header='<table class="event-table"><thead><tr><th scope="col">Date</th><th scope="col">Event / organiser</th><th scope="col">Discipline</th><th scope="col">Location</th><th scope="col">Type</th><th scope="col">Links</th></tr></thead><tbody>';
@@ -71,7 +77,7 @@
       const register=e.registration_url?'<a class="table-action" href="'+safeUrl(e.registration_url)+'" target="_blank" rel="noopener">Register ↗</a>':"";
       const extra=e.uci_accredited?'<span class="table-mini-badge">UCI</span>':"";
       const status=e.status==="postponed"?"Postponed":(e.status==="cancelled"?"Cancelled":"");
-      return '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong><small>'+safe(e.organiser||"Organiser to be confirmed")+'</small><small class="event-table-mobile-meta">'+safe(sub)+'</small><span class="event-table-mobile-type '+typeClass+'">'+safe(type)+'</span></td><td>'+safe(sub||e.discipline||"To be confirmed")+'</td><td>'+safe(e.location||"To be confirmed")+'</td><td><span class="event-type '+typeClass+'">'+safe(type)+'</span>'+extra+(status?'<small class="event-table-status">'+safe(status)+'</small>':"")+'</td><td class="event-table-links">'+source+register+'</td></tr>';
+      return '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong><small>'+safe(e.organiser||"Organiser to be confirmed")+'</small><small class="event-table-mobile-meta">'+safe(sub)+'</small><span class="event-table-mobile-type '+typeClass+'">'+safe(type)+'</span></td><td>'+safe(sub||e.discipline||"To be confirmed")+'</td><td>'+mapLocation(e.location,"To be confirmed")+'</td><td><span class="event-type '+typeClass+'">'+safe(type)+'</span>'+extra+(status?'<small class="event-table-status">'+safe(status)+'</small>':"")+'</td><td class="event-table-links">'+source+register+'</td></tr>';
     }).join("");
     return header+rows+'</tbody></table>';
   }
@@ -84,7 +90,7 @@
       const source=e.source_url?'<a class="table-action" href="'+safeUrl(e.source_url)+'" target="_blank" rel="noopener">Source ↗</a>':"";
       const register=e.registration_url?'<a class="table-action" href="'+safeUrl(e.registration_url)+'" target="_blank" rel="noopener">Results ↗</a>':"";
       const extra=e.verified_at?'<small class="event-table-status">Verified '+safe(fmt(e.verified_at))+'</small>':"";
-      return '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong><small>'+safe(e.organiser||"Organiser not recorded")+'</small><small class="event-table-mobile-meta">'+safe(discipline)+' · '+result+'</small></td><td>'+safe(discipline||"—")+'</td><td>'+safe(e.location||"Not recorded")+'</td><td><span class="event-result-note">'+result+'</span>'+extra+'</td><td class="event-table-links">'+source+register+'</td></tr>';
+      return '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong><small>'+safe(e.organiser||"Organiser not recorded")+'</small><small class="event-table-mobile-meta">'+safe(discipline)+' · '+result+'</small></td><td>'+safe(discipline||"—")+'</td><td>'+mapLocation(e.location,"Not recorded")+'</td><td><span class="event-result-note">'+result+'</span>'+extra+'</td><td class="event-table-links">'+source+register+'</td></tr>';
     }).join("");
     return header+rows+'</tbody></table>';
   }
