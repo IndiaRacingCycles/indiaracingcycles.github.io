@@ -1,7 +1,7 @@
 {
   "meta": {
     "last_updated": "2026-11-11",
-    "note": "Event calendar checked against organiser, federation, UCI and association announcements on 11 November 2026. Updates include corrected Track Asia Cup II dates, Asian Track Championships dates, Asian Road Championships postponement/host uncertainty, Tour de Thar registration status, completed Zabarvan Legends stage dates, and the ASMITA Women's Cycling Zonal League. Earlier update includes HCL Cyclothon, Pune Grand Tour, Tour of Thekkady, Race Across India and Uttarakhand MTB Challenge. National Road Championships venue remains disputed between the supplied CFI calendar image (Jabalpur) and HimCycling (Coimbatore); verify with CFI. Entries with no new official detail remain TBC."
+    "note": "Checked 11 November 2026. Added Nandi Epic, Deccan Cliffhanger, MTB Jaipur, Tour of the Nilgiris, Great Raipur Velo, D’MTB Darjeeling, HindAyan Mumbai–Pune and The Dunes Ultra. Confirmed Track Asia Cup II dates against UCI; HCL Hyderabad registration marked closed. National Road Championships venue remains disputed between CFI calendar image (Jabalpur) and HimCycling listing (Coimbatore)."
   },
   "events": [
     {
@@ -541,8 +541,8 @@
       "event_scope": "National",
       "calendar_category": "national",
       "organiser": "Cycling Federation of India (CFI)",
-      "description": "Race day is 15 November 2026. Official organiser page confirms registration closed on 1 November. Bib Expo: 13–14 November, 10:00–18:00 at Atrium Mall, Hyderabad. Categories include Elite, Amateur Road (54.6 km and 23.4 km), Amateur MTB Road Race (22.4 km) and Green Ride (9.2 km). Amateur fees shown: ₹1,699; Green Ride ₹699. CFI Elite Pro licence holders cannot enter amateur categories. Confirm race-day instructions with organiser.",
-      "registration_url": "https://hclcyclothon.com/hyderabad-race-info/",
+      "description": "Race day is 15 November 2026. Official registration closed on 1 November. Bib Expo: 13–14 November, 10:00–18:00 at Atrium Mall, Hyderabad. Categories include Elite, Amateur Road (54.6 km and 23.4 km), Amateur MTB Road Race (22.4 km) and Green Ride (9.2 km). Confirm race-day instructions with the organiser.",
+      "registration_url": "",
       "contact_email": "",
       "contact_phone": "",
       "poster_url": "",
@@ -612,7 +612,7 @@
       "calendar_category": "national",
       "uci_accredited": true,
       "organiser": "Cycling Federation of India (CFI)",
-      "description": "The supplied CFI Calendar image lists 26–30 December 2026 in Jabalpur, Madhya Pradesh. However, HimCycling's events page and its 1 November announcement list the 31st National (Senior, Junior & Sub-Junior) Road Cycling Championships for 26–30 December in Coimbatore, Tamil Nadu. The venue information conflicts. We have retained the CFI-calendar entry and flagged the location for confirmation rather than silently changing it. Check the latest CFI circular before travel.",
+      "description": "The supplied CFI Calendar image lists 26–30 December 2026 in Jabalpur, Madhya Pradesh. HimCycling's current event listing instead names Coimbatore, Tamil Nadu for the same dates. Because the venue sources conflict, the location remains unconfirmed. Check the latest CFI circular before travel.",
       "registration_url": "",
       "contact_email": "",
       "contact_phone": "",
@@ -1474,6 +1474,249 @@
       "status": "confirmed",
       "verified_at": "2026-11-11",
       "confidence": "association-announcement"
+    },
+    {
+      "id": "bbch-nandi-epic-2026",
+      "title": "Nandi Epic – BBCh Race #10",
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-20",
+      "location": "STRR–Hyd Cross, Nitesh Layout, Nandi Hill Road, Nandi Hills, Bengaluru, Karnataka",
+      "state": "Karnataka",
+      "discipline": "Road",
+      "categories": [
+        "Road",
+        "Elite",
+        "Amateur",
+        "Masters",
+        "Hill Climb"
+      ],
+      "organiser": "Bangalore Bicycle Championships",
+      "description": "BBCh season finale. Categories include 102 km Elite/Men Masters, 50 km Amateur/Women/Non-Road Bike and the 7.3 km Nandi hill climb. Entries close 18 November 2026 at 11:59 PM; no spot registration on race day.",
+      "registration_url": "https://www.bbch.in/events/bbch26-race10",
+      "source_url": "https://www.bbch.in/events/bbch26-race10",
+      "source_name": "Bangalore Bicycle Championships – official race page",
+      "source_links": [
+        {
+          "label": "Official race details and registration",
+          "url": "https://www.bbch.in/events/bbch26-race10"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
+    },
+    {
+      "id": "deccan-cliffhanger-2026",
+      "title": "Deccan Cliffhanger – Edition 13",
+      "start_date": "2026-11-28",
+      "end_date": "2026-11-29",
+      "location": "Start: Keshavbaug, Karve Nagar, Pune, Maharashtra · Finish: Bogmallo Beach, Goa",
+      "state": "Maharashtra / Goa",
+      "discipline": "Ultra Cycling",
+      "categories": [
+        "Ultra",
+        "Road",
+        "Solo",
+        "Relay",
+        "RAAM Qualifier"
+      ],
+      "organiser": "Inspire India",
+      "description": "643 km Pune-to-Goa ultra-cycling race. Solo self-supported, solo crew-supported and 2/3/4-rider RAAM-style relay formats. Flag-off is scheduled for 28 November; finishes and awards continue on 29 November.",
+      "registration_url": "https://www.inspireindia.net.in/deccan-cliffhanger",
+      "source_url": "https://www.inspireindia.net.in/deccan-cliffhanger",
+      "source_name": "Inspire India – official event page",
+      "source_links": [
+        {
+          "label": "Official event details and entry",
+          "url": "https://www.inspireindia.net.in/deccan-cliffhanger"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
+    },
+    {
+      "id": "mtb-jaipur-2026",
+      "title": "MTB Jaipur 2026 – The Pink City Challenge",
+      "start_date": "2026-12-04",
+      "end_date": "2026-12-06",
+      "location": "Jal Mahal, Amer Fort and Nahargarh, Jaipur, Rajasthan",
+      "state": "Rajasthan",
+      "discipline": "MTB",
+      "categories": [
+        "MTB",
+        "Elite",
+        "Amateur",
+        "Cross-Country"
+      ],
+      "organiser": "MTB Jaipur / Araventure Sports",
+      "description": "Three-day MTB weekend. Bib expo on 4 December; Heritage Circuit Race on 5 December; main race day on 6 December. Elite 60 km MTB-only route and 30 km amateur route (MTB/hybrid).",
+      "registration_url": "https://www.mtbjaipur.com/events/mtb-jaipur-2026",
+      "source_url": "https://www.mtbjaipur.com/events/mtb-jaipur-2026",
+      "source_name": "MTB Jaipur – official event page",
+      "source_links": [
+        {
+          "label": "Official event details and registration",
+          "url": "https://www.mtbjaipur.com/events/mtb-jaipur-2026"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
+    },
+    {
+      "id": "tour-of-nilgiris-2026",
+      "title": "Tour of the Nilgiris – 17th Edition",
+      "start_date": "2026-12-06",
+      "end_date": "2026-12-12",
+      "location": "Mysuru, Karnataka through Karnataka, Kerala and Tamil Nadu, finishing in Ooty",
+      "state": "Karnataka / Kerala / Tamil Nadu",
+      "discipline": "Road",
+      "categories": [
+        "Multi-day Tour",
+        "Endurance",
+        "Road"
+      ],
+      "organiser": "Breakaway Sports / Tour of the Nilgiris",
+      "description": "Fully supported seven-day, 700+ km cycling tour. Pre-tour briefing and registration on 5 December; flag-off on 6 December; final riding day 12 December. This is a supported tour, not a mass-start road race.",
+      "registration_url": "https://www.tourofnilgiris.com/",
+      "source_url": "https://www.tourofnilgiris.com/adayintfn",
+      "source_name": "Tour of the Nilgiris – official schedule",
+      "source_links": [
+        {
+          "label": "Official event website",
+          "url": "https://www.tourofnilgiris.com/"
+        },
+        {
+          "label": "Official route and daily schedule",
+          "url": "https://www.tourofnilgiris.com/route"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
+    },
+    {
+      "id": "great-raipur-velo-2026",
+      "title": "The Great Raipur Velo 2026",
+      "start_date": "2026-12-06",
+      "end_date": "2026-12-06",
+      "location": "Atal Nagar–Nava Raipur, Chhattisgarh",
+      "state": "Chhattisgarh",
+      "discipline": "Road",
+      "categories": [
+        "Road",
+        "Timed Race",
+        "Fellowship Ride"
+      ],
+      "organiser": "Tour De Raipur Cycling Association",
+      "description": "Road cycling event with 50 km men's timed race, 25 km women's timed race and a 15 km non-competitive Fellowship Ride. Registration listings show entries closing in late November; check the organiser's current entry instructions and category rules.",
+      "registration_url": "",
+      "source_url": "https://tourderaipur.com/itsa-thegreatraipurvelo",
+      "source_name": "Tour De Raipur Cycling Association – official event page",
+      "source_links": [
+        {
+          "label": "Official event details",
+          "url": "https://tourderaipur.com/itsa-thegreatraipurvelo"
+        },
+        {
+          "label": "Event listing and category information",
+          "url": "https://www.racesindia.com/races/the-great-raipur-velo/2026"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
+    },
+    {
+      "id": "d-mtb-darjeeling-2026",
+      "title": "D’MTB Darjeeling Mountain Bike Race 2026",
+      "start_date": "2026-12-11",
+      "end_date": "2026-12-11",
+      "location": "Darjeeling, West Bengal",
+      "state": "West Bengal",
+      "discipline": "MTB",
+      "categories": [
+        "MTB",
+        "Elite",
+        "Masters"
+      ],
+      "organiser": "Tea’sta Fest, Darjeeling",
+      "description": "42 km mountain-bike race for Elite and Masters riders. Registration closes 25 November; bib distribution is 10 December and race day is 11 December. Published categories include Open Male and Male Masters (35+).",
+      "registration_url": "https://teastafest.com/participate/d-mtb",
+      "source_url": "https://teastafest.com/participate/d-mtb",
+      "source_name": "Tea’sta Fest – official D’MTB page",
+      "source_links": [
+        {
+          "label": "Official event details and registration",
+          "url": "https://teastafest.com/participate/d-mtb"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
+    },
+    {
+      "id": "hindayan-mumbai-pune-2026",
+      "title": "HindAyan Mumbai to Pune Cycle Expedition",
+      "start_date": "2026-12-20",
+      "end_date": "2026-12-20",
+      "location": "Start: Vashi Railway Station, Navi Mumbai · Finish: Pune, Maharashtra",
+      "state": "Maharashtra",
+      "discipline": "Endurance Ride",
+      "categories": [
+        "Endurance",
+        "140 km",
+        "Non-competitive"
+      ],
+      "organiser": "HindAyan Foundation",
+      "description": "140 km non-competitive supported group expedition from Navi Mumbai to Pune. Reporting 4:00 AM and start 4:30 AM. Minimum age 18. The organiser's timetable lists the start at Azad Maidan, while the event booking page lists Vashi Railway Station; verify the latest start-point instructions with HindAyan before travel. Booking listing currently shows registration closing 1 December.",
+      "registration_url": "https://www.indiarunning.com/events/hindayan_mumbai_to_pune_cyclothon_36517",
+      "source_url": "https://www.hindayan.in/time-table/",
+      "source_name": "HindAyan official timetable",
+      "source_links": [
+        {
+          "label": "Official organiser timetable",
+          "url": "https://www.hindayan.in/time-table/"
+        },
+        {
+          "label": "Event booking and participant details",
+          "url": "https://www.indiarunning.com/events/hindayan_mumbai_to_pune_cyclothon_36517"
+        }
+      ],
+      "status": "scheduled",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-and-booking-listing"
+    },
+    {
+      "id": "dunes-ultra-2027",
+      "title": "The Dunes Ultra 2027",
+      "start_date": "2027-02-08",
+      "end_date": "2027-02-08",
+      "location": "Jaipur – Bikaner – Jaisalmer – Jaipur, Rajasthan",
+      "state": "Rajasthan",
+      "discipline": "Ultra Cycling",
+      "categories": [
+        "Ultra",
+        "675 km",
+        "1,340 km",
+        "Solo",
+        "Relay"
+      ],
+      "organiser": "Inspire India",
+      "description": "Inspire India's announced desert ultra-cycling event. The organiser lists 675 km and 1,340 km formats, with solo self-supported, solo crew-supported and RAAM-style relay options. Confirm exact race duration and registration opening with the organiser.",
+      "registration_url": "",
+      "source_url": "https://www.inspireindia.net.in/",
+      "source_name": "Inspire India – official race announcements",
+      "source_links": [
+        {
+          "label": "Official organiser announcements",
+          "url": "https://www.inspireindia.net.in/"
+        }
+      ],
+      "status": "scheduled",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
     }
   ]
 }
