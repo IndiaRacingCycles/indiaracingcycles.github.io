@@ -53,10 +53,9 @@
       "type": "race",
       "summary": "A separate incident during the 2026 Pune Grand Tour was reported near Garware Bridge in Deccan, where a narrow section caused collisions among riders and a brief argument. Police intervened and no serious injuries were reported. The publisher's page includes the video; this is separate from the Stage 1 pile-up near Kolvan.",
       "source_url": "https://www.freepressjournal.in/amp/pune/viral-video-shows-heated-exchange-between-cyclists-at-pune-grand-tour-2026-on-fc-road-watch",
-      "video_url": "https://www.freepressjournal.in/amp/pune/viral-video-shows-heated-exchange-between-cyclists-at-pune-grand-tour-2026-on-fc-road-watch",
-      "video_label": "Watch incident video",
       "related_event_id": "bajaj-pune-grand-tour-2027",
-      "verified_at": "2026-11-11"
+      "verified_at": "2026-11-11",
+      "source_label": "Read report and view incident video"
     },
     {
       "id": "pune-grand-tour-2026-medical-response-after-stage-1-crash",
