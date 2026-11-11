@@ -1,0 +1,37 @@
+name: Publish desktop cover
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".upload-tmp/trigger.txt"
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble and validate WebP
+        run: |
+          mkdir -p assets/images
+          cat .upload-tmp/hero-cover-part-*.txt | tr -d '\r\n' | base64 --decode > assets/images/hero-taj-mahal-desktop.webp
+          python - <<'PY'
+          from PIL import Image
+          path = "assets/images/hero-taj-mahal-desktop.webp"
+          with open(path, "rb") as f:
+              header = f.read(12)
+          assert header[:4] == b"RIFF" and header[8:12] == b"WEBP", "Invalid WebP file"
+          image = Image.open(path)
+          assert image.size == (1000, 400), f"Unexpected image dimensions: {image.size}"
+          image.verify()
+          print("Validated desktop cover:", image.size)
+          PY
+      - name: Commit image and remove temporary upload files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -rf .upload-tmp
+          rm -f .github/workflows/publish-desktop-cover.yml
+          git add -A assets/images/hero-taj-mahal-desktop.webp .upload-tmp .github/workflows/publish-desktop-cover.yml
+          git commit -m "Update India Racing Cycles desktop cover"
+          git push
