@@ -38,8 +38,32 @@
 
   <main id="main">
     <section class="cover-banner" aria-label="India Racing Cycles cover image">
-      <picture><source media="(max-width: 700px)" srcset="assets/images/hero-taj-mahal-mobile.webp?v=irc-cover-20261112"><img src="assets/images/hero-taj-mahal-desktop.webp?v=irc-cover-20261112" alt="India Racing Cycles road race passing the Taj Mahal" fetchpriority="high" decoding="async"></picture>
+      <img id="irc-site-cover" src="assets/images/hero-taj-mahal-desktop.webp?v=irc-cover-20261112" alt="India Racing Cycles cyclists racing past the Taj Mahal" fetchpriority="high" decoding="async">
     </section>
+    <script>
+    (() => {
+      const imageParts = [
+        "assets/images/irc-cover/cover-part-1.txt",
+        "assets/images/irc-cover/cover-part-2.txt",
+        "assets/images/irc-cover/cover-part-3.txt",
+        "assets/images/irc-cover/cover-part-4.txt"
+      ];
+      const cover = document.getElementById("irc-site-cover");
+      Promise.all(imageParts.map(path =>
+        fetch(path + "?v=20261113").then(response => {
+          if (!response.ok) throw new Error("Could not load cover image data");
+          return response.text();
+        })
+      )).then(parts => {
+        const binary = atob(parts.join("").trim());
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+        const objectUrl = URL.createObjectURL(new Blob([bytes], { type: "image/webp" }));
+        cover.addEventListener("load", () => URL.revokeObjectURL(objectUrl), { once: true });
+        cover.src = objectUrl;
+      }).catch(error => console.error("India Racing Cycles cover image:", error));
+    })();
+    </script>
     <section class="hero">
       <div class="hero-glow"></div>
       <div class="hero-content">

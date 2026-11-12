@@ -67,7 +67,7 @@
 /* India Racing Cycles brand images */
 .brand-logo{display:block;width:64px;height:58px;object-fit:contain;flex:none;border-radius:9px;background:#0c131a}
 .cover-banner{width:100%;max-width:1440px;margin:0 auto;overflow:hidden;background:#0c131a;border-bottom:3px solid #f28c00}
-.cover-banner img{display:block;width:100%;height:auto;aspect-ratio:1116/278;object-fit:cover}
+.cover-banner img{display:block;width:100%;height:auto;aspect-ratio:3/1;object-fit:cover}
 @media(max-width:650px){.brand-logo{width:50px;height:46px}.brand{gap:8px}.brand-copy strong{font-size:.72rem}.brand-copy small{font-size:.5rem}}
 
 
