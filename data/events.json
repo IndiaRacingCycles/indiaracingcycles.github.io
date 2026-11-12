@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-11-11",
-    "note": "Checked 11 November 2026. Added Nandi Epic, Deccan Cliffhanger, MTB Jaipur, Tour of the Nilgiris, Great Raipur Velo, D’MTB Darjeeling, HindAyan Mumbai–Pune and The Dunes Ultra. Confirmed Track Asia Cup II dates against UCI; HCL Hyderabad registration marked closed. National Road Championships venue remains disputed between CFI calendar image (Jabalpur) and HimCycling listing (Coimbatore)."
+    "last_updated": "2026-11-12",
+    "note": "Checked 11 November 2026. Added Nandi Epic, Deccan Cliffhanger, MTB Jaipur, Tour of the Nilgiris, Great Raipur Velo, D’MTB Darjeeling, HindAyan Mumbai–Pune and The Dunes Ultra. Confirmed Track Asia Cup II dates against UCI; HCL Hyderabad registration marked closed. National Road Championships venue remains disputed between CFI calendar image (Jabalpur) and HimCycling listing (Coimbatore). Added ASMITA Khelo India Women’s Cycling League – West Zone in Bhavnagar for 21–22 November 2026, using the poster supplied on 12 November."
   },
   "events": [
     {
@@ -1717,6 +1717,34 @@
       "status": "scheduled",
       "verified_at": "2026-11-11",
       "confidence": "organiser-website"
+    },
+    {
+      "id": "asmita-khelo-india-womens-cycling-west-zone-bhavnagar-2026",
+      "title": "ASMITA Khelo India Women’s Cycling League – West Zone",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-22",
+      "location": "Gaytri Resort, P6C3+HM2, GJ SH 37, Ghogha Road, near Avaniya, Bhavnagar, Gujarat 364002",
+      "state": "Gujarat",
+      "discipline": "Other",
+      "categories": [
+        "Women",
+        "Khelo India",
+        "ASMITA",
+        "West Zone",
+        "Cycling League"
+      ],
+      "event_scope": "West Zone",
+      "organiser": "Cycling Federation of India (CFI), Gujarat State Cycling Association (GSCA) and Bhavnagar Cycling Association",
+      "description": "Scheduled for 21–22 November 2026 in Bhavnagar, Gujarat. The event poster lists Gaytri Resort, P6C3+HM2, GJ SH 37, Ghogha Road, near Avaniya, Gujarat 364002 as the venue. The host will provide free boarding and lodging from the evening of 20 November to the afternoon of 22 November 2026. The supplied poster does not include a registration link or contact number; confirm entry, eligibility and race-format details with the organisers.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_note": "Event poster supplied by the community admin; details transcribed from the poster.",
+      "source_url": "",
+      "source_links": [],
+      "status": "confirmed",
+      "verified_at": "2026-11-12",
+      "confidence": "association-poster"
     }
   ]
 }
