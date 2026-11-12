@@ -19,7 +19,7 @@ jobs:
           from pathlib import Path
           data = Path("assets/images/hero-taj-mahal-mobile.webp").read_bytes()
           assert data[:4] == b"RIFF" and data[8:12] == b"WEBP", "Invalid WebP file"
-          assert len(data) == 59360, f"Unexpected image size: {len(data)}"
+          assert len(data) == 53342, f"Unexpected image size: {len(data)}"
           print("Validated mobile WebP:", len(data), "bytes")
           PY
           file assets/images/hero-taj-mahal-mobile.webp
