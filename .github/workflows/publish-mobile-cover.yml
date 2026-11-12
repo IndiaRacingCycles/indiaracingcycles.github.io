@@ -1,0 +1,34 @@
+name: Publish mobile cover
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".upload-mobile/trigger.txt"
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble and validate mobile cover
+        run: |
+          mkdir -p assets/images
+          cat .upload-mobile/mobile-cover-part-*.txt | tr -d '\r\n' | base64 --decode > assets/images/hero-taj-mahal-mobile.webp
+          python - <<'PY'
+          from pathlib import Path
+          data = Path("assets/images/hero-taj-mahal-mobile.webp").read_bytes()
+          assert data[:4] == b"RIFF" and data[8:12] == b"WEBP", "Invalid WebP file"
+          assert len(data) == 59360, f"Unexpected image size: {len(data)}"
+          print("Validated mobile WebP:", len(data), "bytes")
+          PY
+          file assets/images/hero-taj-mahal-mobile.webp
+      - name: Commit image and remove temporary upload files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -rf .upload-mobile
+          rm -f .github/workflows/publish-mobile-cover.yml
+          git add -A assets/images/hero-taj-mahal-mobile.webp .upload-mobile .github/workflows/publish-mobile-cover.yml
+          git commit -m "Update India Racing Cycles mobile cover"
+          git push
