@@ -78,7 +78,7 @@
       const register=e.registration_url?'<a class="table-action" href="'+safeUrl(e.registration_url)+'" target="_blank" rel="noopener">Register ↗</a>':"";
       const extra=e.uci_accredited?'<span class="table-mini-badge">UCI</span>':"";
       const status=e.status==="postponed"?"Postponed":(e.status==="cancelled"?"Cancelled":"");
-      const details=e.id==="asmita-khelo-india-womens-cycling-west-zone-bhavnagar-2026" ? '<button type="button" class="table-action event-details-link" data-event-details="'+safe(e.id)+'">Details ↗</button>' : "";
+      const details=e.id==="asmita-khelo-india-womens-cycling-west-zone-bhavnagar-2026" ? '<button type="button" class="table-action" data-event-details="'+safe(e.id)+'">Details ↗</button>' : "";
       return '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong><small>'+safe(e.organiser||"Organiser to be confirmed")+'</small><small class="event-table-mobile-meta">'+safe(sub)+'</small><span class="event-table-mobile-type '+typeClass+'">'+safe(type)+'</span></td><td>'+safe(sub||e.discipline||"To be confirmed")+'</td><td>'+mapLocation(e.location,"To be confirmed")+'</td><td><span class="event-type '+typeClass+'">'+safe(type)+'</span>'+extra+(status?'<small class="event-table-status">'+safe(status)+'</small>':"")+'</td><td class="event-table-links">'+source+details+register+'</td></tr>';
     }).join("");
     return header+rows+'</tbody></table>';
