@@ -131,6 +131,12 @@
 .event-table-status{display:block;margin-top:4px;font-size:.64rem;color:var(--muted)}
 .table-mini-badge{display:inline-block;margin-left:4px;padding:3px 5px;border-radius:5px;background:var(--surface3);font-size:.58rem;font-weight:900}
 .event-table-links{white-space:nowrap}
+.event-table-detail-row td{padding:0 12px 12px!important;border-top:0!important}
+.event-table-detail{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,1fr);gap:12px;background:var(--surface3);border-radius:10px;padding:12px 14px;white-space:normal}
+.event-table-detail strong{display:block;color:var(--ink);font-size:.72rem;font-weight:800;margin-bottom:4px}
+.event-table-detail p{margin:0;color:var(--muted);font-size:.72rem;line-height:1.5}
+.event-table-accommodation{border-left:3px solid var(--accent);padding-left:12px}
+@media(max-width:760px){.event-table-detail{grid-template-columns:1fr;gap:10px;padding:10px}.event-table-detail p{font-size:.68rem}.event-table-accommodation{border-left:0;border-top:2px solid var(--accent);padding:9px 0 0}}
 .table-action{display:inline-block;margin:2px 5px 2px 0;color:var(--primary-dark);font-size:.69rem;font-weight:800;text-decoration:none}
 .table-action:hover{text-decoration:underline}
 @media(max-width:760px){
