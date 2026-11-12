@@ -78,7 +78,7 @@
       const register=e.registration_url?'<a class="table-action" href="'+safeUrl(e.registration_url)+'" target="_blank" rel="noopener">Register ↗</a>':"";
       const extra=e.uci_accredited?'<span class="table-mini-badge">UCI</span>':"";
       const status=e.status==="postponed"?"Postponed":(e.status==="cancelled"?"Cancelled":"");
-      const details=e.id==="asmita-khelo-india-womens-cycling-west-zone-bhavnagar-2026" ? '<button type="button" class="table-action event-details-link" data-event-details="'+safe(e.id)+'">Details</button>' : "";
+      const details=e.id==="asmita-khelo-india-womens-cycling-west-zone-bhavnagar-2026" ? '<button type="button" class="table-action event-details-link" data-event-details="'+safe(e.id)+'">Details ↗</button>' : "";
       return '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong><small>'+safe(e.organiser||"Organiser to be confirmed")+'</small><small class="event-table-mobile-meta">'+safe(sub)+'</small><span class="event-table-mobile-type '+typeClass+'">'+safe(type)+'</span></td><td>'+safe(sub||e.discipline||"To be confirmed")+'</td><td>'+mapLocation(e.location,"To be confirmed")+'</td><td><span class="event-type '+typeClass+'">'+safe(type)+'</span>'+extra+(status?'<small class="event-table-status">'+safe(status)+'</small>':"")+'</td><td class="event-table-links">'+source+details+register+'</td></tr>';
     }).join("");
     return header+rows+'</tbody></table>';
@@ -140,8 +140,9 @@
       }
       const content=modal.querySelector(".event-details-content");
       const posterUrl=item.poster_url||"";
-      const poster=posterUrl?'<h3>Official event poster</h3><button type="button" class="event-details-poster-trigger" data-view-event-poster="'+safeUrl(posterUrl)+'"><img class="event-details-poster" src="'+safeUrl(posterUrl)+'" alt="ASMITA Khelo India Women’s Cycling League West Zone event poster"><span>Tap to view full poster</span></button>':"";
-      content.innerHTML='<h2 id="event-details-title">'+safe(item.title)+'</h2><p class="event-details-date">'+safe(dateRange(item))+'</p><h3>Organisers</h3><p>'+safe(item.organiser||"To be confirmed")+'</p><h3>Venue</h3><p>'+safe(item.location||"To be confirmed")+'</p><h3>Event information</h3><p>'+safe(item.description||"")+'</p>'+(item.accommodation_note?'<div class="event-details-accommodation"><h3>Free boarding &amp; lodging</h3><p>'+safe(item.accommodation_note)+'</p></div>':"")+poster;
+      content.innerHTML=posterUrl
+        ? '<button type="button" class="event-details-poster-trigger" data-view-event-poster="'+safeUrl(posterUrl)+'"><img class="event-details-poster" src="'+safeUrl(posterUrl)+'" alt="'+safe(item.title)+' official event poster"></button>'
+        : '<div class="event-details-poster-missing" role="status" aria-label="Event poster image is not available"><span class="material-symbols-rounded" aria-hidden="true">image_not_supported</span></div>';
       modal.querySelector(".event-poster-lightbox img").removeAttribute("src");
       modal.hidden=false;document.body.classList.add("event-details-open");
     });
