@@ -1,0 +1,40 @@
+name: Publish responsive homepage cover
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.upload-tmp/trigger.txt'
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Decode and validate cover image
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s .upload-tmp/cover-part-01.txt
+          cat .upload-tmp/cover-part-*.txt | tr -d '\r\n\t ' | base64 --decode > /tmp/irc-cover.webp
+          test -s /tmp/irc-cover.webp
+          file /tmp/irc-cover.webp | grep -q 'Web/P'
+          identify -format '%w %h' /tmp/irc-cover.webp | grep -q '^1200 299$'
+          mkdir -p assets/images
+          cp /tmp/irc-cover.webp assets/images/hero-taj-mahal-desktop.webp
+          cp /tmp/irc-cover.webp assets/images/hero-taj-mahal-mobile.webp
+      - name: Remove temporary upload files and commit cover images
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .upload-tmp
+          rm -f .github/workflows/publish-responsive-cover.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Update desktop and mobile Taj Mahal cycling covers'
+          git push origin main
