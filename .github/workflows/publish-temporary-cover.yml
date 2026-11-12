@@ -1,0 +1,43 @@
+name: Publish panoramic website cover
+on:
+  push:
+    paths:
+      - ".cover-transfer/READY"
+permissions:
+  contents: write
+jobs:
+  publish-cover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Install both cover images from transfer chunks
+        run: |
+          python - <<'PY'
+          import base64
+          from pathlib import Path
+          transfer = Path(".cover-transfer")
+          chunks = sorted(transfer.glob("part-*.txt"))
+          if not chunks:
+              raise SystemExit("No image chunks found.")
+          encoded = "".join(p.read_text().strip() for p in chunks)
+          image = base64.b64decode(encoded, validate=True)
+          if not (image.startswith(b"RIFF") and image[8:12] == b"WEBP"):
+              raise SystemExit("Uploaded data is not a valid WebP image.")
+          for name in ("hero-taj-mahal-desktop.webp", "hero-taj-mahal-mobile.webp"):
+              Path("assets/images", name).write_bytes(image)
+          print(f"Installed WebP cover: {len(image)} bytes")
+          PY
+      - name: Remove temporary transfer files
+        run: |
+          rm -rf .cover-transfer
+          rm -f .github/workflows/publish-temporary-cover.yml
+      - name: Commit both covers
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Publish correct panoramic cover on mobile and desktop"
+          git push origin HEAD:main
