@@ -17,12 +17,16 @@ jobs:
           cat .upload-mobile/mobile-cover-part-*.txt | tr -d '\r\n' | base64 --decode > assets/images/hero-taj-mahal-mobile.webp
           python - <<'PY'
           from pathlib import Path
-          data = Path("assets/images/hero-taj-mahal-mobile.webp").read_bytes()
+          from PIL import Image
+          path = Path("assets/images/hero-taj-mahal-mobile.webp")
+          data = path.read_bytes()
           assert data[:4] == b"RIFF" and data[8:12] == b"WEBP", "Invalid WebP file"
-          assert len(data) == 53342, f"Unexpected image size: {len(data)}"
-          print("Validated mobile WebP:", len(data), "bytes")
+          assert len(data) == 40374, f"Unexpected image size: {len(data)}"
+          image = Image.open(path)
+          assert image.size == (480, 640), f"Unexpected dimensions: {image.size}"
+          image.verify()
+          print("Validated mobile WebP:", len(data), "bytes; 480x640")
           PY
-          file assets/images/hero-taj-mahal-mobile.webp
       - name: Commit image and remove temporary upload files
         run: |
           git config user.name "github-actions[bot]"
