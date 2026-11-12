@@ -78,8 +78,8 @@
       const register=e.registration_url?'<a class="table-action" href="'+safeUrl(e.registration_url)+'" target="_blank" rel="noopener">Register ↗</a>':"";
       const extra=e.uci_accredited?'<span class="table-mini-badge">UCI</span>':"";
       const status=e.status==="postponed"?"Postponed":(e.status==="cancelled"?"Cancelled":"");
-      const details=e.id==="asmita-khelo-india-womens-cycling-west-zone-bhavnagar-2026" ? '<button type="button" class="event-details-button" data-event-details="'+safe(e.id)+'">Details</button>' : "";
-      return '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong>'+details+'<small>'+safe(e.organiser||"Organiser to be confirmed")+'</small><small class="event-table-mobile-meta">'+safe(sub)+'</small><span class="event-table-mobile-type '+typeClass+'">'+safe(type)+'</span></td><td>'+safe(sub||e.discipline||"To be confirmed")+'</td><td>'+mapLocation(e.location,"To be confirmed")+'</td><td><span class="event-type '+typeClass+'">'+safe(type)+'</span>'+extra+(status?'<small class="event-table-status">'+safe(status)+'</small>':"")+'</td><td class="event-table-links">'+source+register+'</td></tr>';
+      const details=e.id==="asmita-khelo-india-womens-cycling-west-zone-bhavnagar-2026" ? '<button type="button" class="table-action event-details-link" data-event-details="'+safe(e.id)+'">Details</button>' : "";
+      return '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong><small>'+safe(e.organiser||"Organiser to be confirmed")+'</small><small class="event-table-mobile-meta">'+safe(sub)+'</small><span class="event-table-mobile-type '+typeClass+'">'+safe(type)+'</span></td><td>'+safe(sub||e.discipline||"To be confirmed")+'</td><td>'+mapLocation(e.location,"To be confirmed")+'</td><td><span class="event-type '+typeClass+'">'+safe(type)+'</span>'+extra+(status?'<small class="event-table-status">'+safe(status)+'</small>':"")+'</td><td class="event-table-links">'+source+details+register+'</td></tr>';
     }).join("");
     return header+rows+'</tbody></table>';
   }
@@ -111,13 +111,38 @@
       let modal=$("event-details-modal");
       if(!modal){
         modal=document.createElement("div");modal.id="event-details-modal";modal.className="event-details-modal";modal.hidden=true;
-        modal.innerHTML='<div class="event-details-backdrop" data-close-event-details></div><section class="event-details-panel" role="dialog" aria-modal="true" aria-labelledby="event-details-title"><button type="button" class="event-details-close" aria-label="Close" data-close-event-details>×</button><div class="event-details-content"></div></section>';
+        modal.innerHTML='<div class="event-details-backdrop" data-close-event-details></div><section class="event-details-panel" role="dialog" aria-modal="true" aria-labelledby="event-details-title"><button type="button" class="event-details-close" aria-label="Close" data-close-event-details>×</button><div class="event-details-content"></div></section><div class="event-poster-lightbox" hidden role="dialog" aria-modal="true" aria-label="Full event poster"><div class="event-poster-lightbox-backdrop" data-close-event-poster></div><div class="event-poster-lightbox-frame"><button type="button" class="event-poster-lightbox-close" aria-label="Close poster" data-close-event-poster>×</button><img alt="Full-size ASMITA Khelo India Women’s Cycling League West Zone event poster"></div></div>';
         document.body.appendChild(modal);
-        modal.addEventListener("click",e=>{if(e.target.closest("[data-close-event-details]")){modal.hidden=true;document.body.classList.remove("event-details-open");}});
-        document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!modal.hidden){modal.hidden=true;document.body.classList.remove("event-details-open");}});
+        modal.addEventListener("click",e=>{
+          const imageButton=e.target.closest("[data-view-event-poster]");
+          if(imageButton){
+            const viewer=modal.querySelector(".event-poster-lightbox");
+            viewer.querySelector("img").src=imageButton.dataset.viewEventPoster;
+            viewer.hidden=false;
+            return;
+          }
+          if(e.target.closest("[data-close-event-poster]")){
+            modal.querySelector(".event-poster-lightbox").hidden=true;
+            return;
+          }
+          if(e.target.closest("[data-close-event-details]")){
+            modal.querySelector(".event-poster-lightbox").hidden=true;
+            modal.hidden=true;document.body.classList.remove("event-details-open");
+          }
+        });
+        document.addEventListener("keydown",e=>{
+          if(e.key==="Escape"&&!modal.hidden){
+            const viewer=modal.querySelector(".event-poster-lightbox");
+            if(viewer&&!viewer.hidden){viewer.hidden=true;return;}
+            modal.hidden=true;document.body.classList.remove("event-details-open");
+          }
+        });
       }
       const content=modal.querySelector(".event-details-content");
-      content.innerHTML='<h2 id="event-details-title">'+safe(item.title)+'</h2><p class="event-details-date">'+safe(dateRange(item))+'</p><h3>Organisers</h3><p>'+safe(item.organiser||"To be confirmed")+'</p><h3>Venue</h3><p>'+safe(item.location||"To be confirmed")+'</p><h3>Event information</h3><p>'+safe(item.description||"")+'</p>'+(item.accommodation_note?'<div class="event-details-accommodation"><h3>Free boarding &amp; lodging</h3><p>'+safe(item.accommodation_note)+'</p></div>':"")+(item.poster_url?'<h3>Official event poster</h3><a href="'+safeUrl(item.poster_url)+'" target="_blank" rel="noopener"><img class="event-details-poster" src="'+safeUrl(item.poster_url)+'" alt="ASMITA Khelo India Women’s Cycling League West Zone event poster"></a>':"");
+      const posterUrl=item.poster_url||"";
+      const poster=posterUrl?'<h3>Official event poster</h3><button type="button" class="event-details-poster-trigger" data-view-event-poster="'+safeUrl(posterUrl)+'"><img class="event-details-poster" src="'+safeUrl(posterUrl)+'" alt="ASMITA Khelo India Women’s Cycling League West Zone event poster"><span>Tap to view full poster</span></button>':"";
+      content.innerHTML='<h2 id="event-details-title">'+safe(item.title)+'</h2><p class="event-details-date">'+safe(dateRange(item))+'</p><h3>Organisers</h3><p>'+safe(item.organiser||"To be confirmed")+'</p><h3>Venue</h3><p>'+safe(item.location||"To be confirmed")+'</p><h3>Event information</h3><p>'+safe(item.description||"")+'</p>'+(item.accommodation_note?'<div class="event-details-accommodation"><h3>Free boarding &amp; lodging</h3><p>'+safe(item.accommodation_note)+'</p></div>':"")+poster;
+      modal.querySelector(".event-poster-lightbox img").removeAttribute("src");
       modal.hidden=false;document.body.classList.add("event-details-open");
     });
     ["event-search","category-filter","state-filter"].forEach(id=>$(id).addEventListener(id==="event-search"?"input":"change",render));
