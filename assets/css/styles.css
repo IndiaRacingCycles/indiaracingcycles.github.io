@@ -350,3 +350,15 @@ body{background:radial-gradient(ellipse at 8% 6%,color-mix(in srgb,var(--tertiar
 
 /* Keep About Me last even when new navigation items are added */
 .main-nav > .nav-link[href="about.html"]{order:9999}
+
+/* Compact homepage cover typography */
+.cover-banner + .hero .hero-content{max-width:500px}
+.cover-banner + .hero .eyebrow{font-size:10px!important;letter-spacing:.12em!important;gap:6px!important;margin-bottom:8px!important}
+.cover-banner + .hero .eyebrow .material-symbols-rounded{font-size:14px!important}
+.cover-banner + .hero h1{font-size:clamp(25px,2.15vw,31px)!important;line-height:1.08!important;letter-spacing:-.035em!important;margin:0 0 8px!important}
+.cover-banner + .hero .hero-lead{font-size:clamp(12px,.9vw,13px)!important;line-height:1.45!important;max-width:450px!important;margin:0!important}
+@media(max-width:760px){
+  .cover-banner + .hero .eyebrow{font-size:9px!important;letter-spacing:.09em!important;margin-bottom:6px!important}
+  .cover-banner + .hero h1{font-size:24px!important;line-height:1.08!important;margin-bottom:7px!important}
+  .cover-banner + .hero .hero-lead{font-size:12px!important;line-height:1.42!important}
+}
