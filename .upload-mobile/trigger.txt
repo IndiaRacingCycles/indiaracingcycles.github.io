@@ -1,1 +1,0 @@
-publish mobile cover, validation fixed
