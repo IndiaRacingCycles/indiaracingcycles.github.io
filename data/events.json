@@ -1723,7 +1723,7 @@
       "title": "ASMITA Khelo India Women’s Cycling League – West Zone",
       "start_date": "2026-11-21",
       "end_date": "2026-11-22",
-      "location": "Gaytri Resort, P6C3+HM2, GJ SH 37, Ghogha Road, near Avaniya, Bhavnagar, Gujarat 364002",
+      "location": "Gaytri Resort, P6C3+HM2, GJ SH 37, Ghogha Road, near Avaniya, Gujarat 364002",
       "state": "Gujarat",
       "discipline": "Other",
       "categories": [
@@ -1735,16 +1735,18 @@
       ],
       "event_scope": "West Zone",
       "organiser": "Cycling Federation of India (CFI), Gujarat State Cycling Association (GSCA) and Bhavnagar Cycling Association",
-      "description": "Scheduled for 21–22 November 2026 in Bhavnagar, Gujarat. The event poster lists Gaytri Resort, P6C3+HM2, GJ SH 37, Ghogha Road, near Avaniya, Gujarat 364002 as the venue. The host will provide free boarding and lodging from the evening of 20 November to the afternoon of 22 November 2026. The supplied poster does not include a registration link or contact number; confirm entry, eligibility and race-format details with the organisers.",
+      "description": "Women’s cycling league event scheduled in Bhavnagar, Gujarat, on 21–22 November 2026. The poster displays the Cycling Federation of India (CFI), Gujarat State Cycling Association (GSCA) and Bhavnagar Cycling Association.",
       "registration_url": "",
       "contact_email": "",
       "contact_phone": "",
-      "poster_note": "Event poster supplied by the community admin; details transcribed from the poster.",
+      "poster_note": "Information transcribed from the event poster supplied on 12 November 2026.",
       "source_url": "",
       "source_links": [],
       "status": "confirmed",
       "verified_at": "2026-11-12",
-      "confidence": "association-poster"
+      "confidence": "association-poster",
+      "calendar_details": true,
+      "accommodation_note": "Free boarding and lodging will be provided by the host from the evening of 20 November 2026 until the afternoon of 22 November 2026."
     }
   ]
 }
