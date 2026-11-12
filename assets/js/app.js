@@ -78,9 +78,8 @@
       const register=e.registration_url?'<a class="table-action" href="'+safeUrl(e.registration_url)+'" target="_blank" rel="noopener">Register ↗</a>':"";
       const extra=e.uci_accredited?'<span class="table-mini-badge">UCI</span>':"";
       const status=e.status==="postponed"?"Postponed":(e.status==="cancelled"?"Cancelled":"");
-      const mainRow = '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong><small>'+safe(e.organiser||"Organiser to be confirmed")+'</small><small class="event-table-mobile-meta">'+safe(sub)+'</small><span class="event-table-mobile-type '+typeClass+'">'+safe(type)+'</span></td><td>'+safe(sub||e.discipline||"To be confirmed")+'</td><td>'+mapLocation(e.location,"To be confirmed")+'</td><td><span class="event-type '+typeClass+'">'+safe(type)+'</span>'+extra+(status?'<small class="event-table-status">'+safe(status)+'</small>':"")+'</td><td class="event-table-links">'+source+register+'</td></tr>';
-      const detailRow = e.calendar_details ? '<tr class="event-table-detail-row"><td colspan="6"><div class="event-table-detail"><div><strong>Event details</strong><p>'+safe(e.description||"")+'</p></div>'+(e.accommodation_note?'<div class="event-table-accommodation"><strong>Free boarding &amp; lodging</strong><p>'+safe(e.accommodation_note)+'</p></div>':"")+'</div></td></tr>' : "";
-      return mainRow+detailRow;
+      const details=e.id==="asmita-khelo-india-womens-cycling-west-zone-bhavnagar-2026" ? '<button type="button" class="table-action event-details-button" data-event-details="'+safe(e.id)+'">Details</button>' : "";
+      return '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong><small>'+safe(e.organiser||"Organiser to be confirmed")+'</small><small class="event-table-mobile-meta">'+safe(sub)+'</small><span class="event-table-mobile-type '+typeClass+'">'+safe(type)+'</span></td><td>'+safe(sub||e.discipline||"To be confirmed")+'</td><td>'+mapLocation(e.location,"To be confirmed")+'</td><td><span class="event-type '+typeClass+'">'+safe(type)+'</span>'+extra+(status?'<small class="event-table-status">'+safe(status)+'</small>':"")+'</td><td class="event-table-links">'+details+source+register+'</td></tr>';
     }).join("");
     return header+rows+'</tbody></table>';
   }
@@ -104,6 +103,23 @@
     try{const d=await load("events");events=d.events||d;const meta=d.meta||{};const upcoming=events.filter(e=>(e.status==="postponed" || (e.end_date ? new Date(e.end_date+"T23:59:59")>=today : e.status!=="completed"))&&e.status!=="cancelled");$("upcoming-count").textContent=upcoming.length;$("updated-date").textContent=meta.last_updated?fmt(meta.last_updated):"—";const states=[...new Set(upcoming.map(e=>e.state).filter(Boolean))];$("state-count").textContent=states.length?states.length+" states":"All India";const state=$("state-filter");states.sort().forEach(s=>state.add(new Option(s,s)));render();}
     catch(err){grid.innerHTML=empty("Calendar could not load","Please refresh the page. The event data file may be temporarily unavailable.","cloud_offline");$("event-error").hidden=false;$("event-error").textContent=err.message;}
     function render(){const q=$("event-search").value.trim().toLowerCase(),cat=$("category-filter").value,state=$("state-filter").value;const list=events.filter(e=>(e.end_date ? new Date(e.end_date+"T23:59:59")>=today : e.status!=="completed")&&e.status!=="cancelled").filter(e=>(!q||[e.title,e.location,e.organiser,e.description].join(" ").toLowerCase().includes(q))&&(!cat||(e.discipline||"").toLowerCase().includes(cat.toLowerCase())||(e.categories||[]).some(c=>c.toLowerCase().includes(cat.toLowerCase())))&&(!state||e.state===state)).sort((a,b)=>(a.start_date||"9999-12-31").localeCompare(b.start_date||"9999-12-31"));grid.innerHTML=list.length?upcomingEventTable(list):empty("No matching events","Try a different search or filter. New listings appear after a source has been checked.","event_busy");}
+    grid.addEventListener("click",ev=>{
+      const button=ev.target.closest("[data-event-details]");
+      if(!button)return;
+      const item=events.find(x=>x.id===button.dataset.eventDetails);
+      if(!item)return;
+      let modal=$("event-details-modal");
+      if(!modal){
+        modal=document.createElement("div");modal.id="event-details-modal";modal.className="event-details-modal";modal.hidden=true;
+        modal.innerHTML='<div class="event-details-backdrop" data-close-event-details></div><section class="event-details-panel" role="dialog" aria-modal="true" aria-labelledby="event-details-title"><button type="button" class="event-details-close" aria-label="Close" data-close-event-details>×</button><div class="event-details-content"></div></section>';
+        document.body.appendChild(modal);
+        modal.addEventListener("click",e=>{if(e.target.closest("[data-close-event-details]")){modal.hidden=true;document.body.classList.remove("event-details-open");}});
+        document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!modal.hidden){modal.hidden=true;document.body.classList.remove("event-details-open");}});
+      }
+      const content=modal.querySelector(".event-details-content");
+      content.innerHTML='<h2 id="event-details-title">'+safe(item.title)+'</h2><p class="event-details-date">'+safe(dateRange(item))+'</p><h3>Organisers</h3><p>'+safe(item.organiser||"To be confirmed")+'</p><h3>Venue</h3><p>'+safe(item.location||"To be confirmed")+'</p><h3>Event information</h3><p>'+safe(item.description||"")+'</p>'+(item.accommodation_note?'<div class="event-details-accommodation"><h3>Free boarding &amp; lodging</h3><p>'+safe(item.accommodation_note)+'</p></div>':"")+(item.poster_url?'<h3>Official event poster</h3><a href="'+safeUrl(item.poster_url)+'" target="_blank" rel="noopener"><img class="event-details-poster" src="'+safeUrl(item.poster_url)+'" alt="ASMITA Khelo India Women’s Cycling League West Zone event poster"></a>':"");
+      modal.hidden=false;document.body.classList.add("event-details-open");
+    });
     ["event-search","category-filter","state-filter"].forEach(id=>$(id).addEventListener(id==="event-search"?"input":"change",render));
   }
   async function initPast(){
