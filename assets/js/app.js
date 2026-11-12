@@ -78,7 +78,9 @@
       const register=e.registration_url?'<a class="table-action" href="'+safeUrl(e.registration_url)+'" target="_blank" rel="noopener">Register ↗</a>':"";
       const extra=e.uci_accredited?'<span class="table-mini-badge">UCI</span>':"";
       const status=e.status==="postponed"?"Postponed":(e.status==="cancelled"?"Cancelled":"");
-      return '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong><small>'+safe(e.organiser||"Organiser to be confirmed")+'</small><small class="event-table-mobile-meta">'+safe(sub)+'</small><span class="event-table-mobile-type '+typeClass+'">'+safe(type)+'</span></td><td>'+safe(sub||e.discipline||"To be confirmed")+'</td><td>'+mapLocation(e.location,"To be confirmed")+'</td><td><span class="event-type '+typeClass+'">'+safe(type)+'</span>'+extra+(status?'<small class="event-table-status">'+safe(status)+'</small>':"")+'</td><td class="event-table-links">'+source+register+'</td></tr>';
+      const mainRow = '<tr><td class="event-table-date">'+safe(dateRange(e))+'</td><td class="event-table-name"><strong>'+safe(e.title)+'</strong><small>'+safe(e.organiser||"Organiser to be confirmed")+'</small><small class="event-table-mobile-meta">'+safe(sub)+'</small><span class="event-table-mobile-type '+typeClass+'">'+safe(type)+'</span></td><td>'+safe(sub||e.discipline||"To be confirmed")+'</td><td>'+mapLocation(e.location,"To be confirmed")+'</td><td><span class="event-type '+typeClass+'">'+safe(type)+'</span>'+extra+(status?'<small class="event-table-status">'+safe(status)+'</small>':"")+'</td><td class="event-table-links">'+source+register+'</td></tr>';
+      const detailRow = e.calendar_details ? '<tr class="event-table-detail-row"><td colspan="6"><div class="event-table-detail"><div><strong>Event details</strong><p>'+safe(e.description||"")+'</p></div>'+(e.accommodation_note?'<div class="event-table-accommodation"><strong>Free boarding &amp; lodging</strong><p>'+safe(e.accommodation_note)+'</p></div>':"")+'</div></td></tr>' : "";
+      return mainRow+detailRow;
     }).join("");
     return header+rows+'</tbody></table>';
   }
