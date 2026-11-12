@@ -13,22 +13,36 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-      - name: Install both cover images from transfer chunks
+      - name: Validate and install both cover images
         run: |
           python - <<'PY'
           import base64
+          import hashlib
           from pathlib import Path
           transfer = Path(".cover-transfer")
           chunks = sorted(transfer.glob("part-*.txt"))
-          if not chunks:
-              raise SystemExit("No image chunks found.")
+          if len(chunks) != 8:
+              raise SystemExit(f"Expected 8 image chunks; found {len(chunks)}.")
           encoded = "".join(p.read_text().strip() for p in chunks)
           image = base64.b64decode(encoded, validate=True)
           if not (image.startswith(b"RIFF") and image[8:12] == b"WEBP"):
               raise SystemExit("Uploaded data is not a valid WebP image.")
+          git_sha = hashlib.sha1(b"blob " + str(len(image)).encode() + b"\\0" + image).hexdigest()
+          expected = "fd16928b6bbf9bd1b5b59b506e4fc1446d010a94"
+          if git_sha != expected:
+              raise SystemExit(f"Image hash mismatch: {git_sha}")
           for name in ("hero-taj-mahal-desktop.webp", "hero-taj-mahal-mobile.webp"):
               Path("assets/images", name).write_bytes(image)
-          print(f"Installed WebP cover: {len(image)} bytes")
+          print(f"Installed verified WebP cover: {len(image)} bytes; SHA {git_sha}")
+          PY
+      - name: Refresh cover cache key
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path("index.html")
+          s = p.read_text()
+          s = s.replace("v=irc-cover-20261112", "v=irc-cover-final-20261112")
+          p.write_text(s)
           PY
       - name: Remove temporary transfer files
         run: |
@@ -39,5 +53,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "Publish correct panoramic cover on mobile and desktop"
+          git commit -m "Publish verified panoramic cover on mobile and desktop"
           git push origin HEAD:main
