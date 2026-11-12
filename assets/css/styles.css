@@ -204,7 +204,7 @@
 /* Taj Mahal sunrise homepage cover */
 .hero{
   background-color:#142642;
-  background-image:linear-gradient(90deg,rgba(8,18,34,.82) 0%,rgba(8,18,34,.50) 48%,rgba(8,18,34,.12) 100%),url("../images/hero-taj-mahal-desktop.webp");
+  background-image:linear-gradient(90deg,rgba(8,18,34,.82) 0%,rgba(8,18,34,.50) 48%,rgba(8,18,34,.12) 100%),url("../images/hero-taj-mahal-desktop.webp?v=20261112");
   background-size:cover;
   background-position:center;
 }
@@ -216,7 +216,7 @@
     min-height:560px;
     align-items:flex-end;
     padding:30px 20px 25px;
-    background-image:linear-gradient(180deg,rgba(8,18,34,.08) 0%,rgba(8,18,34,.12) 42%,rgba(8,18,34,.82) 100%),url("../images/hero-taj-mahal-mobile.webp");
+    background-image:linear-gradient(180deg,rgba(8,18,34,.08) 0%,rgba(8,18,34,.12) 42%,rgba(8,18,34,.82) 100%),url("../images/hero-taj-mahal-mobile.webp?v=20261112");
     background-position:center;
     background-size:cover;
   }
@@ -231,9 +231,9 @@
 
 
 /* Responsive homepage cover images */
-.hero{background-image:linear-gradient(90deg,rgba(8,18,34,.78) 0%,rgba(8,18,34,.42) 44%,rgba(8,18,34,.08) 100%),url("../images/hero-taj-mahal-desktop.webp");background-size:cover;background-position:center}
+.hero{background-image:linear-gradient(90deg,rgba(8,18,34,.78) 0%,rgba(8,18,34,.42) 44%,rgba(8,18,34,.08) 100%),url("../images/hero-taj-mahal-desktop.webp?v=20261112");background-size:cover;background-position:center}
 .hero-glow,.hero-art{display:none}.hero-content{max-width:620px;text-shadow:0 2px 16px rgba(0,0,0,.18)}.hero-mobile-links{display:none}
-@media(max-width:650px){.hero{width:calc(100% - 24px);min-height:0;height:auto;aspect-ratio:3/4;padding:0;border-radius:20px;background-image:url("../images/hero-taj-mahal-mobile.webp");background-size:100% 100%;background-position:center}.hero-content{display:none}.hero-mobile-links{position:absolute;left:5%;right:5%;bottom:5.5%;height:10.5%;display:grid;grid-template-columns:repeat(4,1fr);z-index:5}.hero-mobile-links a{display:block;border-radius:8px}.hero-mobile-links a:focus-visible{outline:3px solid white;outline-offset:2px}}
+@media(max-width:650px){.hero{width:calc(100% - 24px);min-height:0;height:auto;aspect-ratio:3/4;padding:0;border-radius:20px;background-image:url("../images/hero-taj-mahal-mobile.webp?v=20261112");background-size:cover;background-position:63% center}.hero-content{display:none}.hero-mobile-links{position:absolute;left:5%;right:5%;bottom:5.5%;height:10.5%;display:grid;grid-template-columns:repeat(4,1fr);z-index:5}.hero-mobile-links a{display:block;border-radius:8px}.hero-mobile-links a:focus-visible{outline:3px solid white;outline-offset:2px}}
 .event-result-note{display:inline-block;max-width:240px;font-size:.72rem;font-weight:700;color:var(--ink);line-height:1.4}.past-event-table .event-table-name{min-width:190px}.past-event-table .event-table-status{margin-top:4px}
 .past-filter-panel{grid-template-columns:minmax(220px,2fr) repeat(3,minmax(130px,1fr))}@media(max-width:760px){.past-filter-panel{grid-template-columns:1fr 1fr}.past-filter-panel .search-box{grid-column:1/-1}}
 .unified-suggestion-form{max-width:860px;margin:0 auto;gap:16px}.unified-event-box,.unified-contact-box{padding:18px;border:1px solid var(--outline);border-radius:20px;background:var(--surface);box-shadow:var(--shadow)}
