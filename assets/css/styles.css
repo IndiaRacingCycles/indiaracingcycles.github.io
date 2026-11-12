@@ -362,3 +362,70 @@ body{background:radial-gradient(ellipse at 8% 6%,color-mix(in srgb,var(--tertiar
   .cover-banner + .hero h1{font-size:19px!important;line-height:1.08!important;margin-bottom:6px!important}
   .cover-banner + .hero .hero-lead{font-size:10px!important;line-height:1.38!important}
 }
+
+
+/* Homepage hero: one compact horizontal information row */
+@media (min-width: 761px) {
+  .cover-banner + .hero {
+    padding: 14px clamp(16px, 2.2vw, 30px) !important;
+    min-height: 0 !important;
+  }
+  .cover-banner + .hero .hero-content {
+    display: grid !important;
+    grid-template-columns: max-content max-content minmax(120px, 1fr) max-content;
+    align-items: center;
+    gap: clamp(8px, 1.15vw, 18px);
+    width: 100%;
+    max-width: none !important;
+    margin: 0;
+  }
+  .cover-banner + .hero .eyebrow {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 8px !important;
+    letter-spacing: .1em !important;
+    gap: 5px !important;
+    margin: 0 !important;
+    padding-right: clamp(8px, 1vw, 15px);
+    border-right: 1px solid rgba(255,255,255,.28);
+  }
+  .cover-banner + .hero .eyebrow .material-symbols-rounded {
+    font-size: 12px !important;
+  }
+  .cover-banner + .hero h1 {
+    white-space: nowrap;
+    font-size: clamp(17px, 2vw, 24px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -.03em !important;
+    margin: 0 !important;
+    padding-right: clamp(8px, 1vw, 15px);
+    border-right: 1px solid rgba(255,255,255,.28);
+  }
+  .cover-banner + .hero .hero-lead {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-size: clamp(10px, .85vw, 12px) !important;
+    line-height: 1.35 !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+  .cover-banner + .hero .hero-actions {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 7px;
+    margin: 0 !important;
+  }
+  .cover-banner + .hero .hero-actions .button {
+    min-height: 32px;
+    padding: 0 9px;
+    font-size: 10px;
+    white-space: nowrap;
+  }
+  .cover-banner + .hero .hero-footnote {
+    display: none !important;
+  }
+}
