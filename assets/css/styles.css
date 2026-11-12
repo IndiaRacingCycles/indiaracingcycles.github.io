@@ -448,8 +448,8 @@ body.event-details-open{overflow:hidden}
 
 
 /* Bhavnagar event details and poster viewer */
-.event-details-link{appearance:none;border:0;background:transparent;padding:0;font:inherit;font-size:.69rem;font-weight:800;color:var(--primary-dark);text-decoration:none;cursor:pointer;vertical-align:baseline}
-.event-details-link:hover{text-decoration:underline}
+
+
 .event-details-poster-trigger{display:block;width:100%;padding:0;border:0;background:transparent;color:var(--primary);text-align:center;cursor:zoom-in}
 .event-details-poster-trigger .event-details-poster{display:block;width:100%;max-height:76vh;object-fit:contain;background:var(--surface2);margin:0 auto;border-radius:10px}
 .event-details-poster-missing{min-height:220px;display:grid;place-items:center;border:1px dashed var(--outline);border-radius:12px;background:var(--surface2);color:var(--muted)}
