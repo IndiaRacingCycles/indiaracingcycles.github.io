@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-11-11",
-    "note": "Expanded Cycling News with previous-edition reports and race videos discovered by searching upcoming-event names with and without years. Verified crash coverage is limited to the 2017 and 2023 Asian Track Cycling Championships, the January 2026 ASMITA League report, and two separate 2026 Pune Grand Tour incidents. Other entries are clearly labelled as race reports, rider blogs or videos rather than crashes."
+    "last_updated": "2026-11-16",
+    "note": "Checked 16 November 2026. Added Hyderabad HCL Cyclothon race results and the Andaman & Nicobar Islands' Ranchi national track results, including I.S. Bridney's national record, using Telangana Today and the government newspaper e-paper."
   },
   "news": [
     {
@@ -253,6 +253,30 @@
       "source_url": "https://timesofindia.indiatimes.com/sports/more-sports/cycling/three-cyclists-injured-in-a-crash-during-asian-track-cships/articleshow/57023906.cms",
       "related_event_id": "cfi-2027-asian-track-cycling-championships",
       "verified_at": "2026-11-11"
+    },
+    {
+      "id": "hcl-cyclothon-hyderabad-2026-race-results",
+      "title": "HCL Cyclothon Hyderabad 2026: Manjeet Singh and Swasti Singh lead the elite races",
+      "published_at": "2026-11-15",
+      "publisher": "Telangana Today",
+      "category": "Race results",
+      "type": "results",
+      "summary": "Telangana Today reports that more than 2,000 riders took part in the Hyderabad edition on 15 November. Manjeet Singh won the elite men's 50 km race and Swasti Singh won the elite women's 50 km race. The report also lists winners across MTB and amateur categories; see the source for the full podiums.",
+      "source_url": "https://telanganatoday.com/hcl-cyclothon-2026-sees-over-2000-riders-in-hyderabad",
+      "related_event_id": "cfi-2026-hcl-cyclothon-hyderabad",
+      "verified_at": "2026-11-16"
+    },
+    {
+      "id": "andaman-cycling-team-ranchi-nationals-bridney-record-2026",
+      "title": "Andaman & Nicobar cyclists report a provisional medal haul at Ranchi Track Nationals",
+      "published_at": "2026-11-07",
+      "publisher": "The Daily Telegrams – Andaman & Nicobar Administration",
+      "category": "National track results",
+      "type": "results",
+      "summary": "The government newspaper carried a Department of Sports & Youth Affairs report describing a provisional tally of 11 medals for the Islands' Cycling Team at the Ranchi national track championships. It also reported that I.S. Bridney won the sub-junior girls' 500 m individual time trial in 37.479 seconds, setting a national record. The medal tally is described as provisional in the source.",
+      "source_url": "https://dt.andamannicobar.gov.in/epaper/07112026180012223.pdf",
+      "related_event_id": "cfi-2026-national-track-cycling-championships",
+      "verified_at": "2026-11-16"
     }
   ]
 }
