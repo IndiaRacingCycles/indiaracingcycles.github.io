@@ -59,6 +59,46 @@
       "name": "Bangalore Bicycle Championships",
       "url": "https://www.bbch.in/",
       "kind": "official"
+    },
+    {
+      "name": "Audax India Randonneurs – official home and upcoming events",
+      "url": "https://www.audaxindia.in/",
+      "kind": "official"
+    },
+    {
+      "name": "Audax India Randonneurs – events calendar",
+      "url": "https://www.audaxindia.in/eventsv2.php",
+      "kind": "official"
+    },
+    {
+      "name": "HimCycling – events",
+      "url": "https://himcycling.com/events",
+      "kind": "official"
+    },
+    {
+      "name": "Tigerman Sports – cycling and endurance events",
+      "url": "https://www.tigerman.in/",
+      "kind": "official"
+    },
+    {
+      "name": "HindAyan – official event timetable",
+      "url": "https://www.hindayan.in/time-table/",
+      "kind": "official"
+    },
+    {
+      "name": "RacesIndia – event discovery directory",
+      "url": "https://www.racesindia.com/",
+      "kind": "publisher"
+    },
+    {
+      "name": "Telangana Today – sports news",
+      "url": "https://telanganatoday.com/",
+      "kind": "publisher"
+    },
+    {
+      "name": "The Daily Telegrams – Andaman & Nicobar Administration",
+      "url": "https://dt.andamannicobar.gov.in/",
+      "kind": "official"
     }
   ],
   "rss_feeds": [
@@ -69,6 +109,18 @@
     {
       "name": "Google News — Indian cycling announcements and results",
       "url": "https://news.google.com/rss/search?q=Indian+cycling+event+announcement+OR+cycling+results+India&hl=en-IN&gl=IN&ceid=IN:en"
+    },
+    {
+      "name": "Google News — Indian brevets and randonneuring",
+      "url": "https://news.google.com/rss/search?q=India+Audax+India+BRM+brevet+randonneuring+cycling+event&hl=en-IN&gl=IN&ceid=IN:en"
+    },
+    {
+      "name": "Google News — Indian road, MTB and track cycling events",
+      "url": "https://news.google.com/rss/search?q=India+cycling+race+road+MTB+track+championship+event+results&hl=en-IN&gl=IN&ceid=IN:en"
+    },
+    {
+      "name": "Google News — Indian cyclists in international competition",
+      "url": "https://news.google.com/rss/search?q=Indian+cyclists+UCI+international+cycling+results&hl=en-IN&gl=IN&ceid=IN:en"
     }
   ],
   "approved_official_domains": [
@@ -79,6 +131,11 @@
     "raceacrossindia.org",
     "cyclingassociationofmaharashtra.com",
     "inspireindia.net.in",
-    "bbch.in"
+    "bbch.in",
+    "audaxindia.in",
+    "himcycling.com",
+    "tigerman.in",
+    "hindayan.in",
+    "dt.andamannicobar.gov.in"
   ]
 }
