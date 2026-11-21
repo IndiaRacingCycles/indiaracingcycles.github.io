@@ -1,7 +1,7 @@
 {
   "meta": {
     "last_updated": "2026-11-21",
-    "note": "Updated 21 November 2026: added Mumbai Cycling Championship 2026 (MCACA), scheduled for 22 November 2026."
+    "note": "Updated 21 November 2026: added a dedicated Mumbai Cycling Championship 2026 flyer page linked from the event Details action."
   },
   "events": [
     {
@@ -1391,15 +1391,15 @@
       "contact_phone": "",
       "poster_url": "",
       "poster_note": "No official event poster URL supplied for the website listing.",
-      "source_url": "https://calendar.app.google/T8HVjRa49KmfaAYg7",
-      "source_name": "Google Calendar event",
+      "source_url": "mumbai-cycling-championship-2026.html",
+      "source_name": "View event flyer & links",
       "source_links": [
         {
-          "label": "Race location – Google Maps",
+          "label": "Google Maps – Race Location",
           "url": "https://maps.app.goo.gl/SLTxr7jDCxABjBz77"
         },
         {
-          "label": "MCACA event WhatsApp group",
+          "label": "MCACA WhatsApp Group",
           "url": "https://chat.whatsapp.com/I1RkSf62uu3HPXTLw4oKUG"
         }
       ],
