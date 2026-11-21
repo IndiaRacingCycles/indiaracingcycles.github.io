@@ -34,6 +34,10 @@
     return snapshot;
   }
   function dateRange(e){ if(e.date_note) return e.date_note; if(!e.start_date) return "Dates to be confirmed"; if(!e.end_date) return "Starts "+fmt(e.start_date); return e.start_date===e.end_date ? fmt(e.start_date) : fmt(e.start_date)+" – "+fmt(e.end_date); }
+  // Use start_date when end_date is blank (common for one-day events).
+  function eventHasEnded(e){ const lastDate=e.end_date||e.start_date; return Boolean(lastDate) && new Date(lastDate+"T23:59:59")<today; }
+  function isUpcomingEvent(e){ if(e.status==="completed"||e.status==="cancelled") return false; if(e.status==="postponed") return true; return !eventHasEnded(e); }
+  function isPastEvent(e){ return e.status==="completed"||e.status==="cancelled"||(e.status!=="postponed"&&eventHasEnded(e)); }
   function links(e){
     const items=[];
     if(e.source_url) items.push({label:e.source_name||"Official event website",url:e.source_url,image_url:e.source_preview_url||e.image_url||"",kind:"Official source"});
@@ -100,9 +104,9 @@
   function setTheme(){const saved=localStorage.getItem("irc-theme");if(saved==="dark")document.documentElement.dataset.theme="dark";const btn=$("theme-toggle");if(btn)btn.addEventListener("click",()=>{const dark=document.documentElement.dataset.theme!=="dark";if(dark)document.documentElement.dataset.theme="dark";else delete document.documentElement.dataset.theme;localStorage.setItem("irc-theme",dark?"dark":"light");btn.querySelector("span").textContent=dark?"light_mode":"dark_mode";});if(btn&&document.documentElement.dataset.theme==="dark")btn.querySelector("span").textContent="light_mode";}
   async function initUpcoming(){
     const grid=$("event-grid");grid.classList.add("event-table-shell");let events=[];
-    try{const d=await load("events");events=d.events||d;const meta=d.meta||{};const upcoming=events.filter(e=>(e.status==="postponed" || (e.end_date ? new Date(e.end_date+"T23:59:59")>=today : e.status!=="completed"))&&e.status!=="cancelled");$("upcoming-count").textContent=upcoming.length;$("updated-date").textContent=meta.last_updated?fmt(meta.last_updated):"—";const states=[...new Set(upcoming.map(e=>e.state).filter(Boolean))];$("state-count").textContent=states.length?states.length+" states":"All India";const state=$("state-filter");states.sort().forEach(s=>state.add(new Option(s,s)));render();}
+    try{const d=await load("events");events=d.events||d;const meta=d.meta||{};const upcoming=events.filter(isUpcomingEvent);$("upcoming-count").textContent=upcoming.length;$("updated-date").textContent=meta.last_updated?fmt(meta.last_updated):"—";const states=[...new Set(upcoming.map(e=>e.state).filter(Boolean))];$("state-count").textContent=states.length?states.length+" states":"All India";const state=$("state-filter");states.sort().forEach(s=>state.add(new Option(s,s)));render();}
     catch(err){grid.innerHTML=empty("Calendar could not load","Please refresh the page. The event data file may be temporarily unavailable.","cloud_offline");$("event-error").hidden=false;$("event-error").textContent=err.message;}
-    function render(){const q=$("event-search").value.trim().toLowerCase(),cat=$("category-filter").value,state=$("state-filter").value;const list=events.filter(e=>(e.end_date ? new Date(e.end_date+"T23:59:59")>=today : e.status!=="completed")&&e.status!=="cancelled").filter(e=>(!q||[e.title,e.location,e.organiser,e.description].join(" ").toLowerCase().includes(q))&&(!cat||(e.discipline||"").toLowerCase().includes(cat.toLowerCase())||(e.categories||[]).some(c=>c.toLowerCase().includes(cat.toLowerCase())))&&(!state||e.state===state)).sort((a,b)=>(a.start_date||"9999-12-31").localeCompare(b.start_date||"9999-12-31"));grid.innerHTML=list.length?upcomingEventTable(list):empty("No matching events","Try a different search or filter. New listings appear after a source has been checked.","event_busy");}
+    function render(){const q=$("event-search").value.trim().toLowerCase(),cat=$("category-filter").value,state=$("state-filter").value;const list=events.filter(isUpcomingEvent).filter(e=>(!q||[e.title,e.location,e.organiser,e.description].join(" ").toLowerCase().includes(q))&&(!cat||(e.discipline||"").toLowerCase().includes(cat.toLowerCase())||(e.categories||[]).some(c=>c.toLowerCase().includes(cat.toLowerCase())))&&(!state||e.state===state)).sort((a,b)=>(a.start_date||"9999-12-31").localeCompare(b.start_date||"9999-12-31"));grid.innerHTML=list.length?upcomingEventTable(list):empty("No matching events","Try a different search or filter. New listings appear after a source has been checked.","event_busy");}
     grid.addEventListener("click",ev=>{
       const button=ev.target.closest("[data-event-details]");
       if(!button)return;
@@ -152,7 +156,7 @@
     const grid=$("past-grid");grid.classList.add("event-table-shell");let events=[];
     try{
       const d=await load("events");events=d.events||d;
-      events=events.filter(e=>e.status==="completed"||e.status==="cancelled"||(e.status!=="postponed"&&e.end_date&&new Date(e.end_date+"T23:59:59")<today));
+      events=events.filter(isPastEvent);
       const years=[...new Set(events.map(e=>e.start_date?.slice(0,4)).filter(Boolean))].sort().reverse();
       years.forEach(y=>$("year-filter").add(new Option(y,y)));
       const states=[...new Set(events.map(e=>e.state).filter(Boolean))].sort();
