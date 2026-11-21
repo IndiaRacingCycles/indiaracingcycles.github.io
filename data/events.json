@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-11-16",
-    "note": "Checked 16 November 2026. Added 26 verified cycling events, including Audax India BRMs across multiple states, RUSH 24 Nagpur 2027 and HindAyan Delhi–Agra. Marked HCL Cyclothon Hyderabad and the National Track Cycling Championships completed after published results. Closed-registration BRMs remain listed without a Register button. Ahmedabad–Vadodara and Shiv Jayanti details are held for review because published organiser listings conflict."
+    "last_updated": "2026-11-21",
+    "note": "Updated 21 November 2026: added Mumbai Cycling Championship 2026 (MCACA), scheduled for 22 November 2026."
   },
   "events": [
     {
@@ -457,6 +457,40 @@
       "confidence": "cfi-calendar-image"
     },
     {
+      "id": "cfi-2026-zabarvan-1",
+      "title": "Zabarvan Legends · Stage 1: Singge Oralo",
+      "start_date": "2026-10-07",
+      "end_date": "2026-10-11",
+      "date_note": "Date and venue to be confirmed",
+      "location": "Zoom Village, Sikkim",
+      "state": "Sikkim",
+      "discipline": "MTB",
+      "categories": [
+        "Elite",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Official Zabarvan Season 2 schedule identifies this as Stage 1, Singge Oralo, in Zoom Village, Sikkim, 7–11 October 2026. The 2026 series has finished.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.zabarvanx.com/event/zabarvan-legends",
+      "source_name": "Official Zabarvan Legends series page",
+      "source_links": [
+        {
+          "label": "Official Zabarvan Legends series",
+          "url": "https://www.zabarvanx.com/event/zabarvan-legends"
+        }
+      ],
+      "status": "completed",
+      "confidence": "official-organiser",
+      "verified_at": "2026-11-11"
+    },
+    {
       "id": "cfi-2026-uci-world-track-championships",
       "title": "UCI World Track Cycling Championships",
       "start_date": "2026-10-14",
@@ -488,6 +522,74 @@
       ],
       "status": "scheduled",
       "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-zabarvan-2",
+      "title": "Zabarvan Legends · Stage 2: Druk Layul",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-18",
+      "date_note": "Date and venue to be confirmed",
+      "location": "South Pullu, Ladakh",
+      "state": "Ladakh",
+      "discipline": "MTB",
+      "categories": [
+        "Elite",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Official Zabarvan Season 2 schedule identifies this as Stage 2, Druk Layul, at South Pullu, Ladakh, 14–18 October 2026. The 2026 series has finished.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.zabarvanx.com/event/zabarvan-legends",
+      "source_name": "Official Zabarvan Legends series page",
+      "source_links": [
+        {
+          "label": "Official Zabarvan Legends series",
+          "url": "https://www.zabarvanx.com/event/zabarvan-legends"
+        }
+      ],
+      "status": "completed",
+      "confidence": "official-organiser",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "cfi-2026-zabarvan-3",
+      "title": "Zabarvan Legends · Stage 3: Gaur Ghat",
+      "start_date": "2026-10-22",
+      "end_date": "2026-10-25",
+      "date_note": "Date and venue to be confirmed",
+      "location": "Gaur Ghat, Pune, Maharashtra",
+      "state": "Maharashtra",
+      "discipline": "MTB",
+      "categories": [
+        "Elite",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Official Zabarvan Season 2 schedule identifies this as Stage 3, Gaur Ghat, Pune, 22–25 October 2026. The 2026 series has finished.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.zabarvanx.com/event/zabarvan-legends",
+      "source_name": "Official Zabarvan Legends series page",
+      "source_links": [
+        {
+          "label": "Official Zabarvan Legends series",
+          "url": "https://www.zabarvanx.com/event/zabarvan-legends"
+        }
+      ],
+      "status": "completed",
+      "confidence": "official-organiser",
+      "verified_at": "2026-11-11"
     },
     {
       "id": "cfi-2026-national-track-cycling-championships",
@@ -569,888 +671,6 @@
       "verified_at": "2026-11-16"
     },
     {
-      "id": "cfi-2026-track-asia-cup-delhi",
-      "title": "Track Asia Cup II",
-      "start_date": "2026-12-16",
-      "end_date": "2026-12-18",
-      "location": "Indoor Cycling Velodrome, IG Sports Complex, New Delhi, India",
-      "state": "Delhi",
-      "discipline": "Track",
-      "categories": [
-        "Elite",
-        "Junior",
-        "International"
-      ],
-      "event_scope": "International",
-      "calendar_category": "international",
-      "uci_accredited": true,
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "The UCI calendar lists Track Asia Cup II at the Indoor Cycling Velodrome, IG Sports Complex, New Delhi, from 16–18 December 2026. Class CL1. The UCI page lists Elite and Junior track disciplines including pursuit, sprint, keirin, omnium, scratch, points, elimination and time trial. This replaces the earlier 26–28 November date transcribed from the supplied CFI calendar image.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.uci.org/competition-details/2026/PIS/77852",
-      "source_name": "UCI official competition listing",
-      "source_links": [
-        {
-          "label": "UCI competition details",
-          "url": "https://www.uci.org/competition-details/2026/PIS/77852"
-        }
-      ],
-      "status": "confirmed",
-      "confidence": "uci-official",
-      "verified_at": "2026-11-11"
-    },
-    {
-      "id": "cfi-2026-national-road-cycling-championships",
-      "title": "National Road Cycling Championships",
-      "start_date": "2026-12-26",
-      "end_date": "2026-12-30",
-      "location": "Jabalpur, Madhya Pradesh",
-      "state": "Madhya Pradesh",
-      "discipline": "Road",
-      "categories": [
-        "Elite",
-        "Junior",
-        "Sub-Junior",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "national",
-      "uci_accredited": true,
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "The supplied CFI Calendar image lists 26–30 December 2026 in Jabalpur, Madhya Pradesh. HimCycling's current event listing instead names Coimbatore, Tamil Nadu for the same dates. Because the venue sources conflict, the location remains unconfirmed. Check the latest CFI circular before travel.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
-      "source_links": [
-        {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
-        },
-        {
-          "label": "HimCycling event calendar",
-          "url": "https://himcycling.com/events"
-        }
-      ],
-      "status": "scheduled",
-      "confidence": "conflicting-sources",
-      "verified_at": "2026-11-11"
-    },
-    {
-      "id": "bajaj-pune-grand-tour-2027",
-      "title": "Bajaj Pune Grand Tour 2027",
-      "start_date": "2027-01-26",
-      "end_date": "2027-01-31",
-      "location": "Pune district, Maharashtra",
-      "state": "Maharashtra",
-      "discipline": "Road",
-      "categories": [
-        "Road",
-        "Men Elite · UCI 2.1",
-        "Pro Men's Race · UCI 2.2",
-        "Gran Fondo details TBC"
-      ],
-      "organiser": "Pune Grand Tour / Pune District",
-      "description": "The official organiser site confirms 26–31 January 2027 and six stages across Pune district. Men Elite is listed as UCI 2.1 (960.12 km); the Pro Men's Race is UCI 2.2 (437 km). The event is for selected professional teams, not general open entry. Stage areas include Nanded City, Baramati, Saswad, Junnar, Rajgurunagar, Alandi, Lonavala, Hinjawadi and Pune/PCMC. The official site says Gran Fondo details are still to be confirmed. A 9 November 2026 report also notes the event's upgrade to UCI 2.1.",
-      "registration_url": "",
-      "contact_email": "registrations@punegrandtour.in",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No standalone poster URL was available on the official event page checked.",
-      "source_url": "https://punegrandtour.in/",
-      "source_links": [
-        {
-          "label": "Official event site",
-          "url": "https://punegrandtour.in/"
-        },
-        {
-          "label": "Official schedule",
-          "url": "https://punegrandtour.in/schedule/"
-        },
-        {
-          "label": "UCI 2.1 upgrade report (9 Nov 2026)",
-          "url": "https://www.stepout2play.com/news/2026/11/09/bajaj-pune-grand-tour-uci-21-upgrade-2027"
-        }
-      ],
-      "status": "confirmed",
-      "verified_at": "2026-11-11",
-      "confidence": "official-organiser",
-      "image_url": "https://punegrandtour.in/wp-content/uploads/2026/10/the-track-1.jpg",
-      "image_note": "Official event track visual from the organiser website; not a race poster.",
-      "event_scope": "International",
-      "calendar_category": "international",
-      "uci_accredited": true
-    },
-    {
-      "id": "tour-of-thekkady-2027",
-      "title": "Tour of Thekkady 2027",
-      "start_date": "2027-01-30",
-      "end_date": "2027-01-30",
-      "location": "Start: Caesar Palace Hotel, Nagampadom, Kottayam · Finish: Thekkady, Kerala",
-      "state": "Kerala",
-      "discipline": "Gran Fondo",
-      "categories": [
-        "Gran Fondo",
-        "152 km race",
-        "167 km tour",
-        "Men",
-        "Women",
-        "Masters"
-      ],
-      "organiser": "KEG Bikers",
-      "description": "Sixth edition on 30 January 2027. Official organiser confirms a 152 km race with 3,500 m climbing and a 167 km tour. Race categories: Men (18+, 8.5-hour cut-off), Women (18+, 9.5-hour cut-off) and Masters (40+, 9.5-hour cut-off). Tour category is 167 km with a 14.5-hour finish window and minimum age 18. The top six riders in each individual category are offered entry to the Spinneys Dubai 92 Cycle Challenge 2028. Check the current NovaRace listing and organiser terms for entry details.",
-      "registration_url": "https://www.novarace.in/events/tour-of-thekkady-2027",
-      "contact_email": "kegbikers@gmail.com",
-      "contact_phone": "+91 9188633547",
-      "poster_url": "",
-      "poster_note": "The organiser page was available, but a direct poster image URL was not confirmed.",
-      "source_url": "https://www.tourofthekkady.com/",
-      "source_links": [
-        {
-          "label": "Official event site",
-          "url": "https://www.tourofthekkady.com/"
-        },
-        {
-          "label": "Official terms and conditions",
-          "url": "https://www.tourofthekkady.com/termsandconditions"
-        },
-        {
-          "label": "Registration listing",
-          "url": "https://www.novarace.in/events/tour-of-thekkady-2027"
-        }
-      ],
-      "status": "confirmed",
-      "verified_at": "2026-11-11",
-      "confidence": "official-organiser",
-      "image_url": "https://static.wixstatic.com/media/2b39e5_fe127dddad77445dbf539db7cb0cfb8e~mv2.jpg/v1/fill/w_933%2Ch_622%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/2b39e5_fe127dddad77445dbf539db7cb0cfb8e~mv2.jpg",
-      "image_note": "Official organiser website image; not a standalone event poster."
-    },
-    {
-      "id": "cfi-2027-hcl-cyclothon-bangalore",
-      "title": "HCL Cyclothon – Bangalore",
-      "start_date": "2027-02-07",
-      "end_date": "2027-02-07",
-      "location": "Bangalore",
-      "state": "Karnataka",
-      "discipline": "Road",
-      "categories": [
-        "Elite",
-        "Junior",
-        "Cyclothon",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "national",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Official HCL organiser page confirms race day 7 February 2027. Registration is scheduled from 5 December 2026 to 24 January 2027; Expo 5–6 February. Route, expo venue and race guidelines are still to be announced. Amateur road race is listed at 50 km; check the organiser page for current bicycle specifications and category rules.",
-      "registration_url": "https://hclcyclothon.com/bengaluru-race-info/",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://hclcyclothon.com/bengaluru-race-info/",
-      "source_name": "Official HCL Cyclothon Bengaluru event page",
-      "source_links": [
-        {
-          "label": "Official event details",
-          "url": "https://hclcyclothon.com/bengaluru-race-info/"
-        }
-      ],
-      "status": "confirmed",
-      "confidence": "official-organiser",
-      "verified_at": "2026-11-11"
-    },
-    {
-      "id": "race-across-india-2027",
-      "title": "Race Across India 2027",
-      "start_date": "2027-02-28",
-      "end_date": "",
-      "location": "Srinagar to Kanyakumari, India",
-      "state": "",
-      "discipline": "Ultra-cycling",
-      "categories": [
-        "Ultra-cycling",
-        "Solo",
-        "Team of 2",
-        "Team of 4",
-        "4,100+ km"
-      ],
-      "organiser": "Race Across India",
-      "description": "RAIN 3.0 is announced for 28 February 2027 as a 4,100+ km ultra-cycling race from Srinagar to Kanyakumari. The organiser page shows solo and team formats and route downloads. Important: parts of the same page still contain legacy 2025 fee and cut-off tables, so those figures should not be treated as confirmed 2027 terms. Check directly with the organiser for current fees, eligibility, cut-offs and final route.",
-      "registration_url": "https://raceacrossindia.org/rain-3-0/",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No current-edition poster URL was confirmed on the organiser's home page.",
-      "source_url": "https://raceacrossindia.org/rain-3-0/",
-      "source_links": [],
-      "status": "confirmed",
-      "verified_at": "2026-11-11",
-      "confidence": "official-page-with-legacy-content",
-      "image_url": "https://raceacrossindia.org/wp-content/uploads/2024/05/route-for-race-across-india.jpg",
-      "image_note": "Official route-map image shown on the RAIN 3.0 page; check the current organiser route before travel."
-    },
-    {
-      "id": "cfi-2027-hcl-cyclothon-noida",
-      "title": "HCL Cyclothon – Noida",
-      "start_date": "2027-03-14",
-      "end_date": "2027-03-14",
-      "location": "Noida",
-      "state": "Uttar Pradesh",
-      "discipline": "Road",
-      "categories": [
-        "Elite",
-        "Junior",
-        "Cyclothon",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "national",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Official HCL organiser page confirms race day 14 March 2027. Registration is scheduled from 10 January to 28 February 2027; Bib Expo 12–13 March. Route, Expo venue and race guidelines are still to be announced. Amateur road race is listed at 55 km; check the organiser page for bicycle specifications and category rules.",
-      "registration_url": "https://hclcyclothon.com/noida-race-info/",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://hclcyclothon.com/noida-race-info/",
-      "source_name": "Official HCL Cyclothon Noida event page",
-      "source_links": [
-        {
-          "label": "Official event details",
-          "url": "https://hclcyclothon.com/noida-race-info/"
-        }
-      ],
-      "status": "confirmed",
-      "confidence": "official-organiser",
-      "verified_at": "2026-11-11"
-    },
-    {
-      "id": "cfi-college-cyclothon-series",
-      "title": "College Cyclothon Series",
-      "start_date": "",
-      "end_date": "",
-      "date_note": "Dates and venue to be confirmed",
-      "location": "",
-      "state": "",
-      "discipline": "Road",
-      "categories": [
-        "Private Event",
-        "College Series",
-        "Private"
-      ],
-      "event_scope": "Private",
-      "calendar_category": "private",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. The calendar does not provide a venue or date. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
-      "source_links": [
-        {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
-        }
-      ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
-    },
-    {
-      "id": "cfi-2026-kashmir-grand-tour",
-      "title": "Kashmir Grand Tour",
-      "start_date": "",
-      "end_date": "",
-      "date_note": "Date to be announced",
-      "location": "Kashmir, India",
-      "state": "Jammu and Kashmir",
-      "discipline": "Road",
-      "categories": [
-        "Elite",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "national",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the venue as Kashmir, India and the date as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
-      "source_links": [
-        {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
-        }
-      ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
-    },
-    {
-      "id": "cfi-2026-ecycling-isso-zonals",
-      "title": "E-Cycling ISSO Zonals",
-      "start_date": "",
-      "end_date": "",
-      "date_note": "Date and venue to be confirmed",
-      "location": "TBC",
-      "state": "",
-      "discipline": "E-Cycling",
-      "categories": [
-        "E-Cycling",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "private",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
-      "source_links": [
-        {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
-        }
-      ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
-    },
-    {
-      "id": "cfi-2026-zabarvan-1",
-      "title": "Zabarvan Legends · Stage 1: Singge Oralo",
-      "start_date": "2026-10-07",
-      "end_date": "2026-10-11",
-      "date_note": "Date and venue to be confirmed",
-      "location": "Zoom Village, Sikkim",
-      "state": "Sikkim",
-      "discipline": "MTB",
-      "categories": [
-        "Elite",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "national",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Official Zabarvan Season 2 schedule identifies this as Stage 1, Singge Oralo, in Zoom Village, Sikkim, 7–11 October 2026. The 2026 series has finished.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.zabarvanx.com/event/zabarvan-legends",
-      "source_name": "Official Zabarvan Legends series page",
-      "source_links": [
-        {
-          "label": "Official Zabarvan Legends series",
-          "url": "https://www.zabarvanx.com/event/zabarvan-legends"
-        }
-      ],
-      "status": "completed",
-      "confidence": "official-organiser",
-      "verified_at": "2026-11-11"
-    },
-    {
-      "id": "cfi-2026-zabarvan-2",
-      "title": "Zabarvan Legends · Stage 2: Druk Layul",
-      "start_date": "2026-10-14",
-      "end_date": "2026-10-18",
-      "date_note": "Date and venue to be confirmed",
-      "location": "South Pullu, Ladakh",
-      "state": "Ladakh",
-      "discipline": "MTB",
-      "categories": [
-        "Elite",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "national",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Official Zabarvan Season 2 schedule identifies this as Stage 2, Druk Layul, at South Pullu, Ladakh, 14–18 October 2026. The 2026 series has finished.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.zabarvanx.com/event/zabarvan-legends",
-      "source_name": "Official Zabarvan Legends series page",
-      "source_links": [
-        {
-          "label": "Official Zabarvan Legends series",
-          "url": "https://www.zabarvanx.com/event/zabarvan-legends"
-        }
-      ],
-      "status": "completed",
-      "confidence": "official-organiser",
-      "verified_at": "2026-11-11"
-    },
-    {
-      "id": "cfi-2026-zabarvan-3",
-      "title": "Zabarvan Legends · Stage 3: Gaur Ghat",
-      "start_date": "2026-10-22",
-      "end_date": "2026-10-25",
-      "date_note": "Date and venue to be confirmed",
-      "location": "Gaur Ghat, Pune, Maharashtra",
-      "state": "Maharashtra",
-      "discipline": "MTB",
-      "categories": [
-        "Elite",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "national",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Official Zabarvan Season 2 schedule identifies this as Stage 3, Gaur Ghat, Pune, 22–25 October 2026. The 2026 series has finished.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.zabarvanx.com/event/zabarvan-legends",
-      "source_name": "Official Zabarvan Legends series page",
-      "source_links": [
-        {
-          "label": "Official Zabarvan Legends series",
-          "url": "https://www.zabarvanx.com/event/zabarvan-legends"
-        }
-      ],
-      "status": "completed",
-      "confidence": "official-organiser",
-      "verified_at": "2026-11-11"
-    },
-    {
-      "id": "cfi-2026-ecycling-isso-finals",
-      "title": "E-Cycling ISSO Finals",
-      "start_date": "",
-      "end_date": "",
-      "date_note": "Date and venue to be confirmed",
-      "location": "TBC",
-      "state": "",
-      "discipline": "E-Cycling",
-      "categories": [
-        "E-Cycling",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "private",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
-      "source_links": [
-        {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
-        }
-      ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
-    },
-    {
-      "id": "cfi-2026-statue-of-unity",
-      "title": "Statue of Unity Cycling Event",
-      "start_date": "",
-      "end_date": "",
-      "date_note": "Date to be announced",
-      "location": "Ahmedabad, Gujarat",
-      "state": "Gujarat",
-      "discipline": "Road",
-      "categories": [
-        "Elite Men",
-        "Elite Women",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "national",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. The calendar lists Ahmedabad, Gujarat as the venue and the date as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
-      "source_links": [
-        {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
-        }
-      ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
-    },
-    {
-      "id": "cfi-2026-cycling-league-of-india",
-      "title": "Cycling League of India",
-      "start_date": "",
-      "end_date": "",
-      "date_note": "Date to be announced",
-      "location": "Ahmedabad, Gujarat",
-      "state": "Gujarat",
-      "discipline": "Road",
-      "categories": [
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "national",
-      "uci_accredited": true,
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. The calendar marks this event as UCI-accredited; date is TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
-      "source_links": [
-        {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
-        }
-      ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
-    },
-    {
-      "id": "cfi-2026-tour-de-thar",
-      "title": "Tour de Thar 2026",
-      "start_date": "",
-      "end_date": "",
-      "date_note": "Winter 2026 · November–December · exact date TBC",
-      "location": "Thar Desert, Rajasthan",
-      "state": "Rajasthan",
-      "discipline": "Road",
-      "categories": [
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "national",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "The official Tour de Thar event page now lists the 2026 edition as an active/upcoming event with registration open. It is a 130 km ride in the Thar Desert, Rajasthan, scheduled for winter 2026 (November–December); the exact race date is still to be confirmed. The page describes dune roads and an expressway section.",
-      "registration_url": "https://tourdethar.com/events",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://tourdethar.com/events",
-      "source_name": "Official Tour de Thar events page",
-      "source_links": [
-        {
-          "label": "Official events and registration",
-          "url": "https://tourdethar.com/events"
-        }
-      ],
-      "status": "confirmed",
-      "confidence": "official-organiser",
-      "verified_at": "2026-11-11"
-    },
-    {
-      "id": "cfi-2027-national-coaching-camp-elite-road",
-      "title": "National Coaching Camp – Elite (Road)",
-      "start_date": "",
-      "end_date": "",
-      "date_note": "January–February 2027 · exact dates TBC",
-      "location": "Patiala",
-      "state": "Punjab",
-      "discipline": "Road",
-      "categories": [
-        "Elite",
-        "Coaching Camp",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "camp",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. National road coaching camp. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
-      "source_links": [
-        {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
-        }
-      ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
-    },
-    {
-      "id": "cfi-2027-national-coaching-camp-junior-road",
-      "title": "National Coaching Camp – Junior (Road)",
-      "start_date": "",
-      "end_date": "",
-      "date_note": "January–February 2027 · exact dates TBC",
-      "location": "Patiala",
-      "state": "Punjab",
-      "discipline": "Road",
-      "categories": [
-        "Junior",
-        "Coaching Camp",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "camp",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. National road coaching camp. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
-      "source_links": [
-        {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
-        }
-      ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
-    },
-    {
-      "id": "cfi-2027-selection-trial-2",
-      "title": "Selection Trial 2",
-      "start_date": "",
-      "end_date": "",
-      "date_note": "Date and venue to be confirmed",
-      "location": "TBC",
-      "state": "",
-      "discipline": "Road",
-      "categories": [
-        "Elite",
-        "Junior",
-        "Selection Trial",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "national",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. National road selection trial. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
-      "source_links": [
-        {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
-        }
-      ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
-    },
-    {
-      "id": "cfi-2027-asian-track-cycling-championships",
-      "title": "Asian Track Cycling Championships",
-      "start_date": "2027-01-30",
-      "end_date": "2027-02-03",
-      "date_note": "January–February 2027 · exact dates TBC",
-      "location": "Velodrom Nasional Malaysia",
-      "state": "Malaysia",
-      "discipline": "Track",
-      "categories": [
-        "Junior",
-        "International"
-      ],
-      "event_scope": "International",
-      "calendar_category": "international",
-      "uci_accredited": true,
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "The UCI calendar now lists the 2027 Asian Track Championships at Velodrom Nasional Malaysia from 30 January to 3 February 2027. This replaces the earlier broad January–February 2027 window in the supplied CFI calendar image.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.uci.org/calendar/all/2jnxYAuvjgttyHi6YQ94EJ?searchTerm=track",
-      "source_name": "UCI 2027 calendar",
-      "source_links": [
-        {
-          "label": "UCI calendar",
-          "url": "https://www.uci.org/calendar/all/2jnxYAuvjgttyHi6YQ94EJ?searchTerm=track"
-        },
-        {
-          "label": "Asian Cycling Confederation calendar",
-          "url": "https://www.accasia.org/calendar/"
-        }
-      ],
-      "status": "confirmed",
-      "confidence": "uci-official",
-      "verified_at": "2026-11-11"
-    },
-    {
-      "id": "cfi-2027-national-coaching-camp-elite-junior-track",
-      "title": "National Coaching Camp – Elite & Junior (Track)",
-      "start_date": "",
-      "end_date": "",
-      "date_note": "February–March 2027 · exact dates TBC",
-      "location": "Delhi / Rudrapur",
-      "state": "Delhi / Uttarakhand",
-      "discipline": "Track",
-      "categories": [
-        "Elite",
-        "Junior",
-        "Coaching Camp",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "camp",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. National track coaching camp. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
-      "source_links": [
-        {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
-        }
-      ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
-    },
-    {
-      "id": "cfi-2027-national-coaching-camp-junior-track",
-      "title": "National Coaching Camp – Junior (Track)",
-      "start_date": "",
-      "end_date": "",
-      "date_note": "February–March 2027 · exact dates TBC",
-      "location": "Delhi / Rudrapur",
-      "state": "Delhi / Uttarakhand",
-      "discipline": "Track",
-      "categories": [
-        "Junior",
-        "Coaching Camp",
-        "National"
-      ],
-      "event_scope": "National",
-      "calendar_category": "camp",
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "Listed in the CFI Calendar 2026–27. National track coaching camp. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://www.cfiindia.in/about-3",
-      "source_name": "CFI Event Calendar",
-      "source_links": [
-        {
-          "label": "CFI official website",
-          "url": "https://www.cfiindia.in/"
-        }
-      ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
-    },
-    {
-      "id": "cfi-2027-asian-road-cycling-championships",
-      "title": "Asian Road Cycling Championships",
-      "start_date": "",
-      "end_date": "",
-      "date_note": "February–March 2027 · exact dates TBC",
-      "location": "Malaysia (planned; final venue/date not confirmed)",
-      "state": "Malaysia",
-      "discipline": "Road",
-      "categories": [
-        "Junior",
-        "International"
-      ],
-      "event_scope": "International",
-      "calendar_category": "international",
-      "uci_accredited": true,
-      "organiser": "Cycling Federation of India (CFI)",
-      "description": "The supplied CFI calendar image listed China and a February–March 2027 window. A newer Japan Cycling Federation event listing now shows the Asian Road Cycling Championships as postponed/undecided, with Malaysia as the planned host. No confirmed 2027 date is currently published. Treat this as TBC until the Asian Cycling Confederation or UCI confirms it.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
-      "source_url": "https://jcf.or.jp/events/asian-road-cycling-championships-2/",
-      "source_name": "Japan Cycling Federation event listing",
-      "source_links": [
-        {
-          "label": "Japan Cycling Federation event listing",
-          "url": "https://jcf.or.jp/events/asian-road-cycling-championships-2/"
-        },
-        {
-          "label": "Asian Cycling Confederation",
-          "url": "https://www.accasia.org/calendar/"
-        }
-      ],
-      "status": "scheduled",
-      "confidence": "official-federation-listing-confirms-postponement",
-      "verified_at": "2026-11-11"
-    },
-    {
-      "id": "uttarakhand-mtb-challenge-2026",
-      "title": "5th Edition of the Ultimate Uttarakhand MTB Challenge 2026",
-      "start_date": "2026-11-19",
-      "end_date": "2026-11-27",
-      "location": "Mukteshwar to Mussoorie, Uttarakhand",
-      "state": "Uttarakhand",
-      "discipline": "MTB",
-      "categories": [
-        "MTB Cross-Country",
-        "National"
-      ],
-      "organiser": "Department of Tourism, Government of Uttarakhand",
-      "description": "The HimCycling event calendar lists the challenge from 19–27 November 2026, with MTB Cross-Country racing scheduled from 20–26 November. Hosted by the Department of Tourism, Government of Uttarakhand. Check the official announcement for participant instructions and final race details.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_url": "",
-      "poster_note": "No direct event poster URL confirmed.",
-      "source_url": "https://himcycling.com/events",
-      "source_name": "HimCycling event calendar",
-      "source_links": [
-        {
-          "label": "Event calendar and announcement",
-          "url": "https://himcycling.com/events"
-        }
-      ],
-      "status": "confirmed",
-      "verified_at": "2026-11-11",
-      "confidence": "organiser-announcement",
-      "event_scope": "National",
-      "calendar_category": "national"
-    },
-    {
       "id": "asmita-womens-cycling-zonal-league-hyderabad-2026",
       "title": "ASMITA Khelo India Women’s Cycling Zonal League",
       "start_date": "2026-11-16",
@@ -1483,278 +703,6 @@
       "status": "confirmed",
       "verified_at": "2026-11-11",
       "confidence": "association-announcement"
-    },
-    {
-      "id": "bbch-nandi-epic-2026",
-      "title": "Nandi Epic – BBCh Race #10",
-      "start_date": "2026-11-20",
-      "end_date": "2026-11-20",
-      "location": "STRR–Hyd Cross, Nitesh Layout, Nandi Hill Road, Nandi Hills, Bengaluru, Karnataka",
-      "state": "Karnataka",
-      "discipline": "Road",
-      "categories": [
-        "Road",
-        "Elite",
-        "Amateur",
-        "Masters",
-        "Hill Climb"
-      ],
-      "organiser": "Bangalore Bicycle Championships",
-      "description": "BBCh season finale. Categories include 102 km Elite/Men Masters, 50 km Amateur/Women/Non-Road Bike and the 7.3 km Nandi hill climb. Entries close 18 November 2026 at 11:59 PM; no spot registration on race day.",
-      "registration_url": "https://www.bbch.in/events/bbch26-race10",
-      "source_url": "https://www.bbch.in/events/bbch26-race10",
-      "source_name": "Bangalore Bicycle Championships – official race page",
-      "source_links": [
-        {
-          "label": "Official race details and registration",
-          "url": "https://www.bbch.in/events/bbch26-race10"
-        }
-      ],
-      "status": "confirmed",
-      "verified_at": "2026-11-11",
-      "confidence": "organiser-website"
-    },
-    {
-      "id": "deccan-cliffhanger-2026",
-      "title": "Deccan Cliffhanger – Edition 13",
-      "start_date": "2026-11-28",
-      "end_date": "2026-11-29",
-      "location": "Start: Keshavbaug, Karve Nagar, Pune, Maharashtra · Finish: Bogmallo Beach, Goa",
-      "state": "Maharashtra / Goa",
-      "discipline": "Ultra Cycling",
-      "categories": [
-        "Ultra",
-        "Road",
-        "Solo",
-        "Relay",
-        "RAAM Qualifier"
-      ],
-      "organiser": "Inspire India",
-      "description": "643 km Pune-to-Goa ultra-cycling race. Solo self-supported, solo crew-supported and 2/3/4-rider RAAM-style relay formats. Flag-off is scheduled for 28 November; finishes and awards continue on 29 November.",
-      "registration_url": "https://www.inspireindia.net.in/deccan-cliffhanger",
-      "source_url": "https://www.inspireindia.net.in/deccan-cliffhanger",
-      "source_name": "Inspire India – official event page",
-      "source_links": [
-        {
-          "label": "Official event details and entry",
-          "url": "https://www.inspireindia.net.in/deccan-cliffhanger"
-        }
-      ],
-      "status": "confirmed",
-      "verified_at": "2026-11-11",
-      "confidence": "organiser-website"
-    },
-    {
-      "id": "mtb-jaipur-2026",
-      "title": "MTB Jaipur 2026 – The Pink City Challenge",
-      "start_date": "2026-12-04",
-      "end_date": "2026-12-06",
-      "location": "Jal Mahal, Amer Fort and Nahargarh, Jaipur, Rajasthan",
-      "state": "Rajasthan",
-      "discipline": "MTB",
-      "categories": [
-        "MTB",
-        "Elite",
-        "Amateur",
-        "Cross-Country"
-      ],
-      "organiser": "MTB Jaipur / Araventure Sports",
-      "description": "Three-day MTB weekend. Bib expo on 4 December; Heritage Circuit Race on 5 December; main race day on 6 December. Elite 60 km MTB-only route and 30 km amateur route (MTB/hybrid).",
-      "registration_url": "https://www.mtbjaipur.com/events/mtb-jaipur-2026",
-      "source_url": "https://www.mtbjaipur.com/events/mtb-jaipur-2026",
-      "source_name": "MTB Jaipur – official event page",
-      "source_links": [
-        {
-          "label": "Official event details and registration",
-          "url": "https://www.mtbjaipur.com/events/mtb-jaipur-2026"
-        }
-      ],
-      "status": "confirmed",
-      "verified_at": "2026-11-11",
-      "confidence": "organiser-website"
-    },
-    {
-      "id": "tour-of-nilgiris-2026",
-      "title": "Tour of the Nilgiris – 17th Edition",
-      "start_date": "2026-12-06",
-      "end_date": "2026-12-12",
-      "location": "Mysuru, Karnataka through Karnataka, Kerala and Tamil Nadu, finishing in Ooty",
-      "state": "Karnataka / Kerala / Tamil Nadu",
-      "discipline": "Road",
-      "categories": [
-        "Multi-day Tour",
-        "Endurance",
-        "Road"
-      ],
-      "organiser": "Breakaway Sports / Tour of the Nilgiris",
-      "description": "Fully supported seven-day, 700+ km cycling tour. Pre-tour briefing and registration on 5 December; flag-off on 6 December; final riding day 12 December. This is a supported tour, not a mass-start road race.",
-      "registration_url": "https://www.tourofnilgiris.com/",
-      "source_url": "https://www.tourofnilgiris.com/adayintfn",
-      "source_name": "Tour of the Nilgiris – official schedule",
-      "source_links": [
-        {
-          "label": "Official event website",
-          "url": "https://www.tourofnilgiris.com/"
-        },
-        {
-          "label": "Official route and daily schedule",
-          "url": "https://www.tourofnilgiris.com/route"
-        }
-      ],
-      "status": "confirmed",
-      "verified_at": "2026-11-11",
-      "confidence": "organiser-website"
-    },
-    {
-      "id": "great-raipur-velo-2026",
-      "title": "The Great Raipur Velo 2026",
-      "start_date": "2026-12-06",
-      "end_date": "2026-12-06",
-      "location": "Atal Nagar–Nava Raipur, Chhattisgarh",
-      "state": "Chhattisgarh",
-      "discipline": "Road",
-      "categories": [
-        "Road",
-        "Timed Race",
-        "Fellowship Ride"
-      ],
-      "organiser": "Tour De Raipur Cycling Association",
-      "description": "Road cycling event with 50 km men's timed race, 25 km women's timed race and a 15 km non-competitive Fellowship Ride. Registration listings show entries closing in late November; check the organiser's current entry instructions and category rules.",
-      "registration_url": "",
-      "source_url": "https://tourderaipur.com/itsa-thegreatraipurvelo",
-      "source_name": "Tour De Raipur Cycling Association – official event page",
-      "source_links": [
-        {
-          "label": "Official event details",
-          "url": "https://tourderaipur.com/itsa-thegreatraipurvelo"
-        },
-        {
-          "label": "Event listing and category information",
-          "url": "https://www.racesindia.com/races/the-great-raipur-velo/2026"
-        }
-      ],
-      "status": "confirmed",
-      "verified_at": "2026-11-11",
-      "confidence": "organiser-website"
-    },
-    {
-      "id": "d-mtb-darjeeling-2026",
-      "title": "D’MTB Darjeeling Mountain Bike Race 2026",
-      "start_date": "2026-12-11",
-      "end_date": "2026-12-11",
-      "location": "Darjeeling, West Bengal",
-      "state": "West Bengal",
-      "discipline": "MTB",
-      "categories": [
-        "MTB",
-        "Elite",
-        "Masters"
-      ],
-      "organiser": "Tea’sta Fest, Darjeeling",
-      "description": "42 km mountain-bike race for Elite and Masters riders. Registration closes 25 November; bib distribution is 10 December and race day is 11 December. Published categories include Open Male and Male Masters (35+).",
-      "registration_url": "https://teastafest.com/participate/d-mtb",
-      "source_url": "https://teastafest.com/participate/d-mtb",
-      "source_name": "Tea’sta Fest – official D’MTB page",
-      "source_links": [
-        {
-          "label": "Official event details and registration",
-          "url": "https://teastafest.com/participate/d-mtb"
-        }
-      ],
-      "status": "confirmed",
-      "verified_at": "2026-11-11",
-      "confidence": "organiser-website"
-    },
-    {
-      "id": "hindayan-mumbai-pune-2026",
-      "title": "HindAyan Mumbai to Pune Cycle Expedition",
-      "start_date": "2026-12-20",
-      "end_date": "2026-12-20",
-      "location": "Start: Vashi Railway Station, Navi Mumbai · Finish: Pune, Maharashtra",
-      "state": "Maharashtra",
-      "discipline": "Endurance Ride",
-      "categories": [
-        "Endurance",
-        "140 km",
-        "Non-competitive"
-      ],
-      "organiser": "HindAyan Foundation",
-      "description": "140 km non-competitive supported group expedition from Navi Mumbai to Pune. Reporting 4:00 AM and start 4:30 AM. Minimum age 18. The organiser's timetable lists the start at Azad Maidan, while the event booking page lists Vashi Railway Station; verify the latest start-point instructions with HindAyan before travel. Booking listing currently shows registration closing 1 December.",
-      "registration_url": "https://www.indiarunning.com/events/hindayan_mumbai_to_pune_cyclothon_36517",
-      "source_url": "https://www.hindayan.in/time-table/",
-      "source_name": "HindAyan official timetable",
-      "source_links": [
-        {
-          "label": "Official organiser timetable",
-          "url": "https://www.hindayan.in/time-table/"
-        },
-        {
-          "label": "Event booking and participant details",
-          "url": "https://www.indiarunning.com/events/hindayan_mumbai_to_pune_cyclothon_36517"
-        }
-      ],
-      "status": "scheduled",
-      "verified_at": "2026-11-11",
-      "confidence": "organiser-and-booking-listing"
-    },
-    {
-      "id": "dunes-ultra-2027",
-      "title": "The Dunes Ultra 2027",
-      "start_date": "2027-02-08",
-      "end_date": "2027-02-08",
-      "location": "Jaipur – Bikaner – Jaisalmer – Jaipur, Rajasthan",
-      "state": "Rajasthan",
-      "discipline": "Ultra Cycling",
-      "categories": [
-        "Ultra",
-        "675 km",
-        "1,340 km",
-        "Solo",
-        "Relay"
-      ],
-      "organiser": "Inspire India",
-      "description": "Inspire India's announced desert ultra-cycling event. The organiser lists 675 km and 1,340 km formats, with solo self-supported, solo crew-supported and RAAM-style relay options. Confirm exact race duration and registration opening with the organiser.",
-      "registration_url": "",
-      "source_url": "https://www.inspireindia.net.in/",
-      "source_name": "Inspire India – official race announcements",
-      "source_links": [
-        {
-          "label": "Official organiser announcements",
-          "url": "https://www.inspireindia.net.in/"
-        }
-      ],
-      "status": "scheduled",
-      "verified_at": "2026-11-11",
-      "confidence": "organiser-website"
-    },
-    {
-      "id": "asmita-khelo-india-womens-cycling-west-zone-bhavnagar-2026",
-      "title": "ASMITA Khelo India Women’s Cycling League – West Zone",
-      "start_date": "2026-11-21",
-      "end_date": "2026-11-22",
-      "location": "Gaytri Resort, P6C3+HM2, GJ SH 37, Ghogha Road, near Avaniya, Gujarat 364002",
-      "state": "Gujarat",
-      "discipline": "Other",
-      "categories": [
-        "Women",
-        "Khelo India",
-        "ASMITA",
-        "West Zone",
-        "Cycling League"
-      ],
-      "event_scope": "West Zone",
-      "organiser": "Cycling Federation of India (CFI), Gujarat State Cycling Association (GSCA) and Bhavnagar Cycling Association",
-      "description": "Women’s cycling league event scheduled in Bhavnagar, Gujarat, on 21–22 November 2026. The poster displays the Cycling Federation of India (CFI), Gujarat State Cycling Association (GSCA) and Bhavnagar Cycling Association.",
-      "registration_url": "",
-      "contact_email": "",
-      "contact_phone": "",
-      "poster_note": "Information transcribed from the event poster supplied on 12 November 2026.",
-      "source_url": "",
-      "source_links": [],
-      "status": "confirmed",
-      "verified_at": "2026-11-12",
-      "confidence": "association-poster",
-      "accommodation_note": "Free boarding and lodging will be provided by the host from the evening of 20 November 2026 until the afternoon of 22 November 2026."
     },
     {
       "id": "audax-2026-11-17-sahyadri-600-karad",
@@ -1819,6 +767,69 @@
       "status": "confirmed",
       "confidence": "official-audax-event-page",
       "verified_at": "2026-11-16"
+    },
+    {
+      "id": "uttarakhand-mtb-challenge-2026",
+      "title": "5th Edition of the Ultimate Uttarakhand MTB Challenge 2026",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-27",
+      "location": "Mukteshwar to Mussoorie, Uttarakhand",
+      "state": "Uttarakhand",
+      "discipline": "MTB",
+      "categories": [
+        "MTB Cross-Country",
+        "National"
+      ],
+      "organiser": "Department of Tourism, Government of Uttarakhand",
+      "description": "The HimCycling event calendar lists the challenge from 19–27 November 2026, with MTB Cross-Country racing scheduled from 20–26 November. Hosted by the Department of Tourism, Government of Uttarakhand. Check the official announcement for participant instructions and final race details.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No direct event poster URL confirmed.",
+      "source_url": "https://himcycling.com/events",
+      "source_name": "HimCycling event calendar",
+      "source_links": [
+        {
+          "label": "Event calendar and announcement",
+          "url": "https://himcycling.com/events"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-announcement",
+      "event_scope": "National",
+      "calendar_category": "national"
+    },
+    {
+      "id": "bbch-nandi-epic-2026",
+      "title": "Nandi Epic – BBCh Race #10",
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-20",
+      "location": "STRR–Hyd Cross, Nitesh Layout, Nandi Hill Road, Nandi Hills, Bengaluru, Karnataka",
+      "state": "Karnataka",
+      "discipline": "Road",
+      "categories": [
+        "Road",
+        "Elite",
+        "Amateur",
+        "Masters",
+        "Hill Climb"
+      ],
+      "organiser": "Bangalore Bicycle Championships",
+      "description": "BBCh season finale. Categories include 102 km Elite/Men Masters, 50 km Amateur/Women/Non-Road Bike and the 7.3 km Nandi hill climb. Entries close 18 November 2026 at 11:59 PM; no spot registration on race day.",
+      "registration_url": "https://www.bbch.in/events/bbch26-race10",
+      "source_url": "https://www.bbch.in/events/bbch26-race10",
+      "source_name": "Bangalore Bicycle Championships – official race page",
+      "source_links": [
+        {
+          "label": "Official race details and registration",
+          "url": "https://www.bbch.in/events/bbch26-race10"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
     },
     {
       "id": "audax-2026-11-20-bangalore-400",
@@ -1915,6 +926,35 @@
       "status": "confirmed",
       "confidence": "official-audax-event-page",
       "verified_at": "2026-11-16"
+    },
+    {
+      "id": "asmita-khelo-india-womens-cycling-west-zone-bhavnagar-2026",
+      "title": "ASMITA Khelo India Women’s Cycling League – West Zone",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-22",
+      "location": "Gaytri Resort, P6C3+HM2, GJ SH 37, Ghogha Road, near Avaniya, Gujarat 364002",
+      "state": "Gujarat",
+      "discipline": "Other",
+      "categories": [
+        "Women",
+        "Khelo India",
+        "ASMITA",
+        "West Zone",
+        "Cycling League"
+      ],
+      "event_scope": "West Zone",
+      "organiser": "Cycling Federation of India (CFI), Gujarat State Cycling Association (GSCA) and Bhavnagar Cycling Association",
+      "description": "Women’s cycling league event scheduled in Bhavnagar, Gujarat, on 21–22 November 2026. The poster displays the Cycling Federation of India (CFI), Gujarat State Cycling Association (GSCA) and Bhavnagar Cycling Association.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_note": "Information transcribed from the event poster supplied on 12 November 2026.",
+      "source_url": "",
+      "source_links": [],
+      "status": "confirmed",
+      "verified_at": "2026-11-12",
+      "confidence": "association-poster",
+      "accommodation_note": "Free boarding and lodging will be provided by the host from the evening of 20 November 2026 until the afternoon of 22 November 2026."
     },
     {
       "id": "audax-2026-11-21-pune-400",
@@ -2333,6 +1373,71 @@
       "verified_at": "2026-11-16"
     },
     {
+      "id": "mumbai-cycling-championship-2026-mcaca",
+      "title": "Mumbai Cycling Championship 2026",
+      "start_date": "2026-11-22",
+      "end_date": "2026-11-22",
+      "location": "ONGC, Avenue 3, Bandra Kurla Complex (BKC), Mumbai, Maharashtra",
+      "state": "Maharashtra",
+      "discipline": "Road",
+      "categories": [
+        "Road",
+        "Men's Open"
+      ],
+      "organiser": "Mumbai City Amateur Cycling Association (MCACA)",
+      "description": "A road cycling race organised by Mumbai City Amateur Cycling Association (MCACA). Category: Men's Open — men aged 18 years and above. Entry fee: ₹300 per person. Registration deadline: 20 November 2026. The published registration deadline has passed; check the registration form for current availability before submitting.",
+      "registration_url": "https://forms.gle/5mSqjwdSQV9wH8Gy8",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No official event poster URL supplied for the website listing.",
+      "source_url": "https://calendar.app.google/T8HVjRa49KmfaAYg7",
+      "source_name": "Google Calendar event",
+      "source_links": [
+        {
+          "label": "Race location – Google Maps",
+          "url": "https://maps.app.goo.gl/SLTxr7jDCxABjBz77"
+        },
+        {
+          "label": "MCACA event WhatsApp group",
+          "url": "https://chat.whatsapp.com/I1RkSf62uu3HPXTLw4oKUG"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-21",
+      "confidence": "organiser-provided"
+    },
+    {
+      "id": "deccan-cliffhanger-2026",
+      "title": "Deccan Cliffhanger – Edition 13",
+      "start_date": "2026-11-28",
+      "end_date": "2026-11-29",
+      "location": "Start: Keshavbaug, Karve Nagar, Pune, Maharashtra · Finish: Bogmallo Beach, Goa",
+      "state": "Maharashtra / Goa",
+      "discipline": "Ultra Cycling",
+      "categories": [
+        "Ultra",
+        "Road",
+        "Solo",
+        "Relay",
+        "RAAM Qualifier"
+      ],
+      "organiser": "Inspire India",
+      "description": "643 km Pune-to-Goa ultra-cycling race. Solo self-supported, solo crew-supported and 2/3/4-rider RAAM-style relay formats. Flag-off is scheduled for 28 November; finishes and awards continue on 29 November.",
+      "registration_url": "https://www.inspireindia.net.in/deccan-cliffhanger",
+      "source_url": "https://www.inspireindia.net.in/deccan-cliffhanger",
+      "source_name": "Inspire India – official event page",
+      "source_links": [
+        {
+          "label": "Official event details and entry",
+          "url": "https://www.inspireindia.net.in/deccan-cliffhanger"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
+    },
+    {
       "id": "audax-2026-11-28-jamnagar-600",
       "title": "Jamnagar Cycling Club 600 km BRM",
       "start_date": "2026-11-28",
@@ -2363,6 +1468,127 @@
       "status": "confirmed",
       "confidence": "official-audax-event-page",
       "verified_at": "2026-11-16"
+    },
+    {
+      "id": "mtb-jaipur-2026",
+      "title": "MTB Jaipur 2026 – The Pink City Challenge",
+      "start_date": "2026-12-04",
+      "end_date": "2026-12-06",
+      "location": "Jal Mahal, Amer Fort and Nahargarh, Jaipur, Rajasthan",
+      "state": "Rajasthan",
+      "discipline": "MTB",
+      "categories": [
+        "MTB",
+        "Elite",
+        "Amateur",
+        "Cross-Country"
+      ],
+      "organiser": "MTB Jaipur / Araventure Sports",
+      "description": "Three-day MTB weekend. Bib expo on 4 December; Heritage Circuit Race on 5 December; main race day on 6 December. Elite 60 km MTB-only route and 30 km amateur route (MTB/hybrid).",
+      "registration_url": "https://www.mtbjaipur.com/events/mtb-jaipur-2026",
+      "source_url": "https://www.mtbjaipur.com/events/mtb-jaipur-2026",
+      "source_name": "MTB Jaipur – official event page",
+      "source_links": [
+        {
+          "label": "Official event details and registration",
+          "url": "https://www.mtbjaipur.com/events/mtb-jaipur-2026"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
+    },
+    {
+      "id": "tour-of-nilgiris-2026",
+      "title": "Tour of the Nilgiris – 17th Edition",
+      "start_date": "2026-12-06",
+      "end_date": "2026-12-12",
+      "location": "Mysuru, Karnataka through Karnataka, Kerala and Tamil Nadu, finishing in Ooty",
+      "state": "Karnataka / Kerala / Tamil Nadu",
+      "discipline": "Road",
+      "categories": [
+        "Multi-day Tour",
+        "Endurance",
+        "Road"
+      ],
+      "organiser": "Breakaway Sports / Tour of the Nilgiris",
+      "description": "Fully supported seven-day, 700+ km cycling tour. Pre-tour briefing and registration on 5 December; flag-off on 6 December; final riding day 12 December. This is a supported tour, not a mass-start road race.",
+      "registration_url": "https://www.tourofnilgiris.com/",
+      "source_url": "https://www.tourofnilgiris.com/adayintfn",
+      "source_name": "Tour of the Nilgiris – official schedule",
+      "source_links": [
+        {
+          "label": "Official event website",
+          "url": "https://www.tourofnilgiris.com/"
+        },
+        {
+          "label": "Official route and daily schedule",
+          "url": "https://www.tourofnilgiris.com/route"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
+    },
+    {
+      "id": "great-raipur-velo-2026",
+      "title": "The Great Raipur Velo 2026",
+      "start_date": "2026-12-06",
+      "end_date": "2026-12-06",
+      "location": "Atal Nagar–Nava Raipur, Chhattisgarh",
+      "state": "Chhattisgarh",
+      "discipline": "Road",
+      "categories": [
+        "Road",
+        "Timed Race",
+        "Fellowship Ride"
+      ],
+      "organiser": "Tour De Raipur Cycling Association",
+      "description": "Road cycling event with 50 km men's timed race, 25 km women's timed race and a 15 km non-competitive Fellowship Ride. Registration listings show entries closing in late November; check the organiser's current entry instructions and category rules.",
+      "registration_url": "",
+      "source_url": "https://tourderaipur.com/itsa-thegreatraipurvelo",
+      "source_name": "Tour De Raipur Cycling Association – official event page",
+      "source_links": [
+        {
+          "label": "Official event details",
+          "url": "https://tourderaipur.com/itsa-thegreatraipurvelo"
+        },
+        {
+          "label": "Event listing and category information",
+          "url": "https://www.racesindia.com/races/the-great-raipur-velo/2026"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
+    },
+    {
+      "id": "d-mtb-darjeeling-2026",
+      "title": "D’MTB Darjeeling Mountain Bike Race 2026",
+      "start_date": "2026-12-11",
+      "end_date": "2026-12-11",
+      "location": "Darjeeling, West Bengal",
+      "state": "West Bengal",
+      "discipline": "MTB",
+      "categories": [
+        "MTB",
+        "Elite",
+        "Masters"
+      ],
+      "organiser": "Tea’sta Fest, Darjeeling",
+      "description": "42 km mountain-bike race for Elite and Masters riders. Registration closes 25 November; bib distribution is 10 December and race day is 11 December. Published categories include Open Male and Male Masters (35+).",
+      "registration_url": "https://teastafest.com/participate/d-mtb",
+      "source_url": "https://teastafest.com/participate/d-mtb",
+      "source_name": "Tea’sta Fest – official D’MTB page",
+      "source_links": [
+        {
+          "label": "Official event details and registration",
+          "url": "https://teastafest.com/participate/d-mtb"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
     },
     {
       "id": "audax-2026-12-11-cyclone-600-ahmedabad",
@@ -2461,6 +1687,73 @@
       "verified_at": "2026-11-16"
     },
     {
+      "id": "cfi-2026-track-asia-cup-delhi",
+      "title": "Track Asia Cup II",
+      "start_date": "2026-12-16",
+      "end_date": "2026-12-18",
+      "location": "Indoor Cycling Velodrome, IG Sports Complex, New Delhi, India",
+      "state": "Delhi",
+      "discipline": "Track",
+      "categories": [
+        "Elite",
+        "Junior",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "The UCI calendar lists Track Asia Cup II at the Indoor Cycling Velodrome, IG Sports Complex, New Delhi, from 16–18 December 2026. Class CL1. The UCI page lists Elite and Junior track disciplines including pursuit, sprint, keirin, omnium, scratch, points, elimination and time trial. This replaces the earlier 26–28 November date transcribed from the supplied CFI calendar image.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.uci.org/competition-details/2026/PIS/77852",
+      "source_name": "UCI official competition listing",
+      "source_links": [
+        {
+          "label": "UCI competition details",
+          "url": "https://www.uci.org/competition-details/2026/PIS/77852"
+        }
+      ],
+      "status": "confirmed",
+      "confidence": "uci-official",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "hindayan-mumbai-pune-2026",
+      "title": "HindAyan Mumbai to Pune Cycle Expedition",
+      "start_date": "2026-12-20",
+      "end_date": "2026-12-20",
+      "location": "Start: Vashi Railway Station, Navi Mumbai · Finish: Pune, Maharashtra",
+      "state": "Maharashtra",
+      "discipline": "Endurance Ride",
+      "categories": [
+        "Endurance",
+        "140 km",
+        "Non-competitive"
+      ],
+      "organiser": "HindAyan Foundation",
+      "description": "140 km non-competitive supported group expedition from Navi Mumbai to Pune. Reporting 4:00 AM and start 4:30 AM. Minimum age 18. The organiser's timetable lists the start at Azad Maidan, while the event booking page lists Vashi Railway Station; verify the latest start-point instructions with HindAyan before travel. Booking listing currently shows registration closing 1 December.",
+      "registration_url": "https://www.indiarunning.com/events/hindayan_mumbai_to_pune_cyclothon_36517",
+      "source_url": "https://www.hindayan.in/time-table/",
+      "source_name": "HindAyan official timetable",
+      "source_links": [
+        {
+          "label": "Official organiser timetable",
+          "url": "https://www.hindayan.in/time-table/"
+        },
+        {
+          "label": "Event booking and participant details",
+          "url": "https://www.indiarunning.com/events/hindayan_mumbai_to_pune_cyclothon_36517"
+        }
+      ],
+      "status": "scheduled",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-and-booking-listing"
+    },
+    {
       "id": "audax-2026-12-24-jamnagar-1200",
       "title": "Jamnagar Cycling Club 1200 km BRM – The Royal Nawanagar Ride",
       "start_date": "2026-12-24",
@@ -2493,6 +1786,46 @@
       "verified_at": "2026-11-16"
     },
     {
+      "id": "cfi-2026-national-road-cycling-championships",
+      "title": "National Road Cycling Championships",
+      "start_date": "2026-12-26",
+      "end_date": "2026-12-30",
+      "location": "Jabalpur, Madhya Pradesh",
+      "state": "Madhya Pradesh",
+      "discipline": "Road",
+      "categories": [
+        "Elite",
+        "Junior",
+        "Sub-Junior",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "The supplied CFI Calendar image lists 26–30 December 2026 in Jabalpur, Madhya Pradesh. HimCycling's current event listing instead names Coimbatore, Tamil Nadu for the same dates. Because the venue sources conflict, the location remains unconfirmed. Check the latest CFI circular before travel.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/about-3",
+      "source_name": "CFI Event Calendar",
+      "source_links": [
+        {
+          "label": "CFI official website",
+          "url": "https://www.cfiindia.in/"
+        },
+        {
+          "label": "HimCycling event calendar",
+          "url": "https://himcycling.com/events"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "conflicting-sources",
+      "verified_at": "2026-11-11"
+    },
+    {
       "id": "audax-2026-12-26-cyclone-400-ahmedabad",
       "title": "Cyclone Cycling Club 400 km BRM – Aao Babu, Chale Abu",
       "start_date": "2026-12-26",
@@ -2523,6 +1856,134 @@
       "status": "confirmed",
       "confidence": "official-audax-event-page",
       "verified_at": "2026-11-16"
+    },
+    {
+      "id": "bajaj-pune-grand-tour-2027",
+      "title": "Bajaj Pune Grand Tour 2027",
+      "start_date": "2027-01-26",
+      "end_date": "2027-01-31",
+      "location": "Pune district, Maharashtra",
+      "state": "Maharashtra",
+      "discipline": "Road",
+      "categories": [
+        "Road",
+        "Men Elite · UCI 2.1",
+        "Pro Men's Race · UCI 2.2",
+        "Gran Fondo details TBC"
+      ],
+      "organiser": "Pune Grand Tour / Pune District",
+      "description": "The official organiser site confirms 26–31 January 2027 and six stages across Pune district. Men Elite is listed as UCI 2.1 (960.12 km); the Pro Men's Race is UCI 2.2 (437 km). The event is for selected professional teams, not general open entry. Stage areas include Nanded City, Baramati, Saswad, Junnar, Rajgurunagar, Alandi, Lonavala, Hinjawadi and Pune/PCMC. The official site says Gran Fondo details are still to be confirmed. A 9 November 2026 report also notes the event's upgrade to UCI 2.1.",
+      "registration_url": "",
+      "contact_email": "registrations@punegrandtour.in",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No standalone poster URL was available on the official event page checked.",
+      "source_url": "https://punegrandtour.in/",
+      "source_links": [
+        {
+          "label": "Official event site",
+          "url": "https://punegrandtour.in/"
+        },
+        {
+          "label": "Official schedule",
+          "url": "https://punegrandtour.in/schedule/"
+        },
+        {
+          "label": "UCI 2.1 upgrade report (9 Nov 2026)",
+          "url": "https://www.stepout2play.com/news/2026/11/09/bajaj-pune-grand-tour-uci-21-upgrade-2027"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "official-organiser",
+      "image_url": "https://punegrandtour.in/wp-content/uploads/2026/10/the-track-1.jpg",
+      "image_note": "Official event track visual from the organiser website; not a race poster.",
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true
+    },
+    {
+      "id": "tour-of-thekkady-2027",
+      "title": "Tour of Thekkady 2027",
+      "start_date": "2027-01-30",
+      "end_date": "2027-01-30",
+      "location": "Start: Caesar Palace Hotel, Nagampadom, Kottayam · Finish: Thekkady, Kerala",
+      "state": "Kerala",
+      "discipline": "Gran Fondo",
+      "categories": [
+        "Gran Fondo",
+        "152 km race",
+        "167 km tour",
+        "Men",
+        "Women",
+        "Masters"
+      ],
+      "organiser": "KEG Bikers",
+      "description": "Sixth edition on 30 January 2027. Official organiser confirms a 152 km race with 3,500 m climbing and a 167 km tour. Race categories: Men (18+, 8.5-hour cut-off), Women (18+, 9.5-hour cut-off) and Masters (40+, 9.5-hour cut-off). Tour category is 167 km with a 14.5-hour finish window and minimum age 18. The top six riders in each individual category are offered entry to the Spinneys Dubai 92 Cycle Challenge 2028. Check the current NovaRace listing and organiser terms for entry details.",
+      "registration_url": "https://www.novarace.in/events/tour-of-thekkady-2027",
+      "contact_email": "kegbikers@gmail.com",
+      "contact_phone": "+91 9188633547",
+      "poster_url": "",
+      "poster_note": "The organiser page was available, but a direct poster image URL was not confirmed.",
+      "source_url": "https://www.tourofthekkady.com/",
+      "source_links": [
+        {
+          "label": "Official event site",
+          "url": "https://www.tourofthekkady.com/"
+        },
+        {
+          "label": "Official terms and conditions",
+          "url": "https://www.tourofthekkady.com/termsandconditions"
+        },
+        {
+          "label": "Registration listing",
+          "url": "https://www.novarace.in/events/tour-of-thekkady-2027"
+        }
+      ],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "official-organiser",
+      "image_url": "https://static.wixstatic.com/media/2b39e5_fe127dddad77445dbf539db7cb0cfb8e~mv2.jpg/v1/fill/w_933%2Ch_622%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/2b39e5_fe127dddad77445dbf539db7cb0cfb8e~mv2.jpg",
+      "image_note": "Official organiser website image; not a standalone event poster."
+    },
+    {
+      "id": "cfi-2027-asian-track-cycling-championships",
+      "title": "Asian Track Cycling Championships",
+      "start_date": "2027-01-30",
+      "end_date": "2027-02-03",
+      "date_note": "January–February 2027 · exact dates TBC",
+      "location": "Velodrom Nasional Malaysia",
+      "state": "Malaysia",
+      "discipline": "Track",
+      "categories": [
+        "Junior",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "The UCI calendar now lists the 2027 Asian Track Championships at Velodrom Nasional Malaysia from 30 January to 3 February 2027. This replaces the earlier broad January–February 2027 window in the supplied CFI calendar image.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.uci.org/calendar/all/2jnxYAuvjgttyHi6YQ94EJ?searchTerm=track",
+      "source_name": "UCI 2027 calendar",
+      "source_links": [
+        {
+          "label": "UCI calendar",
+          "url": "https://www.uci.org/calendar/all/2jnxYAuvjgttyHi6YQ94EJ?searchTerm=track"
+        },
+        {
+          "label": "Asian Cycling Confederation calendar",
+          "url": "https://www.accasia.org/calendar/"
+        }
+      ],
+      "status": "confirmed",
+      "confidence": "uci-official",
+      "verified_at": "2026-11-11"
     },
     {
       "id": "tigerman-rush-24-nagpur-2027",
@@ -2592,6 +2053,580 @@
       "status": "confirmed",
       "confidence": "official-organiser-timetable",
       "verified_at": "2026-11-16"
+    },
+    {
+      "id": "cfi-2027-hcl-cyclothon-bangalore",
+      "title": "HCL Cyclothon – Bangalore",
+      "start_date": "2027-02-07",
+      "end_date": "2027-02-07",
+      "location": "Bangalore",
+      "state": "Karnataka",
+      "discipline": "Road",
+      "categories": [
+        "Elite",
+        "Junior",
+        "Cyclothon",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Official HCL organiser page confirms race day 7 February 2027. Registration is scheduled from 5 December 2026 to 24 January 2027; Expo 5–6 February. Route, expo venue and race guidelines are still to be announced. Amateur road race is listed at 50 km; check the organiser page for current bicycle specifications and category rules.",
+      "registration_url": "https://hclcyclothon.com/bengaluru-race-info/",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://hclcyclothon.com/bengaluru-race-info/",
+      "source_name": "Official HCL Cyclothon Bengaluru event page",
+      "source_links": [
+        {
+          "label": "Official event details",
+          "url": "https://hclcyclothon.com/bengaluru-race-info/"
+        }
+      ],
+      "status": "confirmed",
+      "confidence": "official-organiser",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "dunes-ultra-2027",
+      "title": "The Dunes Ultra 2027",
+      "start_date": "2027-02-08",
+      "end_date": "2027-02-08",
+      "location": "Jaipur – Bikaner – Jaisalmer – Jaipur, Rajasthan",
+      "state": "Rajasthan",
+      "discipline": "Ultra Cycling",
+      "categories": [
+        "Ultra",
+        "675 km",
+        "1,340 km",
+        "Solo",
+        "Relay"
+      ],
+      "organiser": "Inspire India",
+      "description": "Inspire India's announced desert ultra-cycling event. The organiser lists 675 km and 1,340 km formats, with solo self-supported, solo crew-supported and RAAM-style relay options. Confirm exact race duration and registration opening with the organiser.",
+      "registration_url": "",
+      "source_url": "https://www.inspireindia.net.in/",
+      "source_name": "Inspire India – official race announcements",
+      "source_links": [
+        {
+          "label": "Official organiser announcements",
+          "url": "https://www.inspireindia.net.in/"
+        }
+      ],
+      "status": "scheduled",
+      "verified_at": "2026-11-11",
+      "confidence": "organiser-website"
+    },
+    {
+      "id": "race-across-india-2027",
+      "title": "Race Across India 2027",
+      "start_date": "2027-02-28",
+      "end_date": "",
+      "location": "Srinagar to Kanyakumari, India",
+      "state": "",
+      "discipline": "Ultra-cycling",
+      "categories": [
+        "Ultra-cycling",
+        "Solo",
+        "Team of 2",
+        "Team of 4",
+        "4,100+ km"
+      ],
+      "organiser": "Race Across India",
+      "description": "RAIN 3.0 is announced for 28 February 2027 as a 4,100+ km ultra-cycling race from Srinagar to Kanyakumari. The organiser page shows solo and team formats and route downloads. Important: parts of the same page still contain legacy 2025 fee and cut-off tables, so those figures should not be treated as confirmed 2027 terms. Check directly with the organiser for current fees, eligibility, cut-offs and final route.",
+      "registration_url": "https://raceacrossindia.org/rain-3-0/",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No current-edition poster URL was confirmed on the organiser's home page.",
+      "source_url": "https://raceacrossindia.org/rain-3-0/",
+      "source_links": [],
+      "status": "confirmed",
+      "verified_at": "2026-11-11",
+      "confidence": "official-page-with-legacy-content",
+      "image_url": "https://raceacrossindia.org/wp-content/uploads/2024/05/route-for-race-across-india.jpg",
+      "image_note": "Official route-map image shown on the RAIN 3.0 page; check the current organiser route before travel."
+    },
+    {
+      "id": "cfi-2027-hcl-cyclothon-noida",
+      "title": "HCL Cyclothon – Noida",
+      "start_date": "2027-03-14",
+      "end_date": "2027-03-14",
+      "location": "Noida",
+      "state": "Uttar Pradesh",
+      "discipline": "Road",
+      "categories": [
+        "Elite",
+        "Junior",
+        "Cyclothon",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Official HCL organiser page confirms race day 14 March 2027. Registration is scheduled from 10 January to 28 February 2027; Bib Expo 12–13 March. Route, Expo venue and race guidelines are still to be announced. Amateur road race is listed at 55 km; check the organiser page for bicycle specifications and category rules.",
+      "registration_url": "https://hclcyclothon.com/noida-race-info/",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://hclcyclothon.com/noida-race-info/",
+      "source_name": "Official HCL Cyclothon Noida event page",
+      "source_links": [
+        {
+          "label": "Official event details",
+          "url": "https://hclcyclothon.com/noida-race-info/"
+        }
+      ],
+      "status": "confirmed",
+      "confidence": "official-organiser",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "cfi-college-cyclothon-series",
+      "title": "College Cyclothon Series",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Dates and venue to be confirmed",
+      "location": "",
+      "state": "",
+      "discipline": "Road",
+      "categories": [
+        "Private Event",
+        "College Series",
+        "Private"
+      ],
+      "event_scope": "Private",
+      "calendar_category": "private",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar does not provide a venue or date. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/about-3",
+      "source_name": "CFI Event Calendar",
+      "source_links": [
+        {
+          "label": "CFI official website",
+          "url": "https://www.cfiindia.in/"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-kashmir-grand-tour",
+      "title": "Kashmir Grand Tour",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date to be announced",
+      "location": "Kashmir, India",
+      "state": "Jammu and Kashmir",
+      "discipline": "Road",
+      "categories": [
+        "Elite",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the venue as Kashmir, India and the date as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/about-3",
+      "source_name": "CFI Event Calendar",
+      "source_links": [
+        {
+          "label": "CFI official website",
+          "url": "https://www.cfiindia.in/"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-ecycling-isso-zonals",
+      "title": "E-Cycling ISSO Zonals",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date and venue to be confirmed",
+      "location": "TBC",
+      "state": "",
+      "discipline": "E-Cycling",
+      "categories": [
+        "E-Cycling",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "private",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/about-3",
+      "source_name": "CFI Event Calendar",
+      "source_links": [
+        {
+          "label": "CFI official website",
+          "url": "https://www.cfiindia.in/"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-ecycling-isso-finals",
+      "title": "E-Cycling ISSO Finals",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date and venue to be confirmed",
+      "location": "TBC",
+      "state": "",
+      "discipline": "E-Cycling",
+      "categories": [
+        "E-Cycling",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "private",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists the date and venue as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/about-3",
+      "source_name": "CFI Event Calendar",
+      "source_links": [
+        {
+          "label": "CFI official website",
+          "url": "https://www.cfiindia.in/"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-statue-of-unity",
+      "title": "Statue of Unity Cycling Event",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date to be announced",
+      "location": "Ahmedabad, Gujarat",
+      "state": "Gujarat",
+      "discipline": "Road",
+      "categories": [
+        "Elite Men",
+        "Elite Women",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar lists Ahmedabad, Gujarat as the venue and the date as TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/about-3",
+      "source_name": "CFI Event Calendar",
+      "source_links": [
+        {
+          "label": "CFI official website",
+          "url": "https://www.cfiindia.in/"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-cycling-league-of-india",
+      "title": "Cycling League of India",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date to be announced",
+      "location": "Ahmedabad, Gujarat",
+      "state": "Gujarat",
+      "discipline": "Road",
+      "categories": [
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. The calendar marks this event as UCI-accredited; date is TBC. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/about-3",
+      "source_name": "CFI Event Calendar",
+      "source_links": [
+        {
+          "label": "CFI official website",
+          "url": "https://www.cfiindia.in/"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2026-tour-de-thar",
+      "title": "Tour de Thar 2026",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Winter 2026 · November–December · exact date TBC",
+      "location": "Thar Desert, Rajasthan",
+      "state": "Rajasthan",
+      "discipline": "Road",
+      "categories": [
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "The official Tour de Thar event page now lists the 2026 edition as an active/upcoming event with registration open. It is a 130 km ride in the Thar Desert, Rajasthan, scheduled for winter 2026 (November–December); the exact race date is still to be confirmed. The page describes dune roads and an expressway section.",
+      "registration_url": "https://tourdethar.com/events",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://tourdethar.com/events",
+      "source_name": "Official Tour de Thar events page",
+      "source_links": [
+        {
+          "label": "Official events and registration",
+          "url": "https://tourdethar.com/events"
+        }
+      ],
+      "status": "confirmed",
+      "confidence": "official-organiser",
+      "verified_at": "2026-11-11"
+    },
+    {
+      "id": "cfi-2027-national-coaching-camp-elite-road",
+      "title": "National Coaching Camp – Elite (Road)",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "January–February 2027 · exact dates TBC",
+      "location": "Patiala",
+      "state": "Punjab",
+      "discipline": "Road",
+      "categories": [
+        "Elite",
+        "Coaching Camp",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "camp",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National road coaching camp. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/about-3",
+      "source_name": "CFI Event Calendar",
+      "source_links": [
+        {
+          "label": "CFI official website",
+          "url": "https://www.cfiindia.in/"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2027-national-coaching-camp-junior-road",
+      "title": "National Coaching Camp – Junior (Road)",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "January–February 2027 · exact dates TBC",
+      "location": "Patiala",
+      "state": "Punjab",
+      "discipline": "Road",
+      "categories": [
+        "Junior",
+        "Coaching Camp",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "camp",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National road coaching camp. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/about-3",
+      "source_name": "CFI Event Calendar",
+      "source_links": [
+        {
+          "label": "CFI official website",
+          "url": "https://www.cfiindia.in/"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2027-selection-trial-2",
+      "title": "Selection Trial 2",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "Date and venue to be confirmed",
+      "location": "TBC",
+      "state": "",
+      "discipline": "Road",
+      "categories": [
+        "Elite",
+        "Junior",
+        "Selection Trial",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "national",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National road selection trial. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/about-3",
+      "source_name": "CFI Event Calendar",
+      "source_links": [
+        {
+          "label": "CFI official website",
+          "url": "https://www.cfiindia.in/"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2027-national-coaching-camp-elite-junior-track",
+      "title": "National Coaching Camp – Elite & Junior (Track)",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "February–March 2027 · exact dates TBC",
+      "location": "Delhi / Rudrapur",
+      "state": "Delhi / Uttarakhand",
+      "discipline": "Track",
+      "categories": [
+        "Elite",
+        "Junior",
+        "Coaching Camp",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "camp",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National track coaching camp. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/about-3",
+      "source_name": "CFI Event Calendar",
+      "source_links": [
+        {
+          "label": "CFI official website",
+          "url": "https://www.cfiindia.in/"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2027-national-coaching-camp-junior-track",
+      "title": "National Coaching Camp – Junior (Track)",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "February–March 2027 · exact dates TBC",
+      "location": "Delhi / Rudrapur",
+      "state": "Delhi / Uttarakhand",
+      "discipline": "Track",
+      "categories": [
+        "Junior",
+        "Coaching Camp",
+        "National"
+      ],
+      "event_scope": "National",
+      "calendar_category": "camp",
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "Listed in the CFI Calendar 2026–27. National track coaching camp. This entry is transcribed from the calendar image supplied to India Racing Cycles. Please check the CFI source for final instructions; dates or venues marked TBC are not confirmed.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://www.cfiindia.in/about-3",
+      "source_name": "CFI Event Calendar",
+      "source_links": [
+        {
+          "label": "CFI official website",
+          "url": "https://www.cfiindia.in/"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "cfi-calendar-image"
+    },
+    {
+      "id": "cfi-2027-asian-road-cycling-championships",
+      "title": "Asian Road Cycling Championships",
+      "start_date": "",
+      "end_date": "",
+      "date_note": "February–March 2027 · exact dates TBC",
+      "location": "Malaysia (planned; final venue/date not confirmed)",
+      "state": "Malaysia",
+      "discipline": "Road",
+      "categories": [
+        "Junior",
+        "International"
+      ],
+      "event_scope": "International",
+      "calendar_category": "international",
+      "uci_accredited": true,
+      "organiser": "Cycling Federation of India (CFI)",
+      "description": "The supplied CFI calendar image listed China and a February–March 2027 window. A newer Japan Cycling Federation event listing now shows the Asian Road Cycling Championships as postponed/undecided, with Malaysia as the planned host. No confirmed 2027 date is currently published. Treat this as TBC until the Asian Cycling Confederation or UCI confirms it.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "No individual event poster was supplied; transcribed from the CFI Calendar 2026–27 image.",
+      "source_url": "https://jcf.or.jp/events/asian-road-cycling-championships-2/",
+      "source_name": "Japan Cycling Federation event listing",
+      "source_links": [
+        {
+          "label": "Japan Cycling Federation event listing",
+          "url": "https://jcf.or.jp/events/asian-road-cycling-championships-2/"
+        },
+        {
+          "label": "Asian Cycling Confederation",
+          "url": "https://www.accasia.org/calendar/"
+        }
+      ],
+      "status": "scheduled",
+      "confidence": "official-federation-listing-confirms-postponement",
+      "verified_at": "2026-11-11"
     }
   ]
 }
