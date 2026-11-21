@@ -1,7 +1,7 @@
 {
   "meta": {
     "last_updated": "2026-11-21",
-    "note": "Updated 21 November 2026: added a dedicated Mumbai Cycling Championship 2026 flyer page linked from the event Details action."
+    "note": "Reviewed 21 November 2026: moved 18 dated events whose scheduled dates had elapsed into the Past Events archive. Official UCI, Khelo India/ASMITA, BBCh and Audax India event pages were checked where available; no cancellation or postponement notice was found for the reviewed entries. Events with missing dates remain unchanged."
   },
   "events": [
     {
@@ -59,8 +59,9 @@
           "url": "https://www.cfiindia.in/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "cfi-calendar-image",
+      "verified_at": "2026-11-21"
     },
     {
       "id": "cfi-2026-uci-world-cup-3",
@@ -92,8 +93,9 @@
           "url": "https://www.cfiindia.in/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "cfi-calendar-image",
+      "verified_at": "2026-11-21"
     },
     {
       "id": "cfi-2026-foreign-training-track",
@@ -125,8 +127,9 @@
           "url": "https://www.cfiindia.in/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "cfi-calendar-image",
+      "verified_at": "2026-11-21"
     },
     {
       "id": "cfi-2026-national-coaching-camp-mtb",
@@ -159,8 +162,9 @@
           "url": "https://www.cfiindia.in/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "cfi-calendar-image",
+      "verified_at": "2026-11-21"
     },
     {
       "id": "cfi-2026-foreign-training-mtb",
@@ -192,8 +196,9 @@
           "url": "https://www.cfiindia.in/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "cfi-calendar-image",
+      "verified_at": "2026-11-21"
     },
     {
       "id": "cfi-2026-asian-mtb-cycling-championships",
@@ -226,8 +231,9 @@
           "url": "https://www.cfiindia.in/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "cfi-calendar-image",
+      "verified_at": "2026-11-21"
     },
     {
       "id": "cfi-2026-selection-trial-1",
@@ -260,8 +266,9 @@
           "url": "https://www.cfiindia.in/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "cfi-calendar-image",
+      "verified_at": "2026-11-21"
     },
     {
       "id": "cfi-2026-uci-junior-world-track-championships",
@@ -293,8 +300,9 @@
           "url": "https://www.cfiindia.in/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "cfi-calendar-image",
+      "verified_at": "2026-11-21"
     },
     {
       "id": "cfi-2026-track-asia-cup-bangkok",
@@ -326,8 +334,9 @@
           "url": "https://www.cfiindia.in/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "cfi-calendar-image",
+      "verified_at": "2026-11-21"
     },
     {
       "id": "odisha-state-mtb-championship-2026",
@@ -384,8 +393,9 @@
           "url": "https://www.cfiindia.in/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "cfi-calendar-image",
+      "verified_at": "2026-11-21"
     },
     {
       "id": "cfi-2026-national-mtb-cycling-championships",
@@ -419,8 +429,9 @@
           "url": "https://www.cfiindia.in/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "cfi-calendar-image",
+      "verified_at": "2026-11-21"
     },
     {
       "id": "cfi-2026-hcl-cyclothon-chennai",
@@ -453,8 +464,9 @@
           "url": "https://www.cfiindia.in/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "cfi-calendar-image",
+      "verified_at": "2026-11-21"
     },
     {
       "id": "cfi-2026-zabarvan-1",
@@ -520,8 +532,9 @@
           "url": "https://www.cfiindia.in/"
         }
       ],
-      "status": "scheduled",
-      "confidence": "cfi-calendar-image"
+      "status": "completed",
+      "confidence": "cfi-calendar-image",
+      "verified_at": "2026-11-21"
     },
     {
       "id": "cfi-2026-zabarvan-2",
@@ -700,8 +713,8 @@
           "url": "https://hindudayashankar.com/education/asmita-khelo-india-womens-cycling-zonal-league-to-be-held-in-hyderabad-on-november-16-17/"
         }
       ],
-      "status": "confirmed",
-      "verified_at": "2026-11-11",
+      "status": "completed",
+      "verified_at": "2026-11-21",
       "confidence": "association-announcement"
     },
     {
@@ -732,9 +745,9 @@
           "url": "https://www.audaxindia.in/event-e-10335"
         }
       ],
-      "status": "confirmed",
+      "status": "completed",
       "confidence": "official-audax-event-page",
-      "verified_at": "2026-11-16"
+      "verified_at": "2026-11-21"
     },
     {
       "id": "audax-2026-11-18-bangalore-600",
@@ -764,9 +777,9 @@
           "url": "https://www.audaxindia.in/event-e-10001"
         }
       ],
-      "status": "confirmed",
+      "status": "completed",
       "confidence": "official-audax-event-page",
-      "verified_at": "2026-11-16"
+      "verified_at": "2026-11-21"
     },
     {
       "id": "uttarakhand-mtb-challenge-2026",
@@ -827,8 +840,8 @@
           "url": "https://www.bbch.in/events/bbch26-race10"
         }
       ],
-      "status": "confirmed",
-      "verified_at": "2026-11-11",
+      "status": "completed",
+      "verified_at": "2026-11-21",
       "confidence": "organiser-website"
     },
     {
@@ -859,9 +872,9 @@
           "url": "https://www.audaxindia.in/event-e-10002"
         }
       ],
-      "status": "confirmed",
+      "status": "completed",
       "confidence": "official-audax-event-page",
-      "verified_at": "2026-11-16"
+      "verified_at": "2026-11-21"
     },
     {
       "id": "audax-2026-11-20-sahyadri-400-karad",
@@ -891,9 +904,9 @@
           "url": "https://www.audaxindia.in/event-e-10337"
         }
       ],
-      "status": "confirmed",
+      "status": "completed",
       "confidence": "official-audax-event-page",
-      "verified_at": "2026-11-16"
+      "verified_at": "2026-11-21"
     },
     {
       "id": "audax-2026-11-20-belgaum-600",
@@ -923,9 +936,9 @@
           "url": "https://www.audaxindia.in/event-e-11497"
         }
       ],
-      "status": "confirmed",
+      "status": "completed",
       "confidence": "official-audax-event-page",
-      "verified_at": "2026-11-16"
+      "verified_at": "2026-11-21"
     },
     {
       "id": "asmita-khelo-india-womens-cycling-west-zone-bhavnagar-2026",
