@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-11-23",
-    "note": "Reviewed 23 November 2026: confirmed the scheduled dates for the 21–22 November ASMITA Khelo India Women’s Cycling League – West Zone and 22 November Mumbai Cycling Championship 2026 have elapsed; moved both to Past Events. No cancellation or postponement notice was found in the available event records. BRM, Audax, brevet and randonneuring listings remain excluded."
+    "last_updated": "2026-11-24",
+    "note": "Updated 24 November 2026: added the 28 November Cycling Association of Maharashtra state-level road selection trial from a poster supplied to India Racing Cycles. The previous review moved the elapsed 21–22 November ASMITA West Zone and 22 November Mumbai Cycling Championship events to Past Events; no cancellation or postponement notice was found in the available event records. BRM, Audax, brevet and randonneuring listings remain excluded."
   },
   "events": [
     {
@@ -1872,6 +1872,34 @@
       "status": "scheduled",
       "confidence": "official-federation-listing-confirms-postponement",
       "verified_at": "2026-11-11"
+    },
+    {
+      "id": "cam-maharashtra-road-selection-trial-2026",
+      "title": "Maharashtra State-Level Selection Trial – 31st National Road Cycling Championship 2026",
+      "start_date": "2026-11-28",
+      "end_date": "2026-11-28",
+      "location": "Chand Bibi Mahal, Walunj Bypass Road, Ahilyanagar, Maharashtra",
+      "state": "Maharashtra",
+      "discipline": "Road",
+      "categories": [
+        "Road",
+        "State-Level Selection Trial",
+        "National Championship Selection"
+      ],
+      "event_scope": "State",
+      "organiser": "Cycling Association of Maharashtra (CAM)",
+      "description": "The Cycling Association of Maharashtra poster invites riders across Maharashtra to the state-level selection trial for the 31st National Road Cycling Championship 2026. The poster states that the national championship will be held in Tamil Nadu. The trial is scheduled for Saturday, 28 November 2026, at 7:00 AM at Chand Bibi Mahal, Walunj Bypass Road, Ahilyanagar.",
+      "registration_url": "",
+      "contact_email": "",
+      "contact_phone": "",
+      "poster_url": "",
+      "poster_note": "Poster supplied by the user. The notice does not display a registration link or contact number.",
+      "source_url": "cam-state-selection-trial-2026.html",
+      "source_name": "View event notice & poster",
+      "source_links": [],
+      "status": "scheduled",
+      "verified_at": "2026-11-24",
+      "confidence": "user-supplied-poster"
     }
   ]
 }
