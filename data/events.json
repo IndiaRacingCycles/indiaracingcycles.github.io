@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_updated": "2026-11-21",
-    "note": "Updated 21 November 2026: removed all BRM, Audax and randonneuring entries from the public event calendar; India Racing Cycles lists cycling races and competitions, not brevet/randonneuring rides."
+    "last_updated": "2026-11-23",
+    "note": "Reviewed 23 November 2026: confirmed the scheduled dates for the 21–22 November ASMITA Khelo India Women’s Cycling League – West Zone and 22 November Mumbai Cycling Championship 2026 have elapsed; moved both to Past Events. No cancellation or postponement notice was found in the available event records. BRM, Audax, brevet and randonneuring listings remain excluded."
   },
   "events": [
     {
@@ -804,8 +804,8 @@
       "poster_note": "Information transcribed from the event poster supplied on 12 November 2026.",
       "source_url": "",
       "source_links": [],
-      "status": "confirmed",
-      "verified_at": "2026-11-12",
+      "status": "completed",
+      "verified_at": "2026-11-23",
       "confidence": "association-poster",
       "accommodation_note": "Free boarding and lodging will be provided by the host from the evening of 20 November 2026 until the afternoon of 22 November 2026."
     },
@@ -840,8 +840,8 @@
           "url": "https://chat.whatsapp.com/I1RkSf62uu3HPXTLw4oKUG"
         }
       ],
-      "status": "confirmed",
-      "verified_at": "2026-11-21",
+      "status": "completed",
+      "verified_at": "2026-11-23",
       "confidence": "organiser-provided"
     },
     {
